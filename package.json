@@ -1,0 +1,59 @@
+{
+    "name": "ut-standard",
+    "version": "8.0.0",
+    "main": "index.js",
+    "browser": "browser.js",
+    "pkg": {
+      "assets": [
+        "api/sql/**/*.sql"
+      ]
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+      "tap": "^12.5.3",
+      "ut-tools": "^6.12.6"
+    },
+    "peerDependencies": {
+      "classnames": "^2.2.5",
+      "immutable": "^3.8.1",
+      "material-ui": "^0.16.5",
+      "react": "^15.6.1",
+      "react-hot-loader": "^4.6.3",
+      "react-redux": "^5.0.5",
+      "react-router": "^4.3.1",
+      "react-router-dom": "^4.3.1",
+      "redux": "^3.7.2",
+      "ut-front": "^9.1.0",
+      "ut-front-react": "^11.0.0",
+      "ut-bus": "^7.1.1",
+      "ut-dispatch-db": "^1.1.1",
+      "ut-run": "^10.1.0"
+    },
+    "description": "UT standard module",
+    "scripts": {
+      "lint": "ut-lint .",
+      "release": "ut-release",
+      "changelog": "ut-changelog",
+      "check": "ut-check",
+      "cover": "ut-cover-parallel",
+      "lint-js": "ut-lint-js .",
+      "postpublish": "ut-postpublish",
+      "postversion": "ut-postversion",
+      "precommit": "ut-precommit",
+      "precover": "ut-precover",
+      "prepublish": "ut-prepublish",
+      "prepush": "ut-prepush",
+      "pretest": "ut-pretest",
+      "preversion": "ut-preversion",
+      "test": "ut-test-parallel",
+      "version": "ut-version",
+      "jenkins": "ut-jenkins",
+      "gitlab": "ut-gitlab"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:softwaregroup-bg/ut-standard.git"
+    },
+    "license": "Apache-2.0"
+  }
