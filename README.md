@@ -47,7 +47,7 @@ ut-standard
 
 ## Front end
 
-Back end layers are defined in `\browser.js`. Note adding
+Front end layers are defined in `\browser.js`. Note adding
 this line in `\package.json`: `"browser": "browser.js"`.
 Front end layers are defined in various files in the following places:
 
