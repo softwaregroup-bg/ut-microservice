@@ -47,7 +47,7 @@ module.exports = {
             /(ut|"|'|fk|pk)Microservice/g,
             `$1${id.substr(0, 1).toUpperCase()}${id.substr(1)}`
         ], [
-            'UT standard microservice',
+            'UnderTree standard microservice',
             `${title}`
         ]]
     }]

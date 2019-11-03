@@ -1,6 +1,6 @@
-# UT standard microservice
+# UnderTree standard microservice
 
-Standard structure of UT microservice
+Standard structure of UnderTree microservice
 
 NOTE:
 > The word `microservice` is used in many places as relating to
