@@ -1,6 +1,6 @@
 {
   "name": "ut-microservice",
-  "version": "7.0.0-initial",
+  "version": "7.0.0",
   "main": "index.js",
   "browser": "browser.js",
   "pkg": {
