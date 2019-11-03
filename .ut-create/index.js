@@ -19,24 +19,35 @@ module.exports = {
     },
     rename: ({id, title, userName}) => [{
         files: `{${[
-            'README.md',
+            'api/script.js',
+            'api/sql/schema/150$standard.sql',
+            'api/sql/schema/360$standard.fooCategory.sql',
+            'api/sql/schema/361$standard.foo.sql',
+            'api/sql/schema/750$standard.foo.get.sql',
+            'api/sql/seed/850$standard.fooCategory.seed.sql',
+            'browser.js',
+            'errors.json',
+            'index.js',
             'package.json',
+            'README.md',
+            'ui/react/index.js',
             'ui/react/pages/foo/create.js',
             'ui/react/pages/foo/list.js',
-            'ui/react/routes.js',
             'ui/react/registerRoutes.js',
+            'ui/react/routes.js',
+            'validations/index.js',
         ].join(',')}}`,
         replace: [[
-            /(ut|"|'|-|\[)microservice/,
+            /(ut|"|'|-|\[)microservice/g,
             `ut-${id}`
         ], [
-            /microservice(\.|\()/,
+            /microservice(\.|\()/g,
             `ut-${id}`
         ], [
-            /(ut|"|'|fk|pk)Microservice/,
+            /(ut|"|'|fk|pk)Microservice/g,
             `ut-${id.substr(0, 1).toUpperCase()}${id.substr(1)}`
         ], [
-            '"UT standard microservice"',
+            'UT standard microservice',
             `UT standard microservice`
         ]]
     }, {
