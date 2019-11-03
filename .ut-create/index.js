@@ -17,7 +17,7 @@ module.exports = {
 
         }
     },
-    rename: ({id, title, userName}) => [{
+    rename: ({id, title}) => [{
         files: `{${[
             'api/script.js',
             'api/sql/schema/150$standard.sql',
@@ -48,11 +48,7 @@ module.exports = {
             `ut-${id.substr(0, 1).toUpperCase()}${id.substr(1)}`
         ], [
             'UT standard microservice',
-            `UT standard microservice`
+            `${title}`
         ]]
-    }, {
-        files: '{}',
-        replace: [
-        ]
     }]
 };
