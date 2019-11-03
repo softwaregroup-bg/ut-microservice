@@ -1,3 +1,13 @@
+## [7.0.4](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.0.3...v7.0.4) (2019-11-03)
+
+
+### Bug Fixes
+
+* create-ut patterns ([a194bcd](https://github.com/softwaregroup-bg/ut-microservice/commit/a194bcd))
+* create-ut patterns ([e5bc57f](https://github.com/softwaregroup-bg/ut-microservice/commit/e5bc57f))
+
+
+
 ## [7.0.3](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.0.2...v7.0.3) (2019-11-03)
 
 
