@@ -1,5 +1,5 @@
-module.exports = function standard({utMethod}) {
-    const fooGet = utMethod('db/standard.foo.get', {
+module.exports = function microservice({utMethod}) {
+    const fooGet = utMethod('db/microservice.foo.get', {
         cache: {
             key: msg => ({
                 id: msg.fooId
@@ -7,6 +7,6 @@ module.exports = function standard({utMethod}) {
         }
     });
     return {
-        'standard.foo.get': fooGet // this is optional example how to enable cache
+        'microservice.foo.get': fooGet // this is optional example how to enable cache
     };
 };

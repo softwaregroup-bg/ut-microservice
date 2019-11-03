@@ -1,1 +1,1 @@
-CREATE SCHEMA [standard]
+CREATE SCHEMA [microservice]

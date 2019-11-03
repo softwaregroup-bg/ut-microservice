@@ -1,4 +1,4 @@
-module.exports = () => function utStandard() {
+module.exports = () => function utMicroservice() {
     return {
         browser: () => [
             function ui() {

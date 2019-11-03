@@ -1,4 +1,4 @@
-module.exports = () => function utStandard() {
+module.exports = () => function utMicroservice() {
     return {
         adapter: () => [
             require('./api/sql/schema'),
@@ -7,7 +7,7 @@ module.exports = () => function utStandard() {
             require('./errors')
         ],
         orchestrator: () => [
-            require('ut-dispatch-db')(['foo'], ['utStandard.foo']),
+            require('ut-dispatch-db')(['foo'], ['utMicroservice.foo']),
             require('./api/script')
         ],
         gateway: () => [

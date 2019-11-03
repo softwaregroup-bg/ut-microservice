@@ -1,9 +1,15 @@
-.nyc_output
+.env
+.eslintcache
 .history
 .idea
 .lint
+.next
+.node_repl_history
+.npm
+.nyc_output
 .tern*
-.ut_*
+.ut_*rc
+.yarn-integrity
 *.log
 *.marko.js
 bin/impl-*

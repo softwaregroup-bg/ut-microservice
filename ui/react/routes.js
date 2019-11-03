@@ -10,8 +10,8 @@ registerRoutes();
 
 export default hot(module)(({containerBusinessUnits}) =>
     <Switch>
-        <Route exact path={getLink('ut-standard:fooList')} component={FooList} />
-        <Route exact path={getLink('ut-standard:fooCreate')}
+        <Route exact path={getLink('ut-microservice:fooList')} component={FooList} />
+        <Route exact path={getLink('ut-microservice:fooCreate')}
             component={props => <FooCreate BusinessUnits={containerBusinessUnits} {...props} />}
         />
     </Switch>

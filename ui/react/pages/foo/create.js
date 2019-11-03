@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 
 const Create = () =>
     <Page>
-        <AddTab pathname={getLink('ut-standard:fooCreate')} title='Create Foo' />
+        <AddTab pathname={getLink('ut-microservice:fooCreate')} title='Create Foo' />
         <Container>
             <Content style={{position: 'relative'}}>
                 PUT CREATE FOO COMPONENTS HERE

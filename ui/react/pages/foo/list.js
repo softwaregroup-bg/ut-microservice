@@ -22,8 +22,8 @@ const columns = [{
 
 let List = () =>
     <div>
-        <AddTab pathname={getLink('ut-standard:fooList')} title='Foo list' />
-        <Header text='Foo list' buttons={[{text: 'Create Foo', href: getLink('ut-standard:fooCreate'), permissions: ['standard.foo.add'], styleType: 'primaryLight'}]} />
+        <AddTab pathname={getLink('ut-microservice:fooList')} title='Foo list' />
+        <Header text='Foo list' buttons={[{text: 'Create Foo', href: getLink('ut-microservice:fooCreate'), permissions: ['microservice.foo.add'], styleType: 'primaryLight'}]} />
         <div>
             <ResizibleContainer cols={columns} />
         </div>

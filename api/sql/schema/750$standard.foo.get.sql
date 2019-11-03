@@ -1,9 +1,9 @@
-CREATE PROCEDURE standard.[foo.get] --returns foo by fooId
+CREATE PROCEDURE microservice.[foo.get] --returns foo by fooId
     @fooId BIGINT
 AS
 SELECT
     foo.*
 FROM
-    [standard].[foo] foo
+    [microservice].[foo] foo
 WHERE
     fooId = @fooId

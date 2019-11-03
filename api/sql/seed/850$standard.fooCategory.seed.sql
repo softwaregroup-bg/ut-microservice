@@ -3,7 +3,7 @@ MERGE INTO
     core.itemType AS target
 USING
     (VALUES
-        ('utStandard.foo', 'Standard foo categories')
+        ('utMicroservice.foo', 'Microservice foo categories')
     ) AS source (alias, name)
 ON
     target.alias = source.alias
@@ -23,7 +23,7 @@ USING
         ('foo2', 'Foo category 2')
     ) AS source (itemCode, itemName)
 JOIN
-    core.itemType t ON t.alias = 'utStandard.foo'
+    core.itemType t ON t.alias = 'utMicroservice.foo'
 ON
     target.itemCode = source.itemCode
 WHEN
@@ -39,13 +39,13 @@ UPDATE SET
     target.itemName = source.itemName;
 
 MERGE INTO
-    standard.fooCategories AS target
+    microservice.fooCategories AS target
 USING
     (
         SELECT itemNameId
         FROM core.itemName n
         JOIN core.itemType t ON t.itemTypeId = n.itemTypeId
-        WHERE t.alias = 'utStandard.foo'
+        WHERE t.alias = 'utMicroservice.foo'
     ) AS source
 ON
     target.fooCategoryId = source.itemNameId

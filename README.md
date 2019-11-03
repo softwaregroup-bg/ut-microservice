@@ -1,15 +1,11 @@
-# ut-standard
+# UT standard microservice
 
-Standard structure of UT module.
+Standard structure of UT microservice
 
 NOTE:
-> The word `standard` is used in many places as relating to
+> The word `microservice` is used in many places as relating to
 > the module name and must be renamed when creating module
-> with another name. There are some exceptions, where the
-> word `standard` should be kept:
->
-> * `.\api\sql\standard` - name of this folder
-> * `.\api\sql\standard.js` - name and contenst of this file
+> with another name.
 
 ## Back end
 
@@ -17,7 +13,7 @@ Back end layers are defined in `\index.js`. It references various files
 from the following places:
 
 ```text
-ut-standard
+ut-microservice
 ├── index.js
 ├── errors.js
 ├── errors.json
@@ -52,7 +48,7 @@ this line in `\package.json`: `"browser": "browser.js"`.
 Front end layers are defined in various files in the following places:
 
 ```text
-ut-standard
+ut-microservice
 ├── browser.js
 └── ui
     └── react
@@ -66,23 +62,23 @@ ut-standard
         └── routes.js
 ```
 
-Usually the following files within an implementatoin need
+Usually the following files within an application need
 to be edited to include the front end in it:
 
-* `/package.json` add `ut-standard` in `dependencies`
+* `/package.json` add `ut-microservice` in `dependencies`
 
 ```json
 {
   "name": "impl-project",
   "dependencies": {
       ...
-      "ut-standard": "^8.0.0"
+      "ut-microservice": "^7.0.0"
       ...
   }
 }
 ```
 
-* `/browser/common.js` add `utStandard: {browser: true}`
+* `/browser/common.js` add `utMicroservice: {browser: true}`
 
 ```js
 module.exports = {
@@ -91,11 +87,11 @@ module.exports = {
     utFront: {browser: true},
     utFrontReact: {browser: true},
     // ...
-    utStandard: {browser: true}
+    utMicroservice: {browser: true}
 };
 ```
 
-* `/browser/index.js` add `require('ut-standard')(...params)`
+* `/browser/index.js` add `require('ut-microservice')(...params)`
 
 ```js
 module.exports = (...params) => [
@@ -103,7 +99,7 @@ module.exports = (...params) => [
     require('ut-front')(...params),
     require('ut-front-react')(...params),
     //...
-    require('ut-standard')(...params)
+    require('ut-microservice')(...params)
 ];
 
 ```
@@ -123,17 +119,17 @@ export default class Provider extends Component {
             mainTabset: [
             //...
             {
-                routeName: 'ut-standard:home',
-                title: 'Standard',
-                permission: ['standard.system.nav'],
+                routeName: 'ut-microservice:home',
+                title: 'Microservice',
+                permission: ['microservice.system.nav'],
                 props: {
                     activeClassName: 'active'
                 },
                 multi: [
                     {
-                        routeName: 'ut-standard:fooList',
+                        routeName: 'ut-microservice:fooList',
                         title: 'Foo',
-                        permission: ['standard.foo.fetch'],
+                        permission: ['microservice.foo.fetch'],
                         props: {
                             activeClassName: implementationStyle.active
                         }
