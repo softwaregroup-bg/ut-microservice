@@ -39,13 +39,13 @@ module.exports = {
         ].join(',')}}`,
         replace: [[
             /(ut|"|'|-|\[)microservice/g,
-            `ut-${id}`
+            `$1${id}`
         ], [
             /microservice(\.|\()/g,
-            `ut-${id}`
+            `${id}$1`
         ], [
             /(ut|"|'|fk|pk)Microservice/g,
-            `ut-${id.substr(0, 1).toUpperCase()}${id.substr(1)}`
+            `$1${id.substr(0, 1).toUpperCase()}${id.substr(1)}`
         ], [
             'UT standard microservice',
             `${title}`
