@@ -1,3 +1,12 @@
+## [7.0.3](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.0.2...v7.0.3) (2019-11-03)
+
+
+### Bug Fixes
+
+* ut-create patterns ([c68dfd5](https://github.com/softwaregroup-bg/ut-microservice/commit/c68dfd5))
+
+
+
 ## [7.0.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.0.1...v7.0.2) (2019-11-03)
 
 
