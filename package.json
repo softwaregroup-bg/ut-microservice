@@ -8,7 +8,9 @@
       "api/sql/**/*.sql"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "joi": "13.7.0"
+  },
   "devDependencies": {
     "tap": "^12.5.3",
     "ut-tools": "^6.12.6"
