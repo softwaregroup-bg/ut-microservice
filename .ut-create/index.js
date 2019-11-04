@@ -1,3 +1,7 @@
+const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
+const camelCase = id => id.split('-').slice(1).map((string, index) => index ? capitalize(string) : string).join('');
+const pascalCase = id => id.split('-').slice(1).map(capitalize).join('');
+
 module.exports = {
     params: {
         schema: {
@@ -39,13 +43,13 @@ module.exports = {
         ].join(',')}}`,
         replace: [[
             /(ut|"|'|-|\[)microservice/g,
-            `$1${id}`
+            `$1${camelCase(id)}`
         ], [
             /microservice(\.|\()/g,
-            `${id}$1`
+            `${camelCase(id)}$1`
         ], [
             /(ut|"|'|fk|pk)Microservice/g,
-            `$1${id.substr(0, 1).toUpperCase()}${id.substr(1)}`
+            `$1${pascalCase(id)}`
         ], [
             'UnderTree standard microservice',
             `${title}`
