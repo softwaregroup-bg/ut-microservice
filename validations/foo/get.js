@@ -1,4 +1,4 @@
-var joi = require('joi');
+const joi = require('joi');
 
 module.exports = {
     description: 'Foo get',

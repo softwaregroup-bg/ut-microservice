@@ -20,7 +20,7 @@ const columns = [{
     </div>
 }];
 
-let List = () =>
+const List = () =>
     <div>
         <AddTab pathname={getLink('ut-microservice:fooList')} title='Foo list' />
         <Header text='Foo list' buttons={[{text: 'Create Foo', href: getLink('ut-microservice:fooCreate'), permissions: ['microservice.foo.add'], styleType: 'primaryLight'}]} />

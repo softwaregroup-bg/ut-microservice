@@ -6,7 +6,7 @@ export function ui({utMethod}) {
     return {
         reducer: () => reducer,
         route: async() => {
-            let containerBusinessUnits = await utMethod('container.BusinessUnits')({});
+            const containerBusinessUnits = await utMethod('container.BusinessUnits')({});
             return <Routes key='utMicroservice' containerBusinessUnits={containerBusinessUnits} />;
         }
     };
