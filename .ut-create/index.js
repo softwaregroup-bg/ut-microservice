@@ -57,7 +57,7 @@ module.exports = {
     }, {
         files: 'README.md',
         replace: [[
-            /^## Creating microservices based on this template.*^## /s,
+            /^## Creating microservices based on this template[^#]+^## /ms,
             '## '
         ]]
     }]

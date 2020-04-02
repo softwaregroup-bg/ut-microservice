@@ -9,7 +9,7 @@ This is used as a template to create new microservices.
 In an empty folder named `ut-*` run:
 
 ```bash
-npm init ut
+npm init ut ms
 ```
 
 ## Back end
