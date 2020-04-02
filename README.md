@@ -2,10 +2,15 @@
 
 Standard structure of UnderTree microservice
 
-NOTE:
-> The word `microservice` is used in many places as relating to
-> the module name and must be renamed when creating module
-> with another name.
+## Creating microservices based on this template
+
+This is used as a template to create new microservices.
+
+In an empty folder named `ut-*` run:
+
+```bash
+npm init ut
+```
 
 ## Back end
 

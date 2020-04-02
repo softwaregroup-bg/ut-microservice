@@ -54,5 +54,11 @@ module.exports = {
             'UnderTree standard microservice',
             `${title}`
         ]]
+    }, {
+        files: 'README.md',
+        replace: [[
+            /^## Creating microservices based on this template.*^## /s,
+            '## '
+        ]]
     }]
 };
