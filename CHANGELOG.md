@@ -1,3 +1,12 @@
+## [7.0.10](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.0.9...v7.0.10) (2020-07-01)
+
+
+### Bug Fixes
+
+* seed ([b4df579](https://github.com/softwaregroup-bg/ut-microservice/commit/b4df5793e066af41404f8fe7f3e2e92e2a8605eb))
+
+
+
 ## [7.0.9](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.0.8...v7.0.9) (2020-04-02)
 
 
