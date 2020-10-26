@@ -21,11 +21,18 @@ module.exports = {
 
         }
     },
+    move: ({id}) => [
+        ['api/microservice/microservice.*', fn => fn.replace('microservice', camelCase(id))],
+        ['api/microservice', () => `${camelCase(id)}`],
+        ['validations/microservice.*', fn => fn.replace('microservice', camelCase(id))],
+        ['api/sql/schema/*-microservice.*', fn => fn.replace('microservice', camelCase(id))]
+    ],
     rename: ({id, title}) => [{
         files: `{${[
-            'api/microservice/*.js',
-            'api/sql/schema/*.sql',
-            'api/sql/seed/*.sql',
+            'api/**/*.js',
+            'test/**/*.js',
+            'api/**/*.sql',
+            'api/**/*.yaml',
             'ui/react/**/*.js',
             'validations/*.js',
             'browser.js',
@@ -35,13 +42,13 @@ module.exports = {
             'README.md'
         ].join(',')}}`,
         replace: [[
-            /(ut|"|'|-|\[)microservice/g,
+            /(ut|"|'|-|\[|\/)microservice/g,
             `$1${camelCase(id)}`
         ], [
-            /microservice(\.|\()/g,
+            /microservice(\.|\(|Color)/g,
             `${camelCase(id)}$1`
         ], [
-            /(ut|"|'|fk|pk)Microservice/g,
+            /(ut|"|'|fk|pk|error)Microservice/g,
             `$1${pascalCase(id)}`
         ], [
             'UnderTree standard microservice',
