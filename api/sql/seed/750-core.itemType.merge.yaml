@@ -1,0 +1,2 @@
+list:
+  - {alias: 'utMicroservice.foo', name: 'Foo', description: 'Microservice foo categories'}

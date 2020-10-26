@@ -8,7 +8,7 @@
 .npm
 .nyc_output
 .tern*
-.ut_*rc
+.ut_*
 .yarn-integrity
 *.log
 *.marko.js

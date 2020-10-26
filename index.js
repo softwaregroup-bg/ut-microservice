@@ -7,12 +7,16 @@ module.exports = () => function utMicroservice() {
             require('./errors')
         ],
         orchestrator: () => [
-            require('ut-dispatch-db')(['foo'], ['utMicroservice.foo']),
-            require('./api/script')
+            require('./errors'),
+            require('./api/microservice'),
+            require('ut-dispatch-db')(['microservice'], ['utMicroservice.foo'], ['utMicroservice.validation'])
         ],
         gateway: () => [
             require('./validations')
         ],
-        test: () => require('./test/jobs')
+        test: () => [
+            ...require('./test/steps'),
+            ...require('./test/jobs')
+        ]
     };
 };

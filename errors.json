@@ -1,4 +1,5 @@
 {
     "microservice":"Microservice error",
-    "microservice.foo.notFound": "Foo not found"
+    "microservice.fooNotFound": "Foo ({fooId}) not found",
+    "microservice.colorNotFound": "Color {color} not found"
 }
