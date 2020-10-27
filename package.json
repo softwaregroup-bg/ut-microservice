@@ -20,7 +20,7 @@
     "ut-document": "^7.1.0",
     "ut-port-script": "^7.1.1",
     "ut-port-sql": "^7.35.0",
-    "ut-run": "^10.38.0",
+    "ut-run": "^10.38.2",
     "ut-test": "^6.0.16",
     "ut-tools": "^6.34.2",
     "ut-user": "^9.4.3"
@@ -35,13 +35,11 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^3.7.2",
-    "ut-front": "^9.1.5",
     "ut-front-react": "^12.0.4",
-    "ut-bus": "^7.31.1",
     "ut-dispatch-db": "^1.3.0",
     "ut-audit": "^5.0.15",
     "ut-port-ldap": "^6.2.7",
-    "ut-run": "^10.37.1"
+    "ut-run": "^10.38.2"
   },
   "description": "UnderTree standard microservice",
   "scripts": {
