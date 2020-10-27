@@ -22,9 +22,8 @@ Follow the rules and patterns described in:
 
 ## Project links
 
-- [Skype chat](https://join.skype.com/kCjJp7cig98r)
 - [Continuous Integration (Jenkins)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/)
-  [![Build Status](https://jenkins.softwaregroup.com/buildStatus/icon?job=ut5impl/impl-application/master)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/)
+  [![Build Status](https://jenkins.softwaregroup.com/buildStatus/icon?job=ut/ut-microservice/master)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/)
 - [Static Code Analysis (SonarQube)](https://sonar.softwaregroup.com/dashboard?id=ut-microservice%3Aorigin%2Fmaster)
 - [Error aggregator (Sentry)](http://sentry.k8s.softwaregroup-bg.com/sentry/ut-microservice/dashboard/?statsPeriod=1w)
 
@@ -86,7 +85,7 @@ ut-microservice
 Usually the following files within an application need
 to be edited to include the front end in it:
 
-* `/package.json` add `ut-microservice` in `dependencies`
+- `/package.json` add `ut-microservice` in `dependencies`
 
 ```json
 {
@@ -99,7 +98,7 @@ to be edited to include the front end in it:
 }
 ```
 
-* `/browser/common.js` add `utMicroservice: {browser: true}`
+- `/browser/common.js` add `utMicroservice: {browser: true}`
 
 ```js
 module.exports = {
@@ -112,7 +111,7 @@ module.exports = {
 };
 ```
 
-* `/browser/index.js` add `require('ut-microservice')(...params)`
+- `/browser/index.js` add `require('ut-microservice')(...params)`
 
 ```js
 module.exports = (...params) => [
@@ -125,7 +124,7 @@ module.exports = (...params) => [
 
 ```
 
-* `/ui/administration/provider.js` (or equivalent)
+- `/ui/administration/provider.js` (or equivalent)
   add menu entries in `mainTabset`:
 
 ```js
