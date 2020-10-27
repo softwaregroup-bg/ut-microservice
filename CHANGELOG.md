@@ -1,3 +1,7 @@
+# [7.1.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.1.0-handlers.3...v7.1.0) (2020-10-27)
+
+
+
 ## [7.0.10](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.0.9...v7.0.10) (2020-07-01)
 
 
