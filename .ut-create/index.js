@@ -21,34 +21,34 @@ module.exports = {
 
         }
     },
+    move: ({id}) => [
+        ['api/microservice/microservice.*', fn => fn.replace('microservice', camelCase(id))],
+        ['api/microservice', () => `${camelCase(id)}`],
+        ['validations/microservice.*', fn => fn.replace('microservice', camelCase(id))],
+        ['api/sql/schema/*-microservice.*', fn => fn.replace('microservice', camelCase(id))]
+    ],
     rename: ({id, title}) => [{
         files: `{${[
-            'api/script.js',
-            'api/sql/schema/150$standard.sql',
-            'api/sql/schema/360$standard.fooCategory.sql',
-            'api/sql/schema/361$standard.foo.sql',
-            'api/sql/schema/750$standard.foo.get.sql',
-            'api/sql/seed/850$standard.fooCategory.seed.sql',
+            'api/**/*.js',
+            'test/**/*.js',
+            'api/**/*.sql',
+            'api/**/*.yaml',
+            'ui/react/**/*.js',
+            'validations/*.js',
             'browser.js',
             'errors.json',
             'index.js',
             'package.json',
-            'README.md',
-            'ui/react/index.js',
-            'ui/react/pages/foo/create.js',
-            'ui/react/pages/foo/list.js',
-            'ui/react/registerRoutes.js',
-            'ui/react/routes.js',
-            'validations/index.js',
+            'README.md'
         ].join(',')}}`,
         replace: [[
-            /(ut|"|'|-|\[)microservice/g,
+            /(ut|"|'|-|\[|\/)microservice/g,
             `$1${camelCase(id)}`
         ], [
-            /microservice(\.|\()/g,
+            /microservice(\.|\(|Color)/g,
             `${camelCase(id)}$1`
         ], [
-            /(ut|"|'|fk|pk)Microservice/g,
+            /(ut|"|'|fk|pk|error)Microservice/g,
             `$1${pascalCase(id)}`
         ], [
             'UnderTree standard microservice',
