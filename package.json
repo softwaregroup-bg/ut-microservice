@@ -1,6 +1,6 @@
 {
   "name": "ut-microservice",
-  "version": "7.0.10",
+  "version": "7.1.0-handlers.0",
   "main": "index.js",
   "browser": "browser.js",
   "pkg": {
@@ -8,8 +8,7 @@
       "api/sql/**/*.sql"
     ]
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "tap": "^14.10.8",
     "ut-cache": "^6.0.0",
