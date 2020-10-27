@@ -12,6 +12,22 @@ In an empty folder named `ut-*` run:
 npm init ut ms
 ```
 
+## Development rules
+
+Follow the rules and patterns described in:
+
+- [Composable microservices](https://github.com/softwaregroup-bg/ut-run/blob/master/microservices.md)
+- [Standard structure of UT microservice module](https://github.com/softwaregroup-bg/ut-microservice)
+- [Software development rules](https://confluence.softwaregroup.com/display/RD/Software+Engineering+Rules)
+
+## Project links
+
+- [Skype chat](https://join.skype.com/kCjJp7cig98r)
+- [Continuous Integration (Jenkins)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/)
+  [![Build Status](https://jenkins.softwaregroup.com/buildStatus/icon?job=ut5impl/impl-application/master)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/)
+- [Static Code Analysis (SonarQube)](https://sonar.softwaregroup.com/dashboard?id=ut-microservice%3Aorigin%2Fmaster)
+- [Error aggregator (Sentry)](http://sentry.k8s.softwaregroup-bg.com/sentry/ut-microservice/dashboard/?statsPeriod=1w)
+
 ## Back end
 
 Back end layers are defined in `\index.js`. It references various files
