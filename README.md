@@ -12,14 +12,6 @@ In an empty folder named `ut-*` run:
 npm init ut ms
 ```
 
-## Development rules
-
-Follow the rules and patterns described in:
-
-- [Composable microservices](https://github.com/softwaregroup-bg/ut-run/blob/master/microservices.md)
-- [Standard structure of UT microservice module](https://github.com/softwaregroup-bg/ut-microservice)
-- [Software development rules](https://confluence.softwaregroup.com/display/RD/Software+Engineering+Rules)
-
 ## Project links
 
 - [Continuous Integration (Jenkins)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/)
