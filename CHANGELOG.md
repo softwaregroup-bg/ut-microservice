@@ -1,3 +1,12 @@
+# [7.2.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.1.0...v7.2.0) (2020-11-06)
+
+
+### Features
+
+* add eslint config ([9607a03](https://github.com/softwaregroup-bg/ut-microservice/commit/9607a036e8665e189b1cf70798d332e69a3ddbfb))
+
+
+
 # [7.1.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.1.0-handlers.3...v7.1.0) (2020-10-27)
 
 
