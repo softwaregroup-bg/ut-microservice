@@ -1,14 +1,25 @@
+const test = {
+    adapter: true,
+    orchestrator: true,
+    gateway: true,
+    test: true,
+    sql: {
+        integration: true
+    },
+    sqlStandard: true,
+    sqlTest: true
+};
+
 module.exports = () => ({
-    test: {
+    test,
+    jenkins: test,
+    unit: {
         adapter: true,
         orchestrator: true,
         gateway: true,
-        test: true,
-        sql: {
-            integration: true
-        },
         sqlStandard: true,
-        sqlTest: true
+        sqlTest: true,
+        test: true
     },
     db: {
         adapter: true

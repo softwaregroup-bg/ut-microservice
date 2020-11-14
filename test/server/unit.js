@@ -77,12 +77,5 @@ module.exports = {
             debug: true
         }
     },
-    utMicroservice: {
-        adapter: true,
-        orchestrator: true,
-        gateway: true,
-        sqlStandard: true,
-        sqlTest: true,
-        test: true
-    }
+    utMicroservice: true
 };
