@@ -1,24 +1,28 @@
 const test = {
-    adapter: true,
-    orchestrator: true,
-    gateway: true,
-    test: true,
-    sql: {
-        integration: true
-    },
-    sqlStandard: true,
-    sqlTest: true
+    sqlStandard: true
 };
 
 module.exports = () => ({
+    // environments
+    dev: {
+        sqlStandard: true
+    },
     test,
     jenkins: test,
+    uat: {
+        sqlStandard: true
+    },
+    // test types
     unit: {
         adapter: true,
         orchestrator: true,
         gateway: true,
-        sqlStandard: true,
-        sqlTest: true,
+        test: true
+    },
+    integration: {
+        adapter: true,
+        orchestrator: true,
+        gateway: true,
         test: true
     },
     db: {
@@ -29,12 +33,13 @@ module.exports = () => ({
         orchestrator: joi.boolean(),
         gateway: joi.boolean(),
         test: joi.boolean(),
-        sqlStandard: joi.boolean(),
-        sqlTest: joi.boolean(),
-        sql: [
+        sql: joi.object({
+            exclude: joi.any()
+        }),
+        sqlStandard: [
             joi.boolean(),
             joi.object({
-                integration: joi.boolean()
+                exclude: joi.any()
             })
         ]
     })
