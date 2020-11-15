@@ -1,3 +1,12 @@
+## [7.3.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.3.1...v7.3.2) (2020-11-15)
+
+
+### Bug Fixes
+
+* improve configuration ([1674569](https://github.com/softwaregroup-bg/ut-microservice/commit/16745698f345078c9c5e77ac2dda098cd4579fb2))
+
+
+
 ## [7.3.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.3.0...v7.3.1) (2020-11-14)
 
 
