@@ -1,0 +1,5 @@
+category:
+  - name: 'microservice'
+action:
+  - {category: 'microservice', action: 'microservice.system.nav', description: 'Microservice tab'}
+  - {category: 'microservice', action: 'microservice.foo.fetch', description: 'Microservice fetch foo'}
