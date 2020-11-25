@@ -41,6 +41,10 @@ module.exports = () => ({
             joi.object({
                 exclude: joi.any()
             })
+        ],
+        microserviceDispatch: [
+            joi.boolean(),
+            joi.object()
         ]
     })
 });

@@ -45,7 +45,7 @@ module.exports = {
             /(ut|"|'|-|\[|\/)microservice/g,
             `$1${camelCase(id)}`
         ], [
-            /microservice(\.|\(|Color)/g,
+            /microservice(\.|\(|Color|Dispatch)/g,
             `${camelCase(id)}$1`
         ], [
             /(ut|"|'|fk|pk|error)Microservice/g,
