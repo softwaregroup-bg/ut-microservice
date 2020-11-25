@@ -1,3 +1,18 @@
+# [7.4.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.3.2...v7.4.0) (2020-11-25)
+
+
+### Bug Fixes
+
+* add front end actions ([cfd86f0](https://github.com/softwaregroup-bg/ut-microservice/commit/cfd86f0f3db72a640c1649b49fd7ad818d98e09f))
+* allow distpatcher config ([4f80197](https://github.com/softwaregroup-bg/ut-microservice/commit/4f80197d6c115d7b01384591f1ef55a90400e4f3))
+
+
+### Features
+
+* composeable validations ([050aacb](https://github.com/softwaregroup-bg/ut-microservice/commit/050aacb4fdc469d157a50fc712256efbda980c1c))
+
+
+
 ## [7.3.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.3.1...v7.3.2) (2020-11-15)
 
 
