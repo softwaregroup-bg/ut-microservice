@@ -1,3 +1,12 @@
+## [7.4.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.4.0...v7.4.1) (2020-11-27)
+
+
+### Bug Fixes
+
+* add kustomize defaults ([f84f56a](https://github.com/softwaregroup-bg/ut-microservice/commit/f84f56a37159836bb28bfbbda0342a6404f4f030))
+
+
+
 # [7.4.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.3.2...v7.4.0) (2020-11-25)
 
 
