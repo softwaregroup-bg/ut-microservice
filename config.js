@@ -12,6 +12,12 @@ module.exports = () => ({
     uat: {
         sqlStandard: true
     },
+    // methods
+    kustomize: {
+        adapter: true,
+        orchestrator: true,
+        gateway: true
+    },
     // test types
     unit: {
         adapter: true,
