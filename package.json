@@ -12,17 +12,17 @@
   "devDependencies": {
     "tap": "^14.10.8",
     "ut-cache": "^6.0.0",
-    "ut-core": "^8.6.0",
-    "ut-customer": ">=9.0.0-document.7 <=9.0.0-document.999",
-    "ut-db": "^8.2.1",
+    "ut-core": "^8.7.2",
+    "ut-customer": "^9.0.1",
+    "ut-db": "^8.3.0",
     "ut-dispatch-db": "^1.3.0",
-    "ut-document": ">=8.0.0-cacache.6 <=8.0.0-cacache.999",
+    "ut-document": "^8.0.1",
     "ut-port-script": "^7.1.1",
-    "ut-port-sql": "^7.35.0",
-    "ut-run": "^10.41.2",
+    "ut-port-sql": "^7.36.0",
+    "ut-run": "^10.45.2",
     "ut-test": "^6.1.3",
-    "ut-tools": "^6.34.3",
-    "ut-user": ">=10.0.0-notice.34 <=10.0.0-notice.999"
+    "ut-tools": "^6.36.0",
+    "ut-user": "^10.1.1"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",
@@ -38,12 +38,12 @@
     "ut-dispatch-db": "^1.3.0",
     "ut-audit": "^5.0.15",
     "ut-port-ldap": "^6.2.7",
-    "ut-run": "^10.41.2"
+    "ut-run": "^10.45.0"
   },
   "description": "UnderTree standard microservice",
   "scripts": {
     "lint": "ut-lint .",
-    "release": "ut-release",
+    "release": "node build && ut-release",
     "changelog": "ut-changelog",
     "check": "ut-check",
     "cover": "ut-cover-parallel",

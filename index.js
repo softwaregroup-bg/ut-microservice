@@ -13,6 +13,7 @@ module.exports = () => function utMicroservice() {
             require('ut-dispatch-db')(['microservice'], ['utMicroservice.foo'], ['utMicroservice.validation'])
         ],
         gateway: () => [
+            require('./errors'),
             require('./validations')
         ],
         test: () => [

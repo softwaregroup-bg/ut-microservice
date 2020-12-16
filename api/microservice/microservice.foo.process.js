@@ -1,3 +1,5 @@
+// @ts-check
+/** @type { import("../../handlers").handlerFactory } */
 module.exports = ({
     import: {
         errorMicroserviceFooNotFound

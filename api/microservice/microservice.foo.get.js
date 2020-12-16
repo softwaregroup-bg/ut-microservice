@@ -1,3 +1,5 @@
+// @ts-check
+/** @type { import("../../handlers").handlerFactory } */
 module.exports = ({utMethod}) => ({
     // cache example
     'microservice.foo.get': utMethod('db/microservice.foo.get#[0]', {

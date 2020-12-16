@@ -1,3 +1,5 @@
+// @ts-check
+/** @type { import("../../handlers").handlerSet } */
 module.exports = function foo() {
     return [
         require('../lib/css'),

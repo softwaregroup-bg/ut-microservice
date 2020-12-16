@@ -18,6 +18,12 @@ module.exports = () => ({
         orchestrator: true,
         gateway: true
     },
+    types: {
+        gateway: true
+    },
+    doc: {
+        gateway: true
+    },
     // test types
     unit: {
         adapter: true,

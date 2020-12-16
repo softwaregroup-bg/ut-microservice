@@ -1,6 +1,8 @@
+// @ts-check
+/** @type { import("../../handlers").libFactory } */
 module.exports = ({
     import: {
-        microserviceColorNotFound
+        errorMicroserviceColorNotFound
     }
 }) => ({
     css(color) {
@@ -9,7 +11,7 @@ module.exports = ({
             navy: '#000080',
             green: '#008000'
         }[color];
-        if (!result) throw microserviceColorNotFound({params: {color}});
+        if (!result) throw errorMicroserviceColorNotFound({params: {color}});
         return result;
     }
 });

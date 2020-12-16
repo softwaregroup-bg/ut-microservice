@@ -1,3 +1,5 @@
+// @ts-check
+/** @type { import("ut-run").validationLib } */
 module.exports = ({
     joi
 }) => ({
