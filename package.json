@@ -43,7 +43,7 @@
   "description": "UnderTree standard microservice",
   "scripts": {
     "lint": "ut-lint .",
-    "release": "node build && git add handlers.d.js && ut-release",
+    "release": "node build && git add handlers.d.ts && ut-release",
     "changelog": "ut-changelog",
     "check": "ut-check",
     "cover": "ut-cover-parallel",
