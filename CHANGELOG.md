@@ -1,3 +1,12 @@
+# [7.5.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.4.1...v7.5.0) (2020-12-16)
+
+
+### Features
+
+* typings ([2b2d8ff](https://github.com/softwaregroup-bg/ut-microservice/commit/2b2d8ffd9cdf2e3930aeb887a2857ad9bac39349))
+
+
+
 ## [7.4.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.4.0...v7.4.1) (2020-11-27)
 
 
