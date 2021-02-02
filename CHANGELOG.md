@@ -1,3 +1,13 @@
+## [7.5.3](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.5.2...v7.5.3) (2021-02-02)
+
+
+### Bug Fixes
+
+* pass meta ([a0b4081](https://github.com/softwaregroup-bg/ut-microservice/commit/a0b4081d1af3d6986f69a4544b24ac644871a72e))
+* update dependencies ([29ddfa7](https://github.com/softwaregroup-bg/ut-microservice/commit/29ddfa7d127a2defd94d7fff5656b64fe00905d6))
+
+
+
 ## [7.5.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.5.1...v7.5.2) (2020-12-16)
 
 

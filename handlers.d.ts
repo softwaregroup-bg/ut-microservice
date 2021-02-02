@@ -1,15 +1,3 @@
-declare namespace microservice.foo.get {
-  export interface params {
-    fooId?: number | string;
-  }
-  export interface result {
-    fooId?: number | string;
-    name: string;
-    code: string;
-    color: string;
-  }
-}
-
 declare namespace microservice.foo.fetch {
   export interface params {
     color?: string;
@@ -20,6 +8,18 @@ declare namespace microservice.foo.fetch {
     code: string;
     color: string;
   })[];
+}
+
+declare namespace microservice.foo.get {
+  export interface params {
+    fooId?: number | string;
+  }
+  export interface result {
+    fooId?: number | string;
+    name: string;
+    code: string;
+    color: string;
+  }
 }
 
 import ut from 'ut-run';
