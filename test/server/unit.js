@@ -1,6 +1,14 @@
 module.exports = {
     implementation: 'microservice',
     adapter: true,
+    utPort: {
+        noRecursion: true
+    },
+    utBus: {
+        serviceBus: {
+            requireMeta: true
+        }
+    },
     utLog: {
         streams: {
             sentry: {
