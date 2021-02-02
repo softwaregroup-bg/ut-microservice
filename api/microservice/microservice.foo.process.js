@@ -8,8 +8,8 @@ module.exports = ({
         css
     }
 }) => ({
-    async 'microservice.foo.process'({fooId}) {
-        const found = await this.findHandler('microservice.foo.get').call(this, {fooId});
+    async 'microservice.foo.process'({fooId}, $meta) {
+        const found = await this.findHandler('microservice.foo.get').call(this, {fooId}, $meta);
         if (found) {
             const {color} = found;
             return {css: css(color)};
