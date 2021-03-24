@@ -1,5 +1,4 @@
 // @ts-check
-import navigationGet from './microservice.navigation.get';
 import fooBrowse from './microservice.foo.browse';
 import fooDemo from './microservice.foo.demo';
 import fooOpen from './microservice.foo.open';
@@ -8,7 +7,6 @@ import fooOpen from './microservice.foo.open';
 export default function component() {
     return [
         () => ({ namespace: 'component/microservice' }),
-        navigationGet,
         fooBrowse,
         fooDemo,
         fooOpen
