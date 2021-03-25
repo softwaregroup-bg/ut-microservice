@@ -14,8 +14,8 @@ npm init ut ms
 
 ## Project links
 
-- [Continuous Integration (Jenkins)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/)
-  [![Build Status](https://jenkins.softwaregroup.com/buildStatus/icon?job=ut/ut-microservice/master)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/)
+- [Continuous Integration (Jenkins)](https://jenkins.softwaregroup.com/view/master/job/ut5/job/ut-microservice/)
+  [![Build Status](https://jenkins.softwaregroup.com/buildStatus/icon?job=ut5/ut-microservice/master)](https://jenkins.softwaregroup.com/view/master/job/ut5/job/ut-microservice/job/master/)
 - [Static Code Analysis (SonarQube)](https://sonar.softwaregroup.com/dashboard?id=ut-microservice%3Aorigin%2Fmaster)
 - [Error aggregator (Sentry)](http://sentry.k8s.softwaregroup-bg.com/sentry/ut-microservice/dashboard/?statsPeriod=1w)
 

@@ -1,8 +1,10 @@
 module.exports = function test() {
     return {
-        foo: function(test, bus, run) {
+        foo: function(test, bus, run, ports, {
+            microserviceFooList
+        }) {
             return run(test, bus, [
-                'list foo',
+                microserviceFooList(),
                 {
                     method: 'microservice.foo.get',
                     name: 'fooGet',
