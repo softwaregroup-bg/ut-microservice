@@ -1,16 +1,15 @@
 module.exports = [
-    function steps() {
+    function steps({callSite}) {
         return {
-            'steps.list foo'(defineStep) {
-                return defineStep({
-                    method: 'microservice.foo.fetch',
-                    name: 'fooList',
-                    params: {},
-                    result(result, assert) {
-                        assert.ok(result.length, 'foo list');
-                    }
-                });
-            }
+            'steps.microservice.foo.list': (params = {}) => ({
+                ...callSite?.(),
+                method: 'microservice.foo.fetch',
+                name: 'fooList',
+                params,
+                result(result, assert) {
+                    assert.ok(result.length, 'foo list');
+                }
+            })
         };
     }
 ];
