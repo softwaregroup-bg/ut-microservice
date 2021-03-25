@@ -1,3 +1,12 @@
+# [7.6.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.5.3...v7.6.0) (2021-03-25)
+
+
+### Features
+
+* ut-portal ([2b656f6](https://github.com/softwaregroup-bg/ut-microservice/commit/2b656f6da12d0c3c6a28d6f126986af94ad39060))
+
+
+
 ## [7.5.3](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.5.2...v7.5.3) (2021-02-02)
 
 
