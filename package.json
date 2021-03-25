@@ -14,13 +14,17 @@
     "devextreme-react": "20.2.4",
     "tap": "^14.11.0",
     "ut-cache": "^6.0.0",
+    "ut-core": "^8.8.6",
+    "ut-customer": "^9.1.12",
     "ut-db": "^8.3.1",
     "ut-dispatch-db": "^1.3.0",
+    "ut-document": "^8.2.1",
     "ut-front-devextreme": "^1.9.0",
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^7.37.2",
     "ut-run": "^10.50.0",
-    "ut-tools": "^6.37.0"
+    "ut-tools": "^6.37.0",
+    "ut-user": "^10.4.6"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",

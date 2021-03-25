@@ -6,7 +6,7 @@ import Navigator from 'ut-front-devextreme/core/Navigator';
 /** @type { import("../../handlers").handlerFactory } */
 export default ({
     import: {
-        customerOrganizationFetch,
+        microserviceFooFetch,
         customerOrganizationGraphFetch
     }
 }) => ({
@@ -15,24 +15,18 @@ export default ({
         permission: 'microservice.foo.browse',
         component: async() => {
             const fields = [{
-                dataField: 'organizationName',
-                caption: 'Name'
+                dataField: 'fooId',
+                caption: 'ID'
             }, {
-                dataField: 'parents',
-                caption: 'Parents'
-            }, {
-                dataField: 'statusId',
-                caption: 'Status'
-            }, {
-                dataField: 'isEnabled',
-                caption: 'Enabled'
+                dataField: 'color',
+                caption: 'Foo color'
             }];
             const details = {organizationName: 'Organization', statusId: 'Status'};
             return function FooBrowse() {
                 return (
                     <Explorer
-                        fetch={customerOrganizationFetch}
-                        keyField='actorId'
+                        fetch={microserviceFooFetch}
+                        keyField='fooId'
                         resultSet='organization'
                         fields={fields}
                         details={details}
