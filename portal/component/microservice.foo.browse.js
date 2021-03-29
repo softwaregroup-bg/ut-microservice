@@ -21,13 +21,12 @@ export default ({
                 dataField: 'color',
                 caption: 'Foo color'
             }];
-            const details = {organizationName: 'Organization', statusId: 'Status'};
+            const details = {color: 'Foo color'};
             return function FooBrowse() {
                 return (
                     <Explorer
                         fetch={microserviceFooFetch}
                         keyField='fooId'
-                        resultSet='organization'
                         fields={fields}
                         details={details}
                     >
