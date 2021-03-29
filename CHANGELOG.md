@@ -1,3 +1,12 @@
+# [7.7.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.6.0...v7.7.0) (2021-03-29)
+
+
+### Features
+
+* storybook ([030d1b0](https://github.com/softwaregroup-bg/ut-microservice/commit/030d1b0bdf66af151ba9b63743f71806b7208f27))
+
+
+
 # [7.6.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.5.3...v7.6.0) (2021-03-25)
 
 
