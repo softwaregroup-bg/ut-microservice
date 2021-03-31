@@ -7,4 +7,4 @@ export default function handle() {
         () => ({ namespace: 'handle/microservice' }),
         fooClick
     ];
-};
+}

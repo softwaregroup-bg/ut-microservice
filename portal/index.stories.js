@@ -1,6 +1,6 @@
 import {app} from 'ut-portal/storybook';
 import portal from './';
-// import utCore from 'ut-core/portal';
+import utCore from 'ut-core/portal';
 
 export default {
     title: 'Microservice'
@@ -40,7 +40,7 @@ const page = app({
         color: 'blue'
     }]
 }, [
-    // utCore(),
+    utCore(),
     portal()
 ]);
 

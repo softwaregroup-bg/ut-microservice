@@ -10,4 +10,4 @@ export function ui({utMethod}) {
             return <Routes key='utMicroservice' containerBusinessUnits={containerBusinessUnits} />;
         }
     };
-};
+}

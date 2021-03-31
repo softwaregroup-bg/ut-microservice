@@ -3,8 +3,6 @@ import { AddTab } from 'ut-front-react/containers/TabMenu';
 import { getLink } from 'ut-front-react/routerHelper';
 import Header from 'ut-front-react/components/PageLayout/Header';
 import ResizibleContainer from 'ut-front-react/components/ResiziblePageLayout/Container';
-// import Grid from '../../containers/foo/grid';
-// import Pagination from '../../containers/foo/pagination';
 import mainStyle from 'ut-front-react/assets/index.css';
 import resizibleTypes from 'ut-front-react/components/ResiziblePageLayout/resizibleTypes';
 import { connect } from 'react-redux';
