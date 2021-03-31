@@ -1,3 +1,12 @@
+## [7.8.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.8.1...v7.8.2) (2021-03-31)
+
+
+### Bug Fixes
+
+* storybook ([4485c83](https://github.com/softwaregroup-bg/ut-microservice/commit/4485c8318e23f1de5902a260d194c86ff73518f7))
+
+
+
 ## [7.8.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.8.0...v7.8.1) (2021-03-31)
 
 
