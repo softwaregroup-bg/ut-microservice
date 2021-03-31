@@ -1,3 +1,17 @@
+# [7.8.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.7.0...v7.8.0) (2021-03-31)
+
+
+### Bug Fixes
+
+* code smells ([c80b1e8](https://github.com/softwaregroup-bg/ut-microservice/commit/c80b1e8a9404cc6331df4927f384ee4a9a8e5372))
+
+
+### Features
+
+* publish storybook ([4d98e54](https://github.com/softwaregroup-bg/ut-microservice/commit/4d98e5406ae2b21c5af28024c600a4b02bc420a4))
+
+
+
 # [7.7.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.6.0...v7.7.0) (2021-03-29)
 
 
