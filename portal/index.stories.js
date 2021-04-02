@@ -37,6 +37,9 @@ const page = app({
     }, {
         fooId: 3,
         color: 'blue'
+    }, {
+        fooId: 4,
+        color: 'black'
     }]
 }, [
     portal()
