@@ -1,3 +1,12 @@
+## [7.8.7](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.8.6...v7.8.7) (2021-04-07)
+
+
+### Bug Fixes
+
+* improve rename patterns ([6d5d3cb](https://github.com/softwaregroup-bg/ut-microservice/commit/6d5d3cbbff4c9029217e5cfca53194b6c8aa249a))
+
+
+
 ## [7.8.6](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.8.5...v7.8.6) (2021-04-07)
 
 
