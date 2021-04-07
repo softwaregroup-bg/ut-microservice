@@ -38,6 +38,7 @@ module.exports = {
             'ui/react/**/*.js',
             'validations/*.js',
             'browser.js',
+            'config.js',
             'build.js',
             'errors.json',
             'index.js',
@@ -48,7 +49,7 @@ module.exports = {
             /(ut|"|'|-|\[|\/)microservice/g,
             `$1${camelCase(id)}`
         ], [
-            /microservice(\.|\(|Color|Dispatch)/g,
+            /microservice(\.|\(|Color|Dispatch|Foo|<)/g,
             `${camelCase(id)}$1`
         ], [
             /(ut|"|'|fk|pk|error)Microservice/g,
