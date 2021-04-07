@@ -24,18 +24,21 @@ module.exports = {
     move: ({id}) => [
         ['api/microservice/microservice.*', fn => fn.replace('microservice', camelCase(id))],
         ['api/microservice', () => `${camelCase(id)}`],
+        ['portal/**/microservice.*', fn => fn.replace('microservice', camelCase(id))],
         ['validations/microservice.*', fn => fn.replace('microservice', camelCase(id))],
         ['api/sql/schema/*-microservice.*', fn => fn.replace('microservice', camelCase(id))]
     ],
     rename: ({id, title}) => [{
         files: `{${[
             'api/**/*.js',
+            'portal/**/*.js',
             'test/**/*.js',
             'api/**/*.sql',
             'api/**/*.yaml',
             'ui/react/**/*.js',
             'validations/*.js',
             'browser.js',
+            'build.js',
             'errors.json',
             'index.js',
             'package.json',
