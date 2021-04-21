@@ -1,3 +1,12 @@
+# [7.9.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.8.7...v7.9.0) (2021-04-21)
+
+
+### Features
+
+* publish api docs in Jenkins ([b7cf3e0](https://github.com/softwaregroup-bg/ut-microservice/commit/b7cf3e03b10df2657e8516ad55cbddf9a4607a0a))
+
+
+
 ## [7.8.7](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.8.6...v7.8.7) (2021-04-07)
 
 
