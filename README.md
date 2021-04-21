@@ -16,8 +16,10 @@ npm init ut ms
 
 - [Continuous Integration (Jenkins)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/)
   [![Build Status](https://jenkins.softwaregroup.com/buildStatus/icon?job=ut/ut-microservice/master)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/)
+- [Storybook](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/Storybook/)
+- [Documentation](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/Documentation/)
 - [Static Code Analysis (SonarQube)](https://sonar.softwaregroup.com/dashboard?id=ut-microservice%3Aorigin%2Fmaster)
-- [Error aggregator (Sentry)](http://sentry.k8s.softwaregroup-bg.com/sentry/ut-microservice/dashboard/?statsPeriod=1w)
+- [Error aggregator (Sentry)](http://sentry.k8s.softwaregroup-bg.com/organizations/sentry/projects/ut-microservice)
 - [Component library (Chromatic)](https://www.chromatic.com/library?appId=6064ae0e1e4a6000217a7ed4)
 
 ## Back end
