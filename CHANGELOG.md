@@ -1,3 +1,12 @@
+# [7.10.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.9.0...v7.10.0) (2021-04-29)
+
+
+### Features
+
+* primereact ([1d806ee](https://github.com/softwaregroup-bg/ut-microservice/commit/1d806ee11bd46a302899faa241b240be81da2a36))
+
+
+
 # [7.9.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.8.7...v7.9.0) (2021-04-21)
 
 
