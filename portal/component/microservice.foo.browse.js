@@ -15,11 +15,11 @@ export default ({
         permission: 'microservice.foo.browse',
         component: async() => {
             const fields = [{
-                dataField: 'fooId',
-                caption: 'ID'
+                field: 'fooId',
+                title: 'ID'
             }, {
-                dataField: 'color',
-                caption: 'Foo color'
+                field: 'color',
+                title: 'Foo color'
             }];
             const details = {color: 'Foo color'};
             return function FooBrowse() {
