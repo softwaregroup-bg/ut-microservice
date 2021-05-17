@@ -1,3 +1,12 @@
+# [7.11.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.10.0...v7.11.0) (2021-05-17)
+
+
+### Features
+
+* CRUD UI [UTCORE-121] ([102dbfb](https://github.com/softwaregroup-bg/ut-microservice/commit/102dbfb900606a251a3ee2c18f2f9927183900d5))
+
+
+
 # [7.10.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.9.0...v7.10.0) (2021-04-29)
 
 
