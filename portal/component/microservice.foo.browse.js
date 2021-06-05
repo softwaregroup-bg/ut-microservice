@@ -21,6 +21,7 @@ export default ({
             const fields = [{
                 field: 'color',
                 title: 'Foo color',
+                filter: true,
                 action: ({id}) => handleTabShow([component$microserviceFooOpen, {id}])
             }];
             const details = {color: 'Foo color'};

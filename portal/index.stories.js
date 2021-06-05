@@ -1,31 +1,11 @@
 import {app} from 'ut-portal/storybook';
 import portal from './';
+import chisel from 'ut-portal/chisel';
+import fooMock from './mock/foo';
 
 export default {
     title: 'Microservice'
 };
-
-const fooList = [{
-    tenant: 1,
-    fooId: 1,
-    color: 'red'
-}, {
-    tenant: 1,
-    fooId: 2,
-    color: 'green'
-}, {
-    tenant: 1001,
-    fooId: 3,
-    color: 'blue'
-}, {
-    tenant: 1002,
-    fooId: 4,
-    color: 'black'
-}];
-
-let lastFooId = fooList.reduce((max, {fooId}) => Math.max(max, fooId), 0);
-const byKey = filter => ({fooId}) => String(fooId) === String(filter.fooId);
-const findFoo = filter => fooList.find(byKey(filter));
 
 const page = app({
     implementation: 'microservice',
@@ -34,42 +14,26 @@ const page = app({
 }, {
     'core.translation.fetch': () => ({}),
     'customer.organization.graphFetch': () => ({
-        organization: [{
-            id: 1,
-            title: 'Organization 1'
-        }, {
-            id: 2,
-            title: 'Organization 2'
-        }, {
-            id: 1001,
-            parents: 1,
-            title: 'Office 1'
-        }, {
-            id: 1002,
-            parents: 1,
-            title: 'Office 2'
-        }]
+        organization: [
+            {id: 100, title: 'Africa'},
+            {id: 300, title: 'Asia'},
+            {id: 400, title: 'Australia'},
+            {id: 500, title: 'Europe'},
+            {id: 600, title: 'North America'},
+            {id: 700, title: 'South America'},
+            {id: 101, parents: 100, title: 'Egypt'},
+            {id: 102, parents: 100, title: 'Kenya'},
+            {id: 103, parents: 100, title: 'Ghana'},
+            {id: 104, parents: 100, title: 'Nigeria'},
+            {id: 301, parents: 300, title: 'Philippines'},
+            {id: 302, parents: 300, title: 'India'},
+            {id: 501, parents: 500, title: 'Bulgaria'},
+            {id: 601, parents: 600, title: 'USA'},
+            {id: 701, parents: 700, title: 'Mexico'}
+        ]
     }),
-    'microservice.foo.fetch': ({tenant}) => fooList.filter((foo) => tenant == null || foo.tenant === tenant),
-    'microservice.foo.get': findFoo,
-    'microservice.foo.add': foo => {
-        const result = {...foo, tenant: 1, fooId: ++lastFooId};
-        fooList.push(result);
-        return result;
-    },
-    'microservice.foo.edit': edited => {
-        const result = findFoo({fooId: edited.fooId});
-        return result && Object.assign(result, edited);
-    },
-    'microservice.foo.delete': deleted => {
-        const result = [];
-        for (const item of deleted) {
-            const found = fooList.findIndex(byKey({fooId: item.fooId}));
-            result.push(found >= 0 ? result[found] : null);
-            if (found >= 0) fooList.splice(found, 1);
-        }
-        return result;
-    }
+    ...fooMock,
+    ...chisel({subject: 'microservice', object: 'tree'}).mock()
 }, [
     portal()
 ]);
@@ -78,3 +42,6 @@ export const FooBrowse = page('microservice.foo.browse');
 export const FooDemo = page('microservice.foo.demo');
 export const FooOpen = page('microservice.foo.open', 1);
 export const FooNew = page('microservice.foo.new');
+export const TreeBrowse = page('microservice.tree.browse');
+export const TreeOpen = page('microservice.tree.open', 101);
+export const TreeNew = page('microservice.tree.new');
