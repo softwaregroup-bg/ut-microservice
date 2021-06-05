@@ -1,3 +1,12 @@
+# [7.12.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.11.0...v7.12.0) (2021-06-05)
+
+
+### Features
+
+* use chisel to define object [UTCORE-121] ([b4fd4f0](https://github.com/softwaregroup-bg/ut-microservice/commit/b4fd4f0844c4167b6c6e6b8c95f6bf7b3a8a2b28))
+
+
+
 # [7.11.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.10.0...v7.11.0) (2021-05-17)
 
 
