@@ -6,6 +6,9 @@ export default () => function utMicroservice() {
     return {
         config: require('./config'),
         browser: () => [
+            function backend() {
+                return {namespace: 'microservice'};
+            },
             component,
             handle
         ]
