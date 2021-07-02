@@ -1,3 +1,12 @@
+# [7.13.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.12.1...v7.13.0) (2021-07-02)
+
+
+### Features
+
+* storybook config [UTCORE-121] ([64e5184](https://github.com/softwaregroup-bg/ut-microservice/commit/64e5184e91f1ab228e68047ec820926158a5506d))
+
+
+
 ## [7.12.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.12.0...v7.12.1) (2021-06-14)
 
 
