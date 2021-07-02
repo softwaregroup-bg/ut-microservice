@@ -9,6 +9,16 @@ export default {
 
 const page = app({
     implementation: 'microservice',
+    utBrowser: {
+        backend: {
+            url: 'https://localhost:4006'
+        }
+    },
+    // preauth: {
+    //     backend: {
+    //         authorization: 'Bearer ...'
+    //     }
+    // },
     utMicroservice: true,
     utCore: true
 }, {
