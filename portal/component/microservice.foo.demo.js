@@ -11,7 +11,8 @@ export default ({
         component$microserviceFooOpen,
         component$microserviceFooNew,
         component$microserviceFooDemo
-    }
+    },
+    utMeta
 }) => ({
     'microservice.foo.demo': () => ({
         title: 'Foo demo',
@@ -24,13 +25,13 @@ export default ({
                 <button onClick={handle$microserviceFooClick}>
                     Test reducer {JSON.stringify(pages)}
                 </button>
-                <button onClick={() => handleTabShow(component$microserviceFooBrowse)}>
+                <button onClick={() => handleTabShow(component$microserviceFooBrowse, utMeta())}>
                     Browse foo
                 </button>
-                <button onClick={() => handleTabShow(component$microserviceFooNew)}>
+                <button onClick={() => handleTabShow(component$microserviceFooNew, utMeta())}>
                     Create foo
                 </button>
-                <button onClick={() => handleTabShow([component$microserviceFooOpen, {id: 1}])}>
+                <button onClick={() => handleTabShow([component$microserviceFooOpen, {id: 1}], utMeta())}>
                     Open foo
                 </button>
             </div>;

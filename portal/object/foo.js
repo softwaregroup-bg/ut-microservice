@@ -9,8 +9,8 @@ let lastFooId = fooList.reduce((max, {fooId}) => Math.max(max, fooId), 0);
 const byKey = filter => ({fooId}) => String(fooId) === String(filter.fooId);
 const findFoo = filter => fooList.find(byKey(filter));
 
-export default {
-    'microservice.foo.fetch': ({tenant}) => fooList.filter(foo => tenant == null || foo.tenant === tenant),
+export const fooMock = {
+    'microservice.foo.fetch': ({filterBy: {tenant}}) => fooList.filter(foo => tenant == null || String(foo.tenant) === String(tenant)),
     'microservice.foo.get': findFoo,
     'microservice.foo.add': foo => {
         const result = {...foo, tenant: 1, fooId: ++lastFooId};

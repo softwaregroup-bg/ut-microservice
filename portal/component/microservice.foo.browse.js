@@ -12,45 +12,50 @@ export default ({
         component$microserviceFooOpen,
         component$microserviceFooNew,
         customerOrganizationGraphFetch
-    }
+    },
+    utMeta
 }) => ({
     'microservice.foo.browse': () => ({
         title: 'Foo list',
         permission: 'microservice.foo.browse',
         component: async() => {
-            const fields = [{
-                field: 'color',
-                title: 'Foo color',
-                filter: true,
-                action: ({id}) => handleTabShow([component$microserviceFooOpen, {id}])
-            }];
+            const properties = {
+                color: {
+                    title: 'Foo color',
+                    action: ({id}) => handleTabShow([component$microserviceFooOpen, {id}], utMeta())
+                }
+            };
+            const columns = ['color'];
             const details = {color: 'Foo color'};
+            const explorerFetch = params => microserviceFooFetch(params, utMeta());
+            const navigatorFetch = params => customerOrganizationGraphFetch(params, utMeta());
             return function FooBrowse() {
                 const [tenant, setTenant] = React.useState(null);
                 return (
                     <Explorer
-                        fetch={tenant != null && microserviceFooFetch}
+                        fetch={tenant != null && explorerFetch}
                         keyField='fooId'
-                        fields={fields}
+                        properties={properties}
+                        columns={columns}
                         details={details}
                         filter={{tenant}}
                         actions={[{
                             title: 'Create',
                             permission: 'microservice.foo.add',
-                            action: () => handleTabShow(component$microserviceFooNew)
+                            action: () => handleTabShow(component$microserviceFooNew, utMeta())
                         }, {
                             title: 'Edit',
                             permission: 'microservice.foo.edit',
                             enabled: 'current',
-                            action: ({id}) => handleTabShow([component$microserviceFooOpen, {id}])
+                            action: ({id}) => handleTabShow([component$microserviceFooOpen, {id}], utMeta())
                         }, {
                             title: 'Delete',
                             enabled: 'selected',
-                            action: ({selected}) => microserviceFooDelete(selected)
+                            action: ({selected}) => microserviceFooDelete(selected, utMeta())
                         }]}
                     >
                         <Navigator
-                            fetch={customerOrganizationGraphFetch}
+                            fetch={navigatorFetch}
                             onSelect={setTenant}
                             keyField='id'
                             field='title'

@@ -46,21 +46,22 @@ export default ({
         microserviceFooAdd,
         microserviceFooEdit,
         microserviceFooGet
-    }
+    },
+    utMeta
 }) => ({
     fooEdit({id: fooId}) {
         async function submit(foo) {
             if (fooId != null) {
-                await microserviceFooEdit(foo);
+                await microserviceFooEdit(foo, utMeta());
             } else {
-                foo = await microserviceFooAdd(foo);
+                foo = await microserviceFooAdd(foo, utMeta());
                 fooId = foo.fooId;
             }
         }
         return function FooEdit() {
             return <FooEditor
                 submit={submit}
-                load={() => microserviceFooGet({fooId})}
+                load={() => microserviceFooGet({fooId}, utMeta())}
             />;
         };
     }
