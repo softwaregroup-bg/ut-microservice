@@ -23,11 +23,11 @@ declare namespace microservice.foo.get {
 }
 
 import ut from 'ut-run';
-export interface handlers {
-  'microservice.foo.fetch': ut.remoteHandler<microservice.foo.fetch.params, microservice.foo.fetch.result>,
-  microserviceFooFetch: ut.remoteHandler<microservice.foo.fetch.params, microservice.foo.fetch.result>,
-  'microservice.foo.get': ut.remoteHandler<microservice.foo.get.params, microservice.foo.get.result>,
-  microserviceFooGet: ut.remoteHandler<microservice.foo.get.params, microservice.foo.get.result>
+export interface handlers<location = ''> {
+  'microservice.foo.fetch'?: ut.handler<microservice.foo.fetch.params, microservice.foo.fetch.result, location>,
+  microserviceFooFetch?: ut.handler<microservice.foo.fetch.params, microservice.foo.fetch.result, location>,
+  'microservice.foo.get'?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>,
+  microserviceFooGet?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>
 }
 
 export interface errors {
@@ -35,7 +35,9 @@ export interface errors {
   'error.microservice.colorNotFound': ut.error,
   errorMicroserviceColorNotFound: ut.error,
   'error.microservice.fooNotFound': ut.error,
-  errorMicroserviceFooNotFound: ut.error
+  errorMicroserviceFooNotFound: ut.error,
+  'error.microservice.zoneNotFound': ut.error,
+  errorMicroserviceZoneNotFound: ut.error
 }
 
 import login from 'ut-login/handlers'
@@ -54,5 +56,9 @@ import user from 'ut-user/handlers'
 interface methods extends user.handlers {}
 
 export type libFactory = ut.libFactory<methods, errors>
-export type handlerFactory = ut.handlerFactory<methods, errors>
-export type handlerSet = ut.handlerSet<methods, errors>
+export type handlerFactory = ut.handlerFactory<methods, errors, handlers<'local'>>
+export type handlerSet = ut.handlerSet<methods, errors, handlers<'local'>>
+
+import portal from 'ut-portal'
+export type pageFactory = portal.pageFactory<methods, errors>
+export type pageSet = portal.pageSet<methods, errors>
