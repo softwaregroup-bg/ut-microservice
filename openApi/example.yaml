@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  title: example
+  description: Parking services
+  version: 1.0.0
+paths:
+  /parking/pay:
+    post:
+      tags:
+        - parking
+      summary: Parking payment
+      description: Pay parking in a city zone
+      operationId: example.parking.pay
+      x-ut-errorTransform: example.error.transform
+      consumes:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        schema:
+          type: object
+          properties:
+            city:
+              description: City
+              type: string
+            zone:
+              description: Zone
+              type: string
+          required:
+            - city
+            - zone
+      responses:
+        200:
+          description: Payment details
+          schema:
+            type: object
+            properties:
+              details:
+                type: object
+                properties:
+                  time:
+                    type: string
+                  amount:
+                    type: string
+                required:
+                  - time
+                  - amount
+            required:
+              - details
