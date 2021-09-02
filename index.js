@@ -24,4 +24,4 @@ module.exports = () => function utMicroservice() {
     };
 };
 
-if (require.main === module) require('ut-run/microservice');
+module.exports.run = require('ut-run').microservice(module, require);

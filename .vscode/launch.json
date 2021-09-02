@@ -46,9 +46,7 @@
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/index.js",
-            "args": [
-                "--overlay=all"
-            ],
+            "args": [],
             "cwd": "${workspaceRoot}",
             "console": "integratedTerminal",
             "runtimeArgs": [
