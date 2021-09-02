@@ -1,3 +1,12 @@
+# [7.16.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.15.0...v7.16.0) (2021-09-02)
+
+
+### Features
+
+* back end launch ([418ca65](https://github.com/softwaregroup-bg/ut-microservice/commit/418ca6589d9b7f095663efd6215a007f345c6f41))
+
+
+
 # [7.15.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.14.0...v7.15.0) (2021-09-02)
 
 
