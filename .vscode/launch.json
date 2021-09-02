@@ -42,6 +42,26 @@
             "outputCapture": "std"
         },
         {
+            "name": "Back end",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/index.js",
+            "args": [
+                "--overlay=all"
+            ],
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--nolazy",
+                "--max_old_space_size=500000"
+            ],
+            "env": {
+                "NODE_PATH": "dev"
+            },
+            "outputCapture": "std"
+        },
+        {
             "name": "Test single",
             "type": "node",
             "request": "launch",

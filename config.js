@@ -37,8 +37,14 @@ module.exports = () => ({
         gateway: true,
         test: true
     },
+    // overlays
     db: {
         adapter: true
+    },
+    all: {
+        adapter: true,
+        orchestrator: true,
+        gateway: true
     },
     validation: ({joi}) => joi.object({
         adapter: joi.boolean(),
