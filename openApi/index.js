@@ -1,4 +1,3 @@
-// @ts-check
 const { join } = require('path');
 
 module.exports = function openApi() {

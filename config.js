@@ -41,7 +41,7 @@ module.exports = () => ({
     db: {
         adapter: true
     },
-    all: {
+    microservice: {
         adapter: true,
         orchestrator: true,
         gateway: true

@@ -1,9 +1,8 @@
-// @ts-check
 import React from 'react';
 import Explorer from 'ut-front-devextreme/core/Explorer';
 import Navigator from 'ut-front-devextreme/core/Navigator';
 
-/** @type { import("../../handlers").handlerFactory } */
+/** @type { import("../../handlers").pageFactory } */
 export default ({
     import: {
         microserviceFooFetch,

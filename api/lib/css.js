@@ -1,4 +1,3 @@
-// @ts-check
 /** @type { import("../../handlers").libFactory } */
 module.exports = ({
     import: {

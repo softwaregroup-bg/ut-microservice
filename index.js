@@ -1,4 +1,4 @@
-module.exports = () => function utMicroservice() {
+module.exports = require('ut-run').microservice(module, require, () => function utMicroservice() {
     return {
         config: require('./config'),
         adapter: () => [
@@ -22,6 +22,4 @@ module.exports = () => function utMicroservice() {
             ...require('./test/jobs')
         ]
     };
-};
-
-module.exports.run = require('ut-run').microservice(module, require);
+});

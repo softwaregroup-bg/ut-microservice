@@ -2,15 +2,14 @@
 module.exports = ({
     joi,
     lib: {
-        fooId,
-        fooResult
+        fooId
     }
 }) => ({
-    'microservice.foo.get'() {
+    'microservice.foo.process'() {
         return {
-            description: 'Foo get',
+            description: 'Foo process',
             params: joi.object().keys({fooId}),
-            result: fooResult
+            result: joi.string()
         };
     }
 });

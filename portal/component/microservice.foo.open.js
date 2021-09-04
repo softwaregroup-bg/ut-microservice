@@ -1,5 +1,4 @@
-// @ts-check
-/** @type { import("../../handlers").handlerFactory } */
+/** @type { import("../../handlers").pageFactory } */
 export default ({
     lib: {
         fooEdit

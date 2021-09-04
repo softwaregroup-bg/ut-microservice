@@ -1,4 +1,3 @@
-// @ts-check
 import fooClick from './microservice.foo.click';
 
 /** @type { import("../../handlers").handlerSet } */

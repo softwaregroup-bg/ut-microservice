@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "module": "CommonJS",
+        "jsx": "react",
+        "outDir": "dist",
+        "target": "ES2021",
+        "resolveJsonModule": true
+    },
+    "exclude": ["node_modules", "**/node_modules/*"]
+}

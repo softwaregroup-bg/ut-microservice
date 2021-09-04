@@ -1,4 +1,3 @@
-// @ts-check
 /** @type { import("../../handlers").handlerFactory } */
 module.exports = ({utMethod}) => ({
     // cache example

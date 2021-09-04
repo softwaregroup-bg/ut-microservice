@@ -1,5 +1,4 @@
-// @ts-check
-/** @type { import("../../handlers").handlerFactory } */
+/** @type { import("../../handlers").libFactory } */
 export default () => ({
     async 'microservice.foo.click'(params) {
         return {click: true};

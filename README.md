@@ -97,7 +97,6 @@ Front end is defined in the following folder structure:
 Components are created by following the pattern below:
 
 ```js
-// @ts-check
 import React from 'react';
 
 /** @type { import("../../handlers").handlerFactory } */
@@ -145,7 +144,6 @@ Examples of recommended patterns for naming component functions:
 ### Defining event handlers
 
 ```js
-// @ts-check
 /** @type { import("../../handlers").handlerFactory } */
 export default ({
     import: {

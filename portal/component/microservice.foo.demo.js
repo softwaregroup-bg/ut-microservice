@@ -1,9 +1,8 @@
-// @ts-check
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { FileUpload } from 'ut-front-devextreme/core/prime';
 
-/** @type { import("../../handlers").handlerFactory } */
+/** @type { import("../../handlers").pageFactory } */
 export default ({
     import: {
         handle$microserviceFooClick,

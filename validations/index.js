@@ -1,4 +1,3 @@
-// @ts-check
 /** @type { import("ut-run").validationSet } */
 module.exports = function validation() {
     return [
