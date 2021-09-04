@@ -1,3 +1,7 @@
+## [7.16.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.16.0...v7.16.1) (2021-09-04)
+
+
+
 # [7.16.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.15.0...v7.16.0) (2021-09-02)
 
 
