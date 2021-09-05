@@ -1,3 +1,12 @@
+## [7.16.4](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.16.3...v7.16.4) (2021-09-05)
+
+
+### Bug Fixes
+
+* launch #UTCORE-121 ([0bc1261](https://github.com/softwaregroup-bg/ut-microservice/commit/0bc126109eec9123c2e7dd2223b29ceb27ff1a63)), closes [#UTCORE-121](https://github.com/softwaregroup-bg/ut-microservice/issues/UTCORE-121)
+
+
+
 ## [7.16.3](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.16.2...v7.16.3) (2021-09-05)
 
 
