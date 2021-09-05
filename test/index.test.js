@@ -1,1 +1,0 @@
-require('..').run({method: 'unit'});
