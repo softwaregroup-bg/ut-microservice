@@ -1,3 +1,12 @@
+# [7.17.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.16.4...v7.17.0) (2021-09-08)
+
+
+### Features
+
+* cache instead ([03f75ca](https://github.com/softwaregroup-bg/ut-microservice/commit/03f75ca37caeedb0df6b02ab22e0f4186f3261ee))
+
+
+
 ## [7.16.4](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.16.3...v7.16.4) (2021-09-05)
 
 

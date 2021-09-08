@@ -22,12 +22,48 @@ declare namespace microservice.foo.get {
   }
 }
 
+declare namespace microservice.session.delete$ {
+  export interface params {
+    id?: number;
+    data?: any;
+  }
+  export type result = any | null;
+}
+
+declare namespace microservice.session.get {
+  export interface params {
+    id?: number;
+    data?: any;
+  }
+  export interface result {
+    id?: number;
+    data?: any;
+  }
+}
+
+declare namespace microservice.session.set {
+  export interface params {
+    id?: number;
+    data?: any;
+  }
+  export interface result {
+    id?: number;
+    data?: any;
+  }
+}
+
 import ut from 'ut-run';
 export interface handlers<location = ''> {
   'microservice.foo.fetch'?: ut.handler<microservice.foo.fetch.params, microservice.foo.fetch.result, location>,
   microserviceFooFetch?: ut.handler<microservice.foo.fetch.params, microservice.foo.fetch.result, location>,
   'microservice.foo.get'?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>,
-  microserviceFooGet?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>
+  microserviceFooGet?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>,
+  'microservice.session.delete'?: ut.handler<microservice.session.delete$.params, microservice.session.delete$.result, location>,
+  microserviceSessionDelete?: ut.handler<microservice.session.delete$.params, microservice.session.delete$.result, location>,
+  'microservice.session.get'?: ut.handler<microservice.session.get.params, microservice.session.get.result, location>,
+  microserviceSessionGet?: ut.handler<microservice.session.get.params, microservice.session.get.result, location>,
+  'microservice.session.set'?: ut.handler<microservice.session.set.params, microservice.session.set.result, location>,
+  microserviceSessionSet?: ut.handler<microservice.session.set.params, microservice.session.set.result, location>
 }
 
 export interface errors {
