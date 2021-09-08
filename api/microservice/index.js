@@ -4,6 +4,7 @@ module.exports = function foo() {
         require('../lib/css'),
         require('./example.error.transform'),
         require('./example.parking.pay'),
+        require('./microservice.session'),
         require('./microservice.foo.fetch'),
         require('./microservice.foo.get'),
         require('./microservice.foo.process')

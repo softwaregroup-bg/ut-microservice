@@ -4,6 +4,40 @@ const test = {
 
 module.exports = () => ({
     // environments
+    common: {
+        foo: {
+            import: {
+                'db/microservice.session.set': {
+                    cache: {
+                        instead: 'set',
+                        ttl: 60000,
+                        key: ({id}) => ({
+                            id: String(id),
+                            segment: 'microservice.session'
+                        })
+                    }
+                },
+                'db/microservice.session.get': {
+                    cache: {
+                        instead: 'get',
+                        key: ({id}) => ({
+                            id: String(id),
+                            segment: 'microservice.session'
+                        })
+                    }
+                },
+                'db/microservice.session.delete': {
+                    cache: {
+                        instead: 'drop',
+                        key: ({id}) => ({
+                            id: String(id),
+                            segment: 'microservice.session'
+                        })
+                    }
+                }
+            }
+        }
+    },
     dev: {
         sqlStandard: true
     },
@@ -51,6 +85,7 @@ module.exports = () => ({
         orchestrator: joi.boolean(),
         gateway: joi.boolean(),
         test: joi.boolean(),
+        foo: joi.object(),
         sql: joi.object({
             exclude: joi.any()
         }),

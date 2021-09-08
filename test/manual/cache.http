@@ -1,0 +1,38 @@
+POST http://localhost:8090/rpc/ports/microservice/request
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "microservice.session.set",
+    "id": 1,
+    "params": [{
+        "id": 1,
+        "data": 123
+    }, {}]
+}
+
+###
+POST http://localhost:8090/rpc/ports/microservice/request
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "microservice.session.get",
+    "id": 1,
+    "params": [{
+        "id": 1
+    }, {}]
+}
+
+###
+POST http://localhost:8090/rpc/ports/microservice/request
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "microservice.session.delete",
+    "id": 1,
+    "params": [{
+        "id": 1
+    }, {}]
+}
