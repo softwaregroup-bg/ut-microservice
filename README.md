@@ -36,7 +36,7 @@ from the following places:
 ├── <a href="./index.js">index.js</a> (definition of layers)
 ├── <a href="./errors.js">errors.js</a> (error definitions loader)
 ├── <a href="./errors.json">errors.json</a> (error definitions)
-├──📁 <a href="./api/api">api</a>
+├──📁 <a href="./api">api</a>
 |   ├──📁 <a href="./api/lib">lib</a> (local reusable utility functions)
 |   |   └── fn.js (utility function)
 |   ├──📁 <a href="./api/microservice">microservice</a> (implementation of the API)
@@ -53,13 +53,14 @@ from the following places:
 |       ├── <a href="./api/sql/schema.js">schema.js</a> (configuration for the schema folder)
 |       ├── <a href="./api/sql/seed.js">seed.js</a> (configuration for the seed folder)
 |       └── <a href="./api/sql/standard.js">standard.js</a> (configuration for the standard folder)
+├──📁 <a href="./server">server</a> (back end test / debug)
+|   ├── <a href="./server/common.js">common.js</a> (common configuration)
+|   ├── <a href="./server/index.js">index.js</a> (microservice dependencies)
+|   └── <a href="./server/unit.js">unit.js</a> (unit test configuration)
 ├──📁 <a href="./test">test</a>
 |   ├──📁 <a href="./test/jobs">jobs</a> (definition of parallel jobs to run during tests)
 |   |   ├── <a href="./test/jobs/index.js">index.js</a> (index of all jobs)
 |   |   └── test.*.js (individual jobs)
-|   ├──📁 <a href="./test/server">server</a> (unit tests setup)
-|   |   ├── <a href="./test/server/index.js">index.js</a> (unit test dependencies)
-|   |   └── <a href="./test/server/unit.js">unit.js</a> (unit test configuration)
 |   ├──📁 <a href="./test/steps">steps</a>
 |   |   └── *.js (reusable test steps)
 |   └── <a href="./test/index.test.js">index.test.js</a> (unit tests startup script)
@@ -78,6 +79,10 @@ Front end is defined in the following folder structure:
 <pre>
 📁 ut-microservice
 └── 📁 <a href="./portal">portal</a>
+    ├──📁 <a href="./portal/backend">backend</a> (define optional backend handlers here)
+    |   ├── index.js (index of all backend handlers)
+    |   ├── ...
+    |   └── microservice.object.predicate.js (backend handler)
     ├──📁 <a href="./portal/component">component</a> (define UI components here)
     |  | <a href="./portal/component/index.js">index.js</a> (index of all components)
     |  | ...
@@ -86,6 +91,11 @@ Front end is defined in the following folder structure:
     |  | <a href="./portal/handle/index.js">index.js</a> (index of all handlers)
     |  | ...
     |  └ <a href="./portal/handle/microservice.foo.click.js">microservice.foo.click.js</a> (a single handler)
+    ├──📁 <a href="./portal/backend">object</a> (define objects with chisel)
+    |   ├── index.js (index of all objects)
+    |   ├── mock.js (index of all mocks)
+    |   ├── ...
+    |   └── foo.js (object definition)
     ├── <a href="./portal/config.js">config.js</a> (configuration defaults)
     ├── <a href="./portal/index.js">index.js</a> (layers)
     └── <a href="./portal/index.stories.js">index.stories.js</a> (storybook stories)

@@ -3,6 +3,9 @@ require('ut-run').run({
     main: () => [[{
         main: require.resolve('./'),
         pkg: require.resolve('./package.json')
+    }], [{
+        main: require.resolve('ut-db'),
+        pkg: require.resolve('ut-db/package.json')
     }]],
     config: {
         utMicroservice: true,

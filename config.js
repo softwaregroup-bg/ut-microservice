@@ -53,6 +53,7 @@ module.exports = () => ({
         gateway: true
     },
     types: {
+        adapter: true,
         gateway: true
     },
     doc: {
