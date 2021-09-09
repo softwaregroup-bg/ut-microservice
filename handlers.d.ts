@@ -1,80 +1,83 @@
-declare namespace microservice.foo.fetch {
+declare namespace microservice_foo_fetch {
   export interface params {
     color?: string;
   }
   export type result = ({
-    fooId?: number | string;
-    name: string;
     code: string;
     color: string;
+    fooId?: number | string;
+    name: string;
   })[];
 }
 
-declare namespace microservice.foo.get {
+declare namespace microservice_foo_get {
   export interface params {
     fooId?: number | string;
   }
   export interface result {
-    fooId?: number | string;
-    name: string;
     code: string;
     color: string;
+    fooId?: number | string;
+    name: string;
   }
 }
 
-declare namespace microservice.foo.process {
+declare namespace microservice_foo_process {
   export interface params {
     fooId?: number | string;
   }
-  export interface result {
-  
-  }
+  export interface result {}
 }
 
-declare namespace microservice.session.delete$ {
+declare namespace microservice_session_delete$ {
   export interface params {
-    id?: number;
     data?: any;
+    id?: number;
   }
   export type result = any | null;
 }
 
-declare namespace microservice.session.get {
+declare namespace microservice_session_get {
   export interface params {
-    id?: number;
     data?: any;
+    id?: number;
   }
   export interface result {
-    id?: number;
     data?: any;
+    id?: number;
   }
 }
 
-declare namespace microservice.session.set {
+declare namespace microservice_session_set {
   export interface params {
-    id?: number;
     data?: any;
+    id?: number;
   }
   export interface result {
-    id?: number;
     data?: any;
+    id?: number;
   }
 }
 
 import ut from 'ut-run';
+export interface ports<location = ''> {
+
+}
+interface methods extends ports {}
+
 export interface handlers<location = ''> {
-  'microservice.foo.fetch'?: ut.handler<microservice.foo.fetch.params, microservice.foo.fetch.result, location>,
-  microserviceFooFetch?: ut.handler<microservice.foo.fetch.params, microservice.foo.fetch.result, location>,
-  'microservice.foo.get'?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>,
-  microserviceFooGet?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>,
-  'microservice.foo.process'?: ut.handler<microservice.foo.process.params, microservice.foo.process.result, location>,
-  microserviceFooProcess?: ut.handler<microservice.foo.process.params, microservice.foo.process.result, location>,
-  'microservice.session.delete'?: ut.handler<microservice.session.delete$.params, microservice.session.delete$.result, location>,
-  microserviceSessionDelete?: ut.handler<microservice.session.delete$.params, microservice.session.delete$.result, location>,
-  'microservice.session.get'?: ut.handler<microservice.session.get.params, microservice.session.get.result, location>,
-  microserviceSessionGet?: ut.handler<microservice.session.get.params, microservice.session.get.result, location>,
-  'microservice.session.set'?: ut.handler<microservice.session.set.params, microservice.session.set.result, location>,
-  microserviceSessionSet?: ut.handler<microservice.session.set.params, microservice.session.set.result, location>
+  'microservice.foo.fetch'?: ut.handler<microservice_foo_fetch.params, microservice_foo_fetch.result, location>,
+  microserviceFooFetch?: ut.handler<microservice_foo_fetch.params, microservice_foo_fetch.result, location>,
+  'microservice.foo.get'?: ut.handler<microservice_foo_get.params, microservice_foo_get.result, location>,
+  microserviceFooGet?: ut.handler<microservice_foo_get.params, microservice_foo_get.result, location>,
+  'microservice.foo.process'?: ut.handler<microservice_foo_process.params, microservice_foo_process.result, location>,
+  microserviceFooProcess?: ut.handler<microservice_foo_process.params, microservice_foo_process.result, location>,
+  'microservice.session.delete'?: ut.handler<microservice_session_delete$.params, microservice_session_delete$.result, location>,
+  microserviceSessionDelete?: ut.handler<microservice_session_delete$.params, microservice_session_delete$.result, location>,
+  'microservice.session.get'?: ut.handler<microservice_session_get.params, microservice_session_get.result, location>,
+  microserviceSessionGet?: ut.handler<microservice_session_get.params, microservice_session_get.result, location>,
+  'microservice.session.set'?: ut.handler<microservice_session_set.params, microservice_session_set.result, location>,
+  microserviceSessionSet?: ut.handler<microservice_session_set.params, microservice_session_set.result, location>
 }
 
 export interface errors {
@@ -87,19 +90,19 @@ export interface errors {
   errorMicroserviceZoneNotFound: ut.error
 }
 
-import login from 'ut-login/handlers'
+import login, {loginTableTypes} from 'ut-login/handlers'
 interface methods extends login.handlers {}
 
-import core from 'ut-core/handlers'
+import core, {coreTableTypes} from 'ut-core/handlers'
 interface methods extends core.handlers {}
 
-import customer from 'ut-customer/handlers'
+import customer, {customerTableTypes} from 'ut-customer/handlers'
 interface methods extends customer.handlers {}
 
-import document from 'ut-document/handlers'
+import document, {documentTableTypes} from 'ut-document/handlers'
 interface methods extends document.handlers {}
 
-import user from 'ut-user/handlers'
+import user, {userTableTypes} from 'ut-user/handlers'
 interface methods extends user.handlers {}
 
 export type libFactory = ut.libFactory<methods, errors>
