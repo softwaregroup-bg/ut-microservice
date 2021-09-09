@@ -1,5 +1,5 @@
 import { app } from 'ut-portal/storybook';
-import core from 'ut-core/portal';
+import core from 'ut-core/portal/prime';
 import portal from './index';
 import mocks from './object/mock';
 
