@@ -1,3 +1,4 @@
+declare namespace microserviceTableTypes {}
 declare namespace db$microservice_foo_fetch {
   export interface params {
     color?: string | null;
@@ -145,12 +146,12 @@ export interface handlers<location = ''> {
 
 export interface errors {
   'error.microservice': ut.error,
-  'error.microservice.colorNotFound': ut.error,
-  errorMicroserviceColorNotFound: ut.error,
-  'error.microservice.fooNotFound': ut.error,
-  errorMicroserviceFooNotFound: ut.error,
-  'error.microservice.zoneNotFound': ut.error,
-  errorMicroserviceZoneNotFound: ut.error
+  'error.microservice.colorNotFound': ut.error<{ color: string | number }>,
+  errorMicroserviceColorNotFound: ut.error<{ color: string | number }>,
+  'error.microservice.fooNotFound': ut.error<{ fooId: string | number }>,
+  errorMicroserviceFooNotFound: ut.error<{ fooId: string | number }>,
+  'error.microservice.zoneNotFound': ut.error<{ zone: string | number }>,
+  errorMicroserviceZoneNotFound: ut.error<{ zone: string | number }>
 }
 
 import login, {loginTableTypes} from 'ut-login/handlers'
