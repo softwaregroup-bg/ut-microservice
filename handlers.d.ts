@@ -22,6 +22,15 @@ declare namespace microservice.foo.get {
   }
 }
 
+declare namespace microservice.foo.process {
+  export interface params {
+    fooId?: number | string;
+  }
+  export interface result {
+  
+  }
+}
+
 declare namespace microservice.session.delete$ {
   export interface params {
     id?: number;
@@ -58,6 +67,8 @@ export interface handlers<location = ''> {
   microserviceFooFetch?: ut.handler<microservice.foo.fetch.params, microservice.foo.fetch.result, location>,
   'microservice.foo.get'?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>,
   microserviceFooGet?: ut.handler<microservice.foo.get.params, microservice.foo.get.result, location>,
+  'microservice.foo.process'?: ut.handler<microservice.foo.process.params, microservice.foo.process.result, location>,
+  microserviceFooProcess?: ut.handler<microservice.foo.process.params, microservice.foo.process.result, location>,
   'microservice.session.delete'?: ut.handler<microservice.session.delete$.params, microservice.session.delete$.result, location>,
   microserviceSessionDelete?: ut.handler<microservice.session.delete$.params, microservice.session.delete$.result, location>,
   'microservice.session.get'?: ut.handler<microservice.session.get.params, microservice.session.get.result, location>,
