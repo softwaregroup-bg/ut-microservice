@@ -1,3 +1,25 @@
+declare namespace db$microservice_foo_fetch {
+  export interface params {
+    color?: string | null;
+  }
+  export type result = any;
+}
+
+declare namespace db$microservice_foo_get {
+  export interface params {
+    fooId?: number | string;
+  }
+  export type result = any;
+}
+
+declare namespace db$microservice_foo_merge {
+  export interface params {
+    foo?: microserviceTableTypes.fooMergeTT.params[];
+    meta?: coreTableTypes.metaDataTT.params[];
+  }
+  export type result = any;
+}
+
 declare namespace microservice_foo_fetch {
   export interface params {
     color?: string;
@@ -59,9 +81,50 @@ declare namespace microservice_session_set {
   }
 }
 
+declare namespace microserviceTableTypes.fooMergeTT {
+  export interface params {
+    /**
+     * code of the item, should be unique in the type
+     */
+    code?: string | null;
+    /**
+     * code of the item, should be unique in the type
+     */
+    color?: string | null;
+    /**
+     * name of the item
+     */
+    name?: string | null;
+  }
+  
+}
+
+declare namespace microserviceTableTypes.fooTT {
+  export interface params {
+    color?: string | null;
+    fooId?: number | string;
+  }
+  
+}
+
+declare namespace microserviceTableTypes.fooTTU {
+  export interface params {
+    color?: string | null;
+    colorUpdated?: boolean | null;
+    fooId?: number | string;
+    fooIdUpdated?: boolean | null;
+  }
+  
+}
+
 import ut from 'ut-run';
 export interface ports<location = ''> {
-
+  'db/microservice.foo.fetch'?: ut.handler<db$microservice_foo_fetch.params, db$microservice_foo_fetch.result, location>,
+  db$microserviceFooFetch?: ut.handler<db$microservice_foo_fetch.params, db$microservice_foo_fetch.result, location>,
+  'db/microservice.foo.get'?: ut.handler<db$microservice_foo_get.params, db$microservice_foo_get.result, location>,
+  db$microserviceFooGet?: ut.handler<db$microservice_foo_get.params, db$microservice_foo_get.result, location>,
+  'db/microservice.foo.merge'?: ut.handler<db$microservice_foo_merge.params, db$microservice_foo_merge.result, location>,
+  db$microserviceFooMerge?: ut.handler<db$microservice_foo_merge.params, db$microservice_foo_merge.result, location>
 }
 interface methods extends ports {}
 
