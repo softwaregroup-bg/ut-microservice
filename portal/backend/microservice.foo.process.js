@@ -5,7 +5,7 @@ export default () => ({
         return await super.send(request, $meta);
     },
     async 'microservice.foo.process.response.receive'(response, $meta) {
-        if (response?.payload?.jsonrpc) response = await super.receive(response, $meta);
+        if (response && response?.payload && response?.payload?.jsonrpc) response = await super.receive(response, $meta);
         // mutate the response or $meta
         return response;
     }
