@@ -2,7 +2,10 @@ const test = {
     sqlStandard: true
 };
 
-// const segment = 'microservice.session';
+const key = ({id}) => ({
+    id: String(id),
+    segment: 'microservice.session'
+});
 
 module.exports = () => ({
     // environments
@@ -11,14 +14,21 @@ module.exports = () => ({
             import: {
                 'db/microservice.session.set': {
                     cache: {
+                        instead: 'set',
+                        ttl: 60000,
+                        key
                     }
                 },
                 'db/microservice.session.get': {
                     cache: {
+                        instead: 'get',
+                        key
                     }
                 },
                 'db/microservice.session.delete': {
                     cache: {
+                        instead: 'drop',
+                        key
                     }
                 }
             }
