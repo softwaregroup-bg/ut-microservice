@@ -146,12 +146,12 @@ export interface handlers<location = ''> {
 
 export interface errors {
   'error.microservice': ut.error,
-  'error.microservice.colorNotFound': ut.error<{ color: string | number }>,
-  errorMicroserviceColorNotFound: ut.error<{ color: string | number }>,
-  'error.microservice.fooNotFound': ut.error<{ fooId: string | number }>,
-  errorMicroserviceFooNotFound: ut.error<{ fooId: string | number }>,
-  'error.microservice.zoneNotFound': ut.error<{ zone: string | number }>,
-  errorMicroserviceZoneNotFound: ut.error<{ zone: string | number }>
+  'error.microservice.colorNotFound': ut.errorParam<{ color: string | number }>,
+  errorMicroserviceColorNotFound: ut.errorParam<{ color: string | number }>,
+  'error.microservice.fooNotFound': ut.errorParam<{ fooId: string | number }>,
+  errorMicroserviceFooNotFound: ut.errorParam<{ fooId: string | number }>,
+  'error.microservice.zoneNotFound': ut.errorParam<{ zone: string | number }>,
+  errorMicroserviceZoneNotFound: ut.errorParam<{ zone: string | number }>
 }
 
 import login, {loginTableTypes} from 'ut-login/handlers'
