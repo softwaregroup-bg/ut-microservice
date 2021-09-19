@@ -4,4 +4,4 @@ export default function backend() {
         () => ({namespace: ['microservice']}),
         require('./microservice.foo.process').default
     ];
-};
+}

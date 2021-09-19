@@ -13,7 +13,8 @@ export const fooMock = {
     'microservice.foo.fetch': ({filterBy: {tenant}}) => fooList.filter(foo => tenant == null || String(foo.tenant) === String(tenant)),
     'microservice.foo.get': findFoo,
     'microservice.foo.add': foo => {
-        const result = {...foo, tenant: 1, fooId: ++lastFooId};
+        lastFooId += 1;
+        const result = {...foo, tenant: 1, fooId: lastFooId};
         fooList.push(result);
         return result;
     },

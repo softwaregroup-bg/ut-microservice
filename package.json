@@ -11,7 +11,7 @@
   "dependencies": {},
   "devDependencies": {
     "tap": "^15.0.9",
-    "ut-cache": "^6.0.0",
+    "ut-cache": "^6.0.1",
     "ut-core": "^8.16.7",
     "ut-customer": "^9.7.14",
     "ut-db": "^8.5.1",

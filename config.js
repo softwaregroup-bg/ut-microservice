@@ -2,6 +2,8 @@ const test = {
     sqlStandard: true
 };
 
+const segment = 'microservice.session';
+
 module.exports = () => ({
     // environments
     common: {
@@ -13,7 +15,7 @@ module.exports = () => ({
                         ttl: 60000,
                         key: ({id}) => ({
                             id: String(id),
-                            segment: 'microservice.session'
+                            segment
                         })
                     }
                 },
@@ -22,7 +24,7 @@ module.exports = () => ({
                         instead: 'get',
                         key: ({id}) => ({
                             id: String(id),
-                            segment: 'microservice.session'
+                            segment
                         })
                     }
                 },
@@ -31,7 +33,7 @@ module.exports = () => ({
                         instead: 'drop',
                         key: ({id}) => ({
                             id: String(id),
-                            segment: 'microservice.session'
+                            segment
                         })
                     }
                 }
