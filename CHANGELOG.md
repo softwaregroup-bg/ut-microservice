@@ -1,3 +1,12 @@
+## [7.17.10](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.17.9...v7.17.10) (2021-09-19)
+
+
+### Bug Fixes
+
+* sonar loop ([#2](https://github.com/softwaregroup-bg/ut-microservice/issues/2)) ([ecb15ff](https://github.com/softwaregroup-bg/ut-microservice/commit/ecb15fff2b4cf900bd02ace294a680c473dbaa4e))
+
+
+
 ## [7.17.9](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.17.8...v7.17.9) (2021-09-19)
 
 
