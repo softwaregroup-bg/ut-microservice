@@ -13,8 +13,8 @@ module.exports = {
         adapter: true
     },
     utCore: true,
-    utCustomer: true,
-    utDocument: true,
-    utUser: true,
+    utCustomer: {test: false},
+    utDocument: {test: false},
+    utUser: {test: false},
     utMicroservice: true
 };
