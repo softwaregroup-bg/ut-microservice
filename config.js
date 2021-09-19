@@ -8,7 +8,7 @@ module.exports = () => ({
     // environments
     common: {
         foo: {
-            import: {
+            imp: {
                 'db/microservice.session.set': {
                     cache: {
                         instead: 'set',
