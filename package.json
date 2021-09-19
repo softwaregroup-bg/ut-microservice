@@ -15,7 +15,7 @@
     "inquirer-autocomplete-prompt": "1.2.0",
     "tap": "^15.0.9",
     "ut-cache": "^6.0.1",
-    "ut-core": "^8.16.10",
+    "ut-core": "^8.16.11",
     "ut-customer": "^9.7.18",
     "ut-db": "^8.5.1",
     "ut-dispatch-db": "^1.4.1",
