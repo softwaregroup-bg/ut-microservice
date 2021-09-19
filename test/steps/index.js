@@ -2,7 +2,7 @@ module.exports = [
     function steps({callSite}) {
         return {
             'steps.microservice.foo.list': (params = {}) => ({
-                ...callSite?.(),
+                ...callSite(),
                 method: 'microservice.foo.fetch',
                 name: 'fooList',
                 params,
