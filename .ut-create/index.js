@@ -32,6 +32,8 @@ module.exports = {
         files: `{${[
             'api/**/*.js',
             'portal/**/*.js',
+            'portal/**/*.js',
+            'server/**/*.js',
             'test/**/*.js',
             'api/**/*.sql',
             'api/**/*.yaml',
@@ -43,13 +45,14 @@ module.exports = {
             'errors.json',
             'index.js',
             'package.json',
+            'test/manual/*.http',
             'README.md'
         ].join(',')}}`,
         replace: [[
-            /(ut|"|'|-|\[|\/)microservice/g,
+            /(ut|"|'|-|\[|\/|db\$)microservice/g,
             `$1${camelCase(id)}`
         ], [
-            /microservice(\.|\(|Color|Dispatch|Foo|<)/g,
+            /microservice(\.|\(|Color|Dispatch|Foo|Dropdown|<)/g,
             `${camelCase(id)}$1`
         ], [
             /(ut|"|'|fk|pk|error)Microservice/g,
