@@ -1,7 +1,11 @@
 import { app } from 'ut-portal/storybook';
 import core from 'ut-core/portal/prime';
-import portal from './index';
-import mocks from './object/mock';
+import coreDropdown from 'ut-core/model/dropdown';
+import customerDropdown from 'ut-customer/model/dropdown';
+
+import microservice from './index';
+import microserviceMock from './mock';
+import fooMock from './fooMock';
 
 export default {
     title: 'Microservice'
@@ -17,10 +21,13 @@ const page = app({
     utMicroservice: true,
     utCore: true
 }, {
-    ...mocks()
+    ...coreDropdown,
+    ...customerDropdown,
+    ...fooMock
 }, [
     core(),
-    portal()
+    microservice(),
+    microserviceMock()
 ]);
 
 export const FooBrowse = page('microservice.foo.browse');

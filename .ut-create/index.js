@@ -33,6 +33,7 @@ module.exports = {
             'api/**/*.js',
             'portal/**/*.js',
             'portal/**/*.js',
+            'model/**/*.js',
             'server/**/*.js',
             'test/**/*.js',
             'api/**/*.sql',
@@ -52,7 +53,7 @@ module.exports = {
             /(ut|"|'|-|\[|\/|db\$)microservice/g,
             `$1${camelCase(id)}`
         ], [
-            /microservice(\.|\(|Color|Dispatch|Foo|Dropdown|<)/g,
+            /microservice(\.|Tree|Color|Dispatch|Foo|Dropdown|<)/g,
             `${camelCase(id)}$1`
         ], [
             /(ut|"|'|fk|pk|error)Microservice/g,

@@ -53,6 +53,12 @@ from the following places:
 |       ├── <a href="./api/sql/schema.js">schema.js</a> (configuration for the schema folder)
 |       ├── <a href="./api/sql/seed.js">seed.js</a> (configuration for the seed folder)
 |       └── <a href="./api/sql/standard.js">standard.js</a> (configuration for the standard folder)
+├──📁 <a href="./model">model</a> (define data model and mocks)
+|   ├── index.js (index of all models)
+|   ├── mock.js (index of all mocks)
+|   ├── ...
+|   ├── foo.js (model definition)
+|   └── foo.mock.js (mock definition)
 ├──📁 <a href="./server">server</a> (back end test / debug)
 |   ├── <a href="./server/common.js">common.js</a> (common configuration)
 |   ├── <a href="./server/index.js">index.js</a> (microservice dependencies)
@@ -91,11 +97,6 @@ Front end is defined in the following folder structure:
     |  | <a href="./portal/handle/index.js">index.js</a> (index of all handlers)
     |  | ...
     |  └ <a href="./portal/handle/microservice.foo.click.js">microservice.foo.click.js</a> (a single handler)
-    ├──📁 <a href="./portal/backend">object</a> (define objects with chisel)
-    |   ├── index.js (index of all objects)
-    |   ├── mock.js (index of all mocks)
-    |   ├── ...
-    |   └── foo.js (object definition)
     ├── <a href="./portal/config.js">config.js</a> (configuration defaults)
     ├── <a href="./portal/index.js">index.js</a> (layers)
     └── <a href="./portal/index.stories.js">index.stories.js</a> (storybook stories)

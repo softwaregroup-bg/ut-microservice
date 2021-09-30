@@ -15,18 +15,18 @@
     "inquirer-autocomplete-prompt": "1.2.0",
     "tap": "^15.0.9",
     "ut-cache": "^6.0.1",
-    "ut-core": "^8.16.11",
-    "ut-customer": "^9.7.18",
+    "ut-core": "^8.17.2",
+    "ut-customer": "^9.7.21",
     "ut-db": "^8.5.1",
     "ut-dispatch-db": "^1.4.1",
     "ut-document": "^8.4.1",
     "ut-login": "^7.15.1",
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^7.40.0",
-    "ut-portal": "^7.30.3",
+    "ut-portal": "^7.32.4",
     "ut-run": "^10.64.3",
     "ut-tools": "^6.39.0",
-    "ut-user": "^10.18.7"
+    "ut-user": "^10.19.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
@@ -38,7 +38,7 @@
     "redux": "^4.1.1",
     "ut-front-devextreme": "^1.38.1",
     "ut-dispatch-db": "^1.4.1",
-    "ut-portal": "^7.30.3",
+    "ut-portal": "^7.32.4",
     "ut-run": "^10.64.3"
   },
   "description": "UnderTree standard microservice",

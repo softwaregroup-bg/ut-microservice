@@ -1,4 +1,4 @@
-export const tree = joi => ({
+module.exports = ({joi}) => ({
     joi,
     subject: 'microservice',
     object: 'tree',
@@ -18,5 +18,3 @@ export const tree = joi => ({
         }
     }
 });
-
-export const treeMock = {};

@@ -7,7 +7,7 @@ export default () => function utMicroservice() {
         config: require('./config'),
         browser: () => [
             backend,
-            component,
+            ...component,
             handle
         ]
     };

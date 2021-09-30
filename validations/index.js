@@ -1,6 +1,7 @@
 /** @type { import("ut-run").validationSet } */
 module.exports = function validation() {
     return [
+        require('ut-function.common-joi'),
         require('./foo'),
         require('./microservice.foo.get'),
         require('./microservice.foo.fetch'),
