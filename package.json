@@ -9,6 +9,7 @@
     ]
   },
   "dependencies": {
+    "ut-model": "^7.1.2",
     "ut-function.common-joi": "^1.2.1"
   },
   "devDependencies": {

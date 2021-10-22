@@ -34,7 +34,7 @@ export default ({
                     <Explorer
                         fetch={tenant != null && explorerFetch}
                         keyField='fooId'
-                        properties={properties}
+                        schema={{properties}}
                         columns={columns}
                         details={details}
                         filter={{tenant}}

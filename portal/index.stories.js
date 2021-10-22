@@ -1,10 +1,11 @@
 import { app } from 'ut-portal/storybook';
-import core from 'ut-core/portal/prime';
+import core from 'ut-core/portal';
 import coreDropdown from 'ut-core/model/dropdown';
 import customerDropdown from 'ut-customer/model/dropdown';
 
 import microservice from './index';
 import microserviceMock from './mock';
+import microserviceDropdown from '../model/dropdown';
 import fooMock from './fooMock';
 
 export default {
@@ -23,6 +24,7 @@ const page = app({
 }, {
     ...coreDropdown,
     ...customerDropdown,
+    ...microserviceDropdown,
     ...fooMock
 }, [
     core(),

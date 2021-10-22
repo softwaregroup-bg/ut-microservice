@@ -1,4 +1,4 @@
-import chisel from 'ut-portal/chisel';
+import {component} from 'ut-model';
 
 import fooEdit from './fooEdit';
 import fooBrowse from './microservice.foo.browse';
@@ -8,8 +8,7 @@ import fooOpen from './microservice.foo.open';
 import model from '../../model';
 
 /** @type { import("../../handlers").pageSet } */
-export default chisel.component(model, [
-    () => ({ namespace: 'component/microservice' }),
+export default component(model, [
     fooEdit,
     fooBrowse,
     fooDemo,

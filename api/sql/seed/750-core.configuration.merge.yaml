@@ -1,0 +1,4 @@
+configuration:
+  - key: utMicrosservice.configKey
+    value: configValue
+    description: Demo for configuration

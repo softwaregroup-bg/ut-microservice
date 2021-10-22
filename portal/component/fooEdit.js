@@ -9,7 +9,7 @@ function FooEditor({submit, load}) {
     const {handleSubmit, reset, control} = useForm();
     React.useEffect(() => {
         (async() => reset(load ? await load() : {}))();
-    }, [load]);
+    }, [reset, load]);
     return (
         <div className="p-d-flex p-jc-center">
             <div className="card">

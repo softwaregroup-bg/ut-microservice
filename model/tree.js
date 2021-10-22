@@ -1,20 +1,28 @@
+/** @type { import('ut-model').model<'microservice', 'tree'> } */
 module.exports = ({joi}) => ({
-    joi,
     subject: 'microservice',
     object: 'tree',
     browser: {
         navigator: true
     },
-    properties: {
+    schema: {
     },
     cards: {
         browse: {
-            title: 'Trees',
-            properties: ['treeName', 'treeDescription']
+            label: 'Trees',
+            widgets: ['tree.treeName', 'tree.treeDescription']
         },
         edit: {
-            title: 'Edit tree',
-            properties: ['treeName', 'treeDescription']
+            label: 'Edit tree',
+            widgets: ['tree.treeName', 'tree.treeDescription']
+        }
+    },
+    reports: {
+        list: {
+            validation: joi?.object(),
+            params: ['tree.treeName'],
+            columns: ['tree.treeName'],
+            fetch: 'microservice.tree.report'
         }
     }
 });
