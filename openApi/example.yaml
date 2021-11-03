@@ -11,8 +11,6 @@ paths:
       summary: Parking payment
       description: Pay parking in a city zone
       operationId: example.parking.pay
-      security:
-        - basicAuth: []
       x-ut-errorTransform: example.error.transform
       consumes:
       - application/json
@@ -49,10 +47,12 @@ paths:
                   - amount
             required:
               - details
+security:
+  - jwt: []
 securityDefinitions:
   basicAuth:
     type: basic
   jwt:
-    type: "apiKey"
-    name: "access_token"
-    in: "header"
+    type: apiKey
+    name: authorization
+    in: header
