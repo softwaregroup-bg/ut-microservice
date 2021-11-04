@@ -47,3 +47,12 @@ paths:
                   - amount
             required:
               - details
+security:
+  - jwt: []
+securityDefinitions:
+  basicAuth:
+    type: basic
+  jwt:
+    type: apiKey
+    name: authorization
+    in: header
