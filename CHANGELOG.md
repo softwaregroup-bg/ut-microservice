@@ -1,3 +1,12 @@
+## [7.17.13](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.17.12...v7.17.13) (2021-11-04)
+
+
+### Bug Fixes
+
+* add Swagger securityDefinitions ([ca2e780](https://github.com/softwaregroup-bg/ut-microservice/commit/ca2e780f3b52b90a9d2113577b88dfcaf3af3666))
+
+
+
 ## [7.17.12](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.17.11...v7.17.12) (2021-10-22)
 
 
