@@ -145,6 +145,8 @@ export interface handlers<location = ''> {
 }
 
 export interface errors {
+  'error.example.auth': ut.error,
+  errorExampleAuth: ut.error,
   'error.microservice': ut.error,
   'error.microservice.colorNotFound': ut.errorParam<{ color: string | number }>,
   errorMicroserviceColorNotFound: ut.errorParam<{ color: string | number }>,

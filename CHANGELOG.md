@@ -1,3 +1,12 @@
+# [7.18.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.17.13...v7.18.0) (2021-11-24)
+
+
+### Features
+
+* openapi improvements ([8c8591b](https://github.com/softwaregroup-bg/ut-microservice/commit/8c8591bfaaba0cfca31f29aec73bb8e5394e2d1a))
+
+
+
 ## [7.17.13](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.17.12...v7.17.13) (2021-11-04)
 
 
