@@ -2,5 +2,9 @@
     "microservice":"Microservice error",
     "microservice.zoneNotFound": "Zone '{zone}' not found",
     "microservice.fooNotFound": "Foo ({fooId}) not found",
-    "microservice.colorNotFound": "Color {color} not found"
+    "microservice.colorNotFound": "Color {color} not found",
+    "example.auth": {
+        "statusCode": 401,
+        "message": "Failed authentication"
+    }
 }

@@ -1,0 +1,18 @@
+### Failed authentication
+POST http://localhost:8090/parking/pay
+Content-Type: application/json
+
+{
+    "city": "Sofia",
+    "zone": "green"
+}
+
+### Passed authentication
+POST http://localhost:8090/parking/pay
+Content-Type: application/json
+Authorization: Bearer secret-token
+
+{
+    "city": "Sofia",
+    "zone": "green"
+}

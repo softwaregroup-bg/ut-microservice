@@ -6,12 +6,17 @@ info:
 paths:
   /parking/pay:
     post:
+      security: [] # optionally turn off security check in ut-bus
       tags:
         - parking
       summary: Parking payment
       description: Pay parking in a city zone
       operationId: example.parking.pay
-      x-ut-errorTransform: example.error.transform
+      x-options: # pass options to the hapi route.options
+        payload:
+          parse: false
+      x-ut-receive: example.request.receive # optional receive handler
+      x-ut-errorTransform: example.error.transform # optional error handler
       consumes:
       - application/json
       parameters:
