@@ -1,3 +1,12 @@
+## [7.18.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.18.0...v7.18.1) (2022-02-11)
+
+
+### Bug Fixes
+
+* typo ([d38efd3](https://github.com/softwaregroup-bg/ut-microservice/commit/d38efd368ffd9f5df9149ce9d1a5106bb7c9b30e))
+
+
+
 # [7.18.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.17.13...v7.18.0) (2021-11-24)
 
 
