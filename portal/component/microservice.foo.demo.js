@@ -31,7 +31,7 @@ export default ({
                     ...options.props.url && {$http: {uri: options.props.url}}
                 }, utMeta());
             };
-            return function fooDemo(params) {
+            return function FooDemo(params) {
                 // @ts-ignore
                 const pages = useSelector(({pages}) => pages);
                 return <div>
