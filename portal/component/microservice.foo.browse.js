@@ -1,6 +1,6 @@
 import React from 'react';
-import Explorer from 'ut-front-devextreme/core/Explorer';
-import Navigator from 'ut-front-devextreme/core/Navigator';
+import Explorer from 'ut-prime/core/Explorer';
+import Navigator from 'ut-prime/core/Navigator';
 
 /** @type { import("../../handlers").pageFactory } */
 export default ({

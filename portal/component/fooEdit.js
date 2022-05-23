@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button, InputText } from 'ut-front-devextreme/core/prime';
-import useForm from 'ut-front-devextreme/core/hooks/useForm';
-import Controller from 'ut-front-devextreme/core/Controller';
+import { Button, InputText } from 'ut-prime/core/prime';
+import useForm from 'ut-prime/core/hooks/useForm';
+import Controller from 'ut-prime/core/Controller';
 
 function FooEditor({submit, load}) {
     const {handleSubmit, reset, control} = useForm();

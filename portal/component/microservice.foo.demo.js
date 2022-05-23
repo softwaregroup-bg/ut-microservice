@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { FileUpload } from 'ut-front-devextreme/core/prime';
+import { FileUpload } from 'ut-prime/core/prime';
 
 /** @type { import("../../handlers").pageFactory } */
 export default ({
