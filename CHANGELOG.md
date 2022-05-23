@@ -1,3 +1,12 @@
+## [7.19.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.18.1...v7.19.1) (2022-05-23)
+
+
+### Bug Fixes
+
+* deps ([3fcbc1d](https://github.com/softwaregroup-bg/ut-microservice/commit/3fcbc1d2c20ac87bcda0cdbd9d5626d612c1df99))
+
+
+
 ## [7.18.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.18.0...v7.18.1) (2022-02-11)
 
 
