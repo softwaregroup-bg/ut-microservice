@@ -91,6 +91,8 @@ of the files does:
 
    ```js
    // ut-microservice/api/subject/index.js
+   const template = require('ut-function.xjx');
+
    module.exports = async function subject({vfs}) {
        return [
            await template(vfs, __dirname),
