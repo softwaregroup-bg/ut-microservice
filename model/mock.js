@@ -1,3 +1,3 @@
 module.exports = {
-    microserviceTree: require('./tree.mock')
+    microserviceBar: require('./bar.mock')
 };

@@ -7,7 +7,7 @@ import fooNew from './microservice.foo.new';
 import fooOpen from './microservice.foo.open';
 import model from '../../model';
 
-/** @type { import("../../handlers").pageSet } */
+/** @type { import("../../handlers").handlerSet[] } */
 export default component(model, [
     fooEdit,
     fooBrowse,

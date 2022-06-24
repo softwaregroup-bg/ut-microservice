@@ -1,8 +1,14 @@
 {
     "cSpell.words": [
+        "ISNULL",
         "kustomize",
         "markdownlint",
+        "NVARCHAR",
+        "PROCID",
         "Qube",
-        "transpiled"
+        "RAISERROR",
+        "TRANCOUNT",
+        "transpiled",
+        "VARCHAR"
     ]
 }

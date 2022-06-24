@@ -1,0 +1,853 @@
+{
+    "info": {
+        "description": "UT Microservice API",
+        "title": "microservice",
+        "version": "7.19.2"
+    },
+    "paths": {
+        "/rpc/microservice/foo/fetch": {
+            "post": {
+                "description": "microservice.foo.fetch",
+                "operationId": "microservice.foo.fetch",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.fetch"
+                                    ],
+                                    "example": "microservice.foo.fetch",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "color": {
+                                            "maxLength": 50,
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.fetch"
+                                    ],
+                                    "example": "microservice.foo.fetch",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "items": {
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "code": {
+                                                "maxLength": 200,
+                                                "type": "string"
+                                            },
+                                            "color": {
+                                                "maxLength": 50,
+                                                "type": "string"
+                                            },
+                                            "fooId": {
+                                                "oneOf": [
+                                                    {
+                                                        "type": "integer"
+                                                    },
+                                                    {
+                                                        "pattern": "^[0-9]{1,19}$",
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            },
+                                            "name": {
+                                                "maxLength": 200,
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "name",
+                                            "code",
+                                            "color"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Foo search",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/foo/get": {
+            "post": {
+                "description": "microservice.foo.get",
+                "operationId": "microservice.foo.get",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.get"
+                                    ],
+                                    "example": "microservice.foo.get",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "fooId": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "integer"
+                                                },
+                                                {
+                                                    "pattern": "^[0-9]{1,19}$",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.get"
+                                    ],
+                                    "example": "microservice.foo.get",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "code": {
+                                            "maxLength": 200,
+                                            "type": "string"
+                                        },
+                                        "color": {
+                                            "maxLength": 50,
+                                            "type": "string"
+                                        },
+                                        "fooId": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "integer"
+                                                },
+                                                {
+                                                    "pattern": "^[0-9]{1,19}$",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        },
+                                        "name": {
+                                            "maxLength": 200,
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "name",
+                                        "code",
+                                        "color"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Foo get",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/foo/process": {
+            "post": {
+                "description": "microservice.foo.process",
+                "operationId": "microservice.foo.process",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.process"
+                                    ],
+                                    "example": "microservice.foo.process",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "fooId": {
+                                            "oneOf": [
+                                                {
+                                                    "type": "integer"
+                                                },
+                                                {
+                                                    "pattern": "^[0-9]{1,19}$",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.process"
+                                    ],
+                                    "example": "microservice.foo.process",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": true,
+                                    "properties": {},
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Foo process",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/session/delete": {
+            "post": {
+                "description": "microservice.session.delete",
+                "operationId": "microservice.session.delete",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.session.delete"
+                                    ],
+                                    "example": "microservice.session.delete",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "data": {},
+                                        "id": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.session.delete"
+                                    ],
+                                    "example": "microservice.session.delete",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "enum": [
+                                        null
+                                    ],
+                                    "example": null,
+                                    "nullable": true
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Session delete",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/session/get": {
+            "post": {
+                "description": "microservice.session.get",
+                "operationId": "microservice.session.get",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.session.get"
+                                    ],
+                                    "example": "microservice.session.get",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "data": {},
+                                        "id": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.session.get"
+                                    ],
+                                    "example": "microservice.session.get",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "data": {},
+                                        "id": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Session get",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/session/set": {
+            "post": {
+                "description": "microservice.session.set",
+                "operationId": "microservice.session.set",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.session.set"
+                                    ],
+                                    "example": "microservice.session.set",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "data": {},
+                                        "id": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.session.set"
+                                    ],
+                                    "example": "microservice.session.set",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "data": {},
+                                        "id": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Session set",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        }
+    },
+    "swagger": "2.0",
+    "tags": [
+        {
+            "description": "utMicroservice.validation",
+            "name": "microservice"
+        }
+    ]
+}

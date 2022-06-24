@@ -38,7 +38,7 @@ export default ({
                         columns={columns}
                         details={details}
                         filter={{tenant}}
-                        actions={[{
+                        toolbar={[{
                             title: 'Create',
                             permission: 'microservice.foo.add',
                             action: () => handleTabShow(component$microserviceFooNew, utMeta())

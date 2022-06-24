@@ -77,6 +77,9 @@ module.exports = () => ({
         orchestrator: true,
         gateway: true
     },
+    api: {
+        gateway: true
+    },
     validation: ({joi}) => joi.object({
         adapter: joi.boolean(),
         orchestrator: joi.boolean(),

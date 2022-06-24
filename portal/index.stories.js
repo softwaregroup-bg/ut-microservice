@@ -14,11 +14,6 @@ export default {
 
 const page = app({
     implementation: 'microservice',
-    utBrowser: {
-        backend: {
-            url: 'https://localhost:4006'
-        }
-    },
     utMicroservice: true,
     utCore: true
 }, {
@@ -36,7 +31,7 @@ export const FooBrowse = page('microservice.foo.browse');
 export const FooDemo = page('microservice.foo.demo');
 export const FooOpen = page('microservice.foo.open', 1);
 export const FooNew = page('microservice.foo.new');
-export const TreeBrowse = page('microservice.tree.browse');
-export const TreeOpen = page('microservice.tree.open', 101);
-export const TreeNew = page('microservice.tree.new');
-export const TreeReport = page('microservice.tree.report', 'list');
+export const BarBrowse = page('microservice.bar.browse');
+export const BarOpen = page('microservice.bar.open', 1);
+export const BarNew = page('microservice.bar.new');
+export const BarReport = page('microservice.bar.report', 'list');

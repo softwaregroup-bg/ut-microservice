@@ -17,10 +17,9 @@ npm init ut ms
 - [Continuous Integration (Jenkins)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/)
   [![Build Status](https://jenkins.softwaregroup.com/buildStatus/icon?job=ut/ut-microservice/master)](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/)
 - [Storybook](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/Storybook/)
-- [Documentation](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/Documentation/)
-- [Static Code Analysis (SonarQube)](https://sonar.softwaregroup.com/dashboard?id=ut-microservice%3Aorigin%2Fmaster)
-- [Error aggregator (Sentry)](http://sentry.k8s.softwaregroup-bg.com/organizations/sentry/projects/ut-microservice)
-- [Component library (Chromatic)](https://www.chromatic.com/library?appId=6064ae0e1e4a6000217a7ed4)
+- [API Docs](https://jenkins.softwaregroup.com/view/master/job/ut/job/ut-microservice/job/master/Documentation/)
+- [Static Code Analysis (SonarQube)](https://sca.softwaregroup.com/dashboard?id=ut-microservice)
+- [UI builds (Chromatic)](https://www.chromatic.com/builds?appId=6064ae0e1e4a6000217a7ed4)
 
 ## Back end
 
@@ -84,6 +83,17 @@ Front end is defined in the following folder structure:
 <!-- markdownlint-disable MD033 MD013 MD037 -->
 <pre>
 📁 ut-microservice
+├── 📁 <a href="./help">help</a> (user guide content)
+|   ├── <a href="./help/_category_.yaml">_category_.yaml</a> (title and index configuration)
+|   ├── ...
+|   └── <a href="./help/microservice.tree.open.md">microservice.tree.open.md</a> (help pages)
+├── 📁 <a href="./model">model</a> (define data model and mocks here)
+|   ├── <a href="./model/index.js">index.js</a> (index of all models)
+|   ├── <a href="./model/mock.js">mock.js</a> (index of all mocks)
+|   ├── <a href="./model/dropdown.js">dropdown.js</a> (dropdowns mock)
+|   ├── ...
+|   ├── <a href="./model/bar.js">bar.js</a> (model definition)
+|   └── <a href="./model/bar.mock.js">bar.mock.js</a> (mock definition)
 └── 📁 <a href="./portal">portal</a>
     ├──📁 <a href="./portal/backend">backend</a> (define optional backend handlers here)
     |   ├── index.js (index of all backend handlers)
@@ -99,7 +109,8 @@ Front end is defined in the following folder structure:
     |  └ <a href="./portal/handle/microservice.foo.click.js">microservice.foo.click.js</a> (a single handler)
     ├── <a href="./portal/config.js">config.js</a> (configuration defaults)
     ├── <a href="./portal/index.js">index.js</a> (layers)
-    └── <a href="./portal/index.stories.js">index.stories.js</a> (storybook stories)
+    ├── <a href="./portal/index.stories.js">index.stories.js</a> (storybook)
+    └── <a href="./portal/mock.js">mock.js</a> (mock loader)
 </pre>
 <!-- markdownlint-restore -->
 
