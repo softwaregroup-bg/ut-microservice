@@ -6,6 +6,943 @@
     },
     "openapi": "3.0.0",
     "paths": {
+        "/rpc/microservice/bar/add": {
+            "post": {
+                "description": "microservice.bar.add",
+                "operationId": "microservice.bar.add",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "id": {
+                                        "description": "Unique identifier of the request",
+                                        "example": "1",
+                                        "oneOf": [
+                                            {
+                                                "type": "number"
+                                            },
+                                            {
+                                                "maxLength": 36,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "jsonrpc": {
+                                        "description": "Version of the JSON-RPC protocol",
+                                        "enum": [
+                                            "2.0"
+                                        ],
+                                        "example": "2.0",
+                                        "type": "string"
+                                    },
+                                    "method": {
+                                        "description": "Name of the method",
+                                        "enum": [
+                                            "microservice.bar.add"
+                                        ],
+                                        "example": "microservice.bar.add",
+                                        "type": "string"
+                                    },
+                                    "params": {
+                                        "additionalProperties": false,
+                                        "description": "Method parameters",
+                                        "properties": {
+                                            "bar": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "barDescription": {
+                                                        "maxLength": 255,
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
+                                                    "barId": {
+                                                        "nullable": true,
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "integer"
+                                                            },
+                                                            {
+                                                                "pattern": "^[0-9]{1,19}$",
+                                                                "type": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "barName": {
+                                                        "maxLength": 50,
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "barName"
+                                                ],
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "timeout": {
+                                        "description": "Timeout in milliseconds",
+                                        "example": null,
+                                        "nullable": true,
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "jsonrpc",
+                                    "method",
+                                    "params"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "id": {
+                                            "description": "Unique identifier of the request",
+                                            "example": "1",
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "jsonrpc": {
+                                            "description": "Version of the JSON-RPC protocol",
+                                            "enum": [
+                                                "2.0"
+                                            ],
+                                            "example": "2.0",
+                                            "type": "string"
+                                        },
+                                        "method": {
+                                            "description": "Name of the method",
+                                            "enum": [
+                                                "microservice.bar.add"
+                                            ],
+                                            "example": "microservice.bar.add",
+                                            "type": "string"
+                                        },
+                                        "result": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "bar": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "barDescription": {
+                                                            "maxLength": 255,
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "barId": {
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "integer"
+                                                                },
+                                                                {
+                                                                    "pattern": "^[0-9]{1,19}$",
+                                                                    "type": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "barName": {
+                                                            "maxLength": 50,
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "barId",
+                                                        "barName"
+                                                    ],
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "required": [
+                                        "jsonrpc",
+                                        "method"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "default": {
+                        "content": {},
+                        "description": "Invalid request"
+                    }
+                },
+                "summary": "add new bar",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/bar/delete": {
+            "post": {
+                "description": "microservice.bar.delete",
+                "operationId": "microservice.bar.delete",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "id": {
+                                        "description": "Unique identifier of the request",
+                                        "example": "1",
+                                        "oneOf": [
+                                            {
+                                                "type": "number"
+                                            },
+                                            {
+                                                "maxLength": 36,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "jsonrpc": {
+                                        "description": "Version of the JSON-RPC protocol",
+                                        "enum": [
+                                            "2.0"
+                                        ],
+                                        "example": "2.0",
+                                        "type": "string"
+                                    },
+                                    "method": {
+                                        "description": "Name of the method",
+                                        "enum": [
+                                            "microservice.bar.delete"
+                                        ],
+                                        "example": "microservice.bar.delete",
+                                        "type": "string"
+                                    },
+                                    "params": {
+                                        "additionalProperties": false,
+                                        "description": "Method parameters",
+                                        "properties": {
+                                            "barId": {
+                                                "items": {
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "integer"
+                                                        },
+                                                        {
+                                                            "pattern": "^[0-9]{1,19}$",
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                "type": "array"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "timeout": {
+                                        "description": "Timeout in milliseconds",
+                                        "example": null,
+                                        "nullable": true,
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "jsonrpc",
+                                    "method"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "id": {
+                                            "description": "Unique identifier of the request",
+                                            "example": "1",
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "jsonrpc": {
+                                            "description": "Version of the JSON-RPC protocol",
+                                            "enum": [
+                                                "2.0"
+                                            ],
+                                            "example": "2.0",
+                                            "type": "string"
+                                        },
+                                        "method": {
+                                            "description": "Name of the method",
+                                            "enum": [
+                                                "microservice.bar.delete"
+                                            ],
+                                            "example": "microservice.bar.delete",
+                                            "type": "string"
+                                        },
+                                        "result": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "bar": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "barDescription": {
+                                                                "maxLength": 255,
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "barId": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "pattern": "^[0-9]{1,19}$",
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "barName": {
+                                                                "maxLength": 50,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "barId",
+                                                            "barName"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "bar"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "required": [
+                                        "jsonrpc",
+                                        "method"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "default": {
+                        "content": {},
+                        "description": "Invalid request"
+                    }
+                },
+                "summary": "Bar delete",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/bar/edit": {
+            "post": {
+                "description": "microservice.bar.edit",
+                "operationId": "microservice.bar.edit",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "id": {
+                                        "description": "Unique identifier of the request",
+                                        "example": "1",
+                                        "oneOf": [
+                                            {
+                                                "type": "number"
+                                            },
+                                            {
+                                                "maxLength": 36,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "jsonrpc": {
+                                        "description": "Version of the JSON-RPC protocol",
+                                        "enum": [
+                                            "2.0"
+                                        ],
+                                        "example": "2.0",
+                                        "type": "string"
+                                    },
+                                    "method": {
+                                        "description": "Name of the method",
+                                        "enum": [
+                                            "microservice.bar.edit"
+                                        ],
+                                        "example": "microservice.bar.edit",
+                                        "type": "string"
+                                    },
+                                    "params": {
+                                        "additionalProperties": false,
+                                        "description": "Method parameters",
+                                        "properties": {
+                                            "bar": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "barDescription": {
+                                                        "maxLength": 255,
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
+                                                    "barId": {
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "integer"
+                                                            },
+                                                            {
+                                                                "pattern": "^[0-9]{1,19}$",
+                                                                "type": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "barName": {
+                                                        "maxLength": 50,
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "barId",
+                                                    "barName"
+                                                ],
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "timeout": {
+                                        "description": "Timeout in milliseconds",
+                                        "example": null,
+                                        "nullable": true,
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "jsonrpc",
+                                    "method",
+                                    "params"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "id": {
+                                            "description": "Unique identifier of the request",
+                                            "example": "1",
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "jsonrpc": {
+                                            "description": "Version of the JSON-RPC protocol",
+                                            "enum": [
+                                                "2.0"
+                                            ],
+                                            "example": "2.0",
+                                            "type": "string"
+                                        },
+                                        "method": {
+                                            "description": "Name of the method",
+                                            "enum": [
+                                                "microservice.bar.edit"
+                                            ],
+                                            "example": "microservice.bar.edit",
+                                            "type": "string"
+                                        },
+                                        "result": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "bar": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "barDescription": {
+                                                            "maxLength": 255,
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "barId": {
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "integer"
+                                                                },
+                                                                {
+                                                                    "pattern": "^[0-9]{1,19}$",
+                                                                    "type": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "barName": {
+                                                            "maxLength": 50,
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "barId",
+                                                        "barName"
+                                                    ],
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "required": [
+                                        "jsonrpc",
+                                        "method"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "default": {
+                        "content": {},
+                        "description": "Invalid request"
+                    }
+                },
+                "summary": "add existing bar object",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/bar/fetch": {
+            "post": {
+                "description": "microservice.bar.fetch",
+                "operationId": "microservice.bar.fetch",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "id": {
+                                        "description": "Unique identifier of the request",
+                                        "example": "1",
+                                        "oneOf": [
+                                            {
+                                                "type": "number"
+                                            },
+                                            {
+                                                "maxLength": 36,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "jsonrpc": {
+                                        "description": "Version of the JSON-RPC protocol",
+                                        "enum": [
+                                            "2.0"
+                                        ],
+                                        "example": "2.0",
+                                        "type": "string"
+                                    },
+                                    "method": {
+                                        "description": "Name of the method",
+                                        "enum": [
+                                            "microservice.bar.fetch"
+                                        ],
+                                        "example": "microservice.bar.fetch",
+                                        "type": "string"
+                                    },
+                                    "params": {
+                                        "additionalProperties": false,
+                                        "description": "Method parameters",
+                                        "properties": {
+                                            "bar": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "barDescription": {
+                                                        "maxLength": 255,
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
+                                                    "barName": {
+                                                        "maxLength": 50,
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "orderBy": {
+                                                "items": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "dir": {
+                                                            "enum": [
+                                                                "ASC",
+                                                                "DESC"
+                                                            ],
+                                                            "type": "string"
+                                                        },
+                                                        "field": {
+                                                            "maxLength": 128,
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "paging": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "pageNumber": {
+                                                        "type": "integer"
+                                                    },
+                                                    "pageSize": {
+                                                        "type": "integer"
+                                                    },
+                                                    "pagesTotal": {
+                                                        "type": "integer"
+                                                    },
+                                                    "recordsTotal": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "timeout": {
+                                        "description": "Timeout in milliseconds",
+                                        "example": null,
+                                        "nullable": true,
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "jsonrpc",
+                                    "method"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "id": {
+                                            "description": "Unique identifier of the request",
+                                            "example": "1",
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "jsonrpc": {
+                                            "description": "Version of the JSON-RPC protocol",
+                                            "enum": [
+                                                "2.0"
+                                            ],
+                                            "example": "2.0",
+                                            "type": "string"
+                                        },
+                                        "method": {
+                                            "description": "Name of the method",
+                                            "enum": [
+                                                "microservice.bar.fetch"
+                                            ],
+                                            "example": "microservice.bar.fetch",
+                                            "type": "string"
+                                        },
+                                        "result": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "bar": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "barDescription": {
+                                                                "maxLength": 255,
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "barId": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "pattern": "^[0-9]{1,19}$",
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "barName": {
+                                                                "maxLength": 50,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "barId",
+                                                            "barName"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "pagination": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "pageNumber": {
+                                                            "type": "integer"
+                                                        },
+                                                        "pageSize": {
+                                                            "type": "integer"
+                                                        },
+                                                        "pagesTotal": {
+                                                            "type": "integer"
+                                                        },
+                                                        "recordsTotal": {
+                                                            "type": "integer"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "required": [
+                                                "bar"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "required": [
+                                        "jsonrpc",
+                                        "method"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "default": {
+                        "content": {},
+                        "description": "Invalid request"
+                    }
+                },
+                "summary": "search bar objects",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/bar/get": {
+            "post": {
+                "description": "microservice.bar.get",
+                "operationId": "microservice.bar.get",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "id": {
+                                        "description": "Unique identifier of the request",
+                                        "example": "1",
+                                        "oneOf": [
+                                            {
+                                                "type": "number"
+                                            },
+                                            {
+                                                "maxLength": 36,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "jsonrpc": {
+                                        "description": "Version of the JSON-RPC protocol",
+                                        "enum": [
+                                            "2.0"
+                                        ],
+                                        "example": "2.0",
+                                        "type": "string"
+                                    },
+                                    "method": {
+                                        "description": "Name of the method",
+                                        "enum": [
+                                            "microservice.bar.get"
+                                        ],
+                                        "example": "microservice.bar.get",
+                                        "type": "string"
+                                    },
+                                    "params": {
+                                        "additionalProperties": false,
+                                        "description": "Method parameters",
+                                        "properties": {
+                                            "barId": {
+                                                "oneOf": [
+                                                    {
+                                                        "type": "integer"
+                                                    },
+                                                    {
+                                                        "pattern": "^[0-9]{1,19}$",
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "barId"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "timeout": {
+                                        "description": "Timeout in milliseconds",
+                                        "example": null,
+                                        "nullable": true,
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "jsonrpc",
+                                    "method"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "id": {
+                                            "description": "Unique identifier of the request",
+                                            "example": "1",
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "jsonrpc": {
+                                            "description": "Version of the JSON-RPC protocol",
+                                            "enum": [
+                                                "2.0"
+                                            ],
+                                            "example": "2.0",
+                                            "type": "string"
+                                        },
+                                        "method": {
+                                            "description": "Name of the method",
+                                            "enum": [
+                                                "microservice.bar.get"
+                                            ],
+                                            "example": "microservice.bar.get",
+                                            "type": "string"
+                                        },
+                                        "result": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "bar": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "barDescription": {
+                                                            "maxLength": 255,
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "barId": {
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "integer"
+                                                                },
+                                                                {
+                                                                    "pattern": "^[0-9]{1,19}$",
+                                                                    "type": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "barName": {
+                                                            "maxLength": 50,
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "barId",
+                                                        "barName"
+                                                    ],
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "required": [
+                                        "jsonrpc",
+                                        "method"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "default": {
+                        "content": {},
+                        "description": "Invalid request"
+                    }
+                },
+                "summary": "Bar get",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
         "/rpc/microservice/foo/fetch": {
             "post": {
                 "description": "microservice.foo.fetch",

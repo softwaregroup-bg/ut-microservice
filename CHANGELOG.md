@@ -1,3 +1,12 @@
+# [7.20.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.19.2...v7.20.0) (2022-06-24)
+
+
+### Features
+
+* ut-model, ut-help ([b22e4a4](https://github.com/softwaregroup-bg/ut-microservice/commit/b22e4a426cca811332313bb2835485f9a83b6271))
+
+
+
 ## [7.19.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.19.1...v7.19.2) (2022-05-31)
 
 

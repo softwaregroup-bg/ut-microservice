@@ -1,4 +1,73 @@
 declare namespace microserviceTableTypes {}
+declare namespace db$microservice_bar_add {
+  export interface params {
+    /**
+     * object to create
+     */
+    bar?: microserviceTableTypes.barTT.params[];
+    /**
+     * information for the user that makes the operation
+     */
+    meta?: coreTableTypes.metaDataTT.params[];
+  }
+  export type result = any;
+}
+
+declare namespace db$microservice_bar_delete$ {
+  export interface params {
+    /**
+     * bar ids
+     */
+    barId?: coreTableTypes.arrayNumberList.params[];
+    /**
+     * information for the user that makes the operation
+     */
+    meta?: coreTableTypes.metaDataTT.params[];
+  }
+  export type result = any;
+}
+
+declare namespace db$microservice_bar_edit {
+  export interface params {
+    /**
+     * object to edit
+     */
+    bar?: microserviceTableTypes.barTT.params[];
+    /**
+     * information for the user that makes the operation
+     */
+    meta?: coreTableTypes.metaDataTT.params[];
+  }
+  export type result = any;
+}
+
+declare namespace db$microservice_bar_fetch {
+  export interface params {
+    bar_barDescription?: string | null;
+    bar_barName?: string | null;
+    /**
+     * information about the user making the operation
+     */
+    meta?: coreTableTypes.metaDataTT.params[];
+    /**
+     * information for ordering
+     */
+    orderBy?: coreTableTypes.orderByTT.params[];
+    /**
+     * information for paging
+     */
+    paging?: coreTableTypes.pagingTT.params[];
+  }
+  export type result = any;
+}
+
+declare namespace db$microservice_bar_get {
+  export interface params {
+    barId?: number | string;
+  }
+  export type result = any;
+}
+
 declare namespace db$microservice_foo_fetch {
   export interface params {
     color?: string | null;
@@ -19,6 +88,98 @@ declare namespace db$microservice_foo_merge {
     meta?: coreTableTypes.metaDataTT.params[];
   }
   export type result = any;
+}
+
+declare namespace microservice_bar_add {
+  export interface params {
+    bar?: {
+      barDescription?: string | null;
+      barId?: number | string;
+      barName: string;
+    };
+  }
+  export interface result {
+    bar?: {
+      barDescription?: string | null;
+      barId: number | string;
+      barName: string;
+    };
+  }
+}
+
+declare namespace microservice_bar_delete$ {
+  export interface params {
+    barId?: (number | string)[];
+  }
+  export interface result {
+    bar: ({
+      barDescription?: string | null;
+      barId: number | string;
+      barName: string;
+    })[];
+  }
+}
+
+declare namespace microservice_bar_edit {
+  export interface params {
+    bar?: {
+      barDescription?: string | null;
+      barId: number | string;
+      barName: string;
+    };
+  }
+  export interface result {
+    bar?: {
+      barDescription?: string | null;
+      barId: number | string;
+      barName: string;
+    };
+  }
+}
+
+declare namespace microservice_bar_fetch {
+  export interface params {
+    bar?: {
+      barDescription?: string | null;
+      barName?: string | null;
+    };
+    orderBy?: ({
+      dir?: 'ASC' | 'DESC';
+      field?: string;
+    })[];
+    paging?: {
+      pageNumber?: number;
+      pageSize?: number;
+      pagesTotal?: number;
+      recordsTotal?: number;
+    };
+  }
+  export interface result {
+    bar: ({
+      barDescription?: string | null;
+      barId: number | string;
+      barName: string;
+    })[];
+    pagination?: {
+      pageNumber?: number;
+      pageSize?: number;
+      pagesTotal?: number;
+      recordsTotal?: number;
+    };
+  }
+}
+
+declare namespace microservice_bar_get {
+  export interface params {
+    barId: number | string;
+  }
+  export interface result {
+    bar?: {
+      barDescription?: string | null;
+      barId: number | string;
+      barName: string;
+    };
+  }
 }
 
 declare namespace microservice_foo_fetch {
@@ -82,6 +243,27 @@ declare namespace microservice_session_set {
   }
 }
 
+declare namespace microserviceTableTypes.barTT {
+  export interface params {
+    barDescription?: string | null;
+    barId?: number | string;
+    barName?: string | null;
+  }
+  
+}
+
+declare namespace microserviceTableTypes.barTTU {
+  export interface params {
+    barDescription?: string | null;
+    barDescriptionUpdated?: boolean | null;
+    barId?: number | string;
+    barIdUpdated?: boolean | null;
+    barName?: string | null;
+    barNameUpdated?: boolean | null;
+  }
+  
+}
+
 declare namespace microserviceTableTypes.fooMergeTT {
   export interface params {
     /**
@@ -120,6 +302,16 @@ declare namespace microserviceTableTypes.fooTTU {
 
 import ut from 'ut-run';
 export interface ports<location = ''> {
+  'db/microservice.bar.add'?: ut.handler<db$microservice_bar_add.params, db$microservice_bar_add.result, location>,
+  db$microserviceBarAdd?: ut.handler<db$microservice_bar_add.params, db$microservice_bar_add.result, location>,
+  'db/microservice.bar.delete'?: ut.handler<db$microservice_bar_delete$.params, db$microservice_bar_delete$.result, location>,
+  db$microserviceBarDelete?: ut.handler<db$microservice_bar_delete$.params, db$microservice_bar_delete$.result, location>,
+  'db/microservice.bar.edit'?: ut.handler<db$microservice_bar_edit.params, db$microservice_bar_edit.result, location>,
+  db$microserviceBarEdit?: ut.handler<db$microservice_bar_edit.params, db$microservice_bar_edit.result, location>,
+  'db/microservice.bar.fetch'?: ut.handler<db$microservice_bar_fetch.params, db$microservice_bar_fetch.result, location>,
+  db$microserviceBarFetch?: ut.handler<db$microservice_bar_fetch.params, db$microservice_bar_fetch.result, location>,
+  'db/microservice.bar.get'?: ut.handler<db$microservice_bar_get.params, db$microservice_bar_get.result, location>,
+  db$microserviceBarGet?: ut.handler<db$microservice_bar_get.params, db$microservice_bar_get.result, location>,
   'db/microservice.foo.fetch'?: ut.handler<db$microservice_foo_fetch.params, db$microservice_foo_fetch.result, location>,
   db$microserviceFooFetch?: ut.handler<db$microservice_foo_fetch.params, db$microservice_foo_fetch.result, location>,
   'db/microservice.foo.get'?: ut.handler<db$microservice_foo_get.params, db$microservice_foo_get.result, location>,
@@ -130,6 +322,16 @@ export interface ports<location = ''> {
 interface methods extends ports {}
 
 export interface handlers<location = ''> {
+  'microservice.bar.add'?: ut.handler<microservice_bar_add.params, microservice_bar_add.result, location>,
+  microserviceBarAdd?: ut.handler<microservice_bar_add.params, microservice_bar_add.result, location>,
+  'microservice.bar.delete'?: ut.handler<microservice_bar_delete$.params, microservice_bar_delete$.result, location>,
+  microserviceBarDelete?: ut.handler<microservice_bar_delete$.params, microservice_bar_delete$.result, location>,
+  'microservice.bar.edit'?: ut.handler<microservice_bar_edit.params, microservice_bar_edit.result, location>,
+  microserviceBarEdit?: ut.handler<microservice_bar_edit.params, microservice_bar_edit.result, location>,
+  'microservice.bar.fetch'?: ut.handler<microservice_bar_fetch.params, microservice_bar_fetch.result, location>,
+  microserviceBarFetch?: ut.handler<microservice_bar_fetch.params, microservice_bar_fetch.result, location>,
+  'microservice.bar.get'?: ut.handler<microservice_bar_get.params, microservice_bar_get.result, location>,
+  microserviceBarGet?: ut.handler<microservice_bar_get.params, microservice_bar_get.result, location>,
   'microservice.foo.fetch'?: ut.handler<microservice_foo_fetch.params, microservice_foo_fetch.result, location>,
   microserviceFooFetch?: ut.handler<microservice_foo_fetch.params, microservice_foo_fetch.result, location>,
   'microservice.foo.get'?: ut.handler<microservice_foo_get.params, microservice_foo_get.result, location>,
