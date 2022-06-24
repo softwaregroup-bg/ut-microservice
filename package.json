@@ -67,11 +67,11 @@
     "preversion": "ut-preversion",
     "release_": "ut-help build --out-dir dist/help && ut-release",
     "release": "ut-release",
-    "review": "node build && ut-portal build && ut-portal publish",
+    "review": "node build && ut-storybook build && ut-storybook publish",
     "snapshot": "node ui.test --playwright.update-snapshots",
     "storybook": "ut-storybook start -p 6006 --ci",
     "test": "ut-test-parallel",
-    "version": "node build && ut-portal build && ut-portal publish && git add handlers.d.ts system/api && ut-version"
+    "version": "node build && ut-storybook build && ut-storybook publish && git add handlers.d.ts system/api && ut-version"
   },
   "publishConfig": {
     "registry": "https://nexus.softwaregroup.com/repository/npm-internal"
