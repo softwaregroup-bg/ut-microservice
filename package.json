@@ -23,6 +23,7 @@
     "ut-document": "^9.2.0",
     "ut-login": "^7.20.0",
     "ut-port-jsonrpc": "^7.3.1",
+    "ut-port-http": "^8.9.3",
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^8.0.2",
     "ut-portal": "^9.1.5",
