@@ -101,7 +101,7 @@ Front end is defined in the following folder structure:
 |   └──📁 <a href="./test/ui">ui</a> (UI tests)
 |       ├── index.js (test runner)
 |       ├── ...
-|       └── microservice.bar.play.js (Playwright script)
+|       └── <a href="./test/ui/microservice.bar.play.js">microservice.bar.play.js</a> (Playwright script)
 └── 📁 <a href="./portal">portal</a>
     ├──📁 <a href="./portal/backend">backend</a> (define optional backend handlers here)
     |   ├── index.js (index of all backend handlers)
