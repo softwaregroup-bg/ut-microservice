@@ -1,7 +1,7 @@
 module.exports = {
     resolve: require.resolve,
     include: [
-        'ut-core',
-        '.'
+        __dirname,
+        'ut-core'
     ]
 };
