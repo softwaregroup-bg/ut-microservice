@@ -39,6 +39,7 @@
   },
   "description": "UnderTree standard microservice",
   "scripts": {
+    "build": "ut-webpack --mode development",
     "changelog": "ut-changelog",
     "check": "ut-check",
     "cover": "ut-cover-parallel",
@@ -52,13 +53,14 @@
     "postpublish": "ut-postpublish",
     "postversion": "ut-postversion",
     "precommit": "ut-precommit",
-    "precover": "ut-precover",
+    "precover": "ut-webpack --mode development && ut-precover",
     "prepublish": "ut-prepublish",
     "prepush": "ut-prepush",
     "pretest": "ut-pretest",
     "preversion": "ut-preversion",
     "release": "ut-help build --out-dir dist/help && ut-release",
     "review": "node build && ut-portal build && ut-portal publish",
+    "snapshot": "node ui.test --playwright.update-snapshots",
     "storybook": "ut-storybook start -p 6006 --ci",
     "test": "ut-test-parallel",
     "version": "node build && ut-portal build && ut-portal publish && git add handlers.d.ts system/api && ut-version"

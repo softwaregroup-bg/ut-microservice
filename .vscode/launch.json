@@ -60,6 +60,30 @@
             "outputCapture": "std"
         },
         {
+            "name": "Test UI",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/ui.test.js",
+            "args": [
+                "--run.logLevel=trace"
+                // ,"--playwright.headed"
+                // ,"--playwright.update-snapshots"
+            ],
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--nolazy",
+                "--max_old_space_size=500000"
+            ],
+            "env": {
+                "UT_ENV": "test",
+                "NODE_PATH": "dev"
+                // "PWDEBUG": 1
+            },
+            "outputCapture": "std"
+        },
+        {
             "name": "Test single",
             "type": "node",
             "request": "launch",

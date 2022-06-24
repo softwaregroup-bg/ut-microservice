@@ -22,6 +22,7 @@ module.exports = require('ut-run').microservice(
             ],
             test: () => [
                 ...require('./test/steps'),
+                ...require('./test/ui'),
                 ...require('./test/jobs')
             ]
         };

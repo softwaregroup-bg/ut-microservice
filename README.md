@@ -83,6 +83,9 @@ Front end is defined in the following folder structure:
 <!-- markdownlint-disable MD033 MD013 MD037 -->
 <pre>
 📁 ut-microservice
+├── <a href="./ui.test.js">ui.test.js</a> (UT test startup script)
+├── 📁 <a href="./browser">browser</a>
+|   └── <a href="./browser/adminPortal.js">adminPortal.js</a> (UI test portal entry)
 ├── 📁 <a href="./help">help</a> (user guide content)
 |   ├── <a href="./help/_category_.yaml">_category_.yaml</a> (title and index configuration)
 |   ├── ...
@@ -94,6 +97,11 @@ Front end is defined in the following folder structure:
 |   ├── ...
 |   ├── <a href="./model/bar.js">bar.js</a> (model definition)
 |   └── <a href="./model/bar.mock.js">bar.mock.js</a> (mock definition)
+├── 📁 <a href="./test">test</a>
+|   └──📁 <a href="./test/ui">ui</a> (UI tests)
+|       ├── index.js (test runner)
+|       ├── ...
+|       └── microservice.bar.play.js (Playwright script)
 └── 📁 <a href="./portal">portal</a>
     ├──📁 <a href="./portal/backend">backend</a> (define optional backend handlers here)
     |   ├── index.js (index of all backend handlers)

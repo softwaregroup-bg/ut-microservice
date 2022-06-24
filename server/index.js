@@ -1,6 +1,9 @@
 module.exports = [
     'ut-cache',
     'ut-db',
+    'ut-portal',
+    'ut-browser',
+    'ut-login',
     'ut-core',
     'ut-document',
     'ut-customer',

@@ -12,9 +12,12 @@ module.exports = {
     utCache: {
         adapter: true
     },
+    utPortal: true,
+    utBrowser: true,
+    utLogin: true,
     utCore: true,
     utCustomer: {test: false},
     utDocument: {test: false},
-    utUser: {test: false},
+    utUser: true,
     utMicroservice: true
 };
