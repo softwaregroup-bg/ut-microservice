@@ -14,7 +14,7 @@ module.exports = {
                     type: 'string',
                     title: 'Microservice title'
                 }
-          },
+            },
             required: ['id', 'title']
         },
         uiSchema: {
@@ -26,6 +26,7 @@ module.exports = {
         ['api/microservice', () => `${camelCase(id)}`],
         ['portal/**/microservice.*', fn => fn.replace('microservice', camelCase(id))],
         ['validations/microservice.*', fn => fn.replace('microservice', camelCase(id))],
+        ['help/microservice.*', fn => fn.replace('microservice', camelCase(id))],
         ['api/sql/schema/*-microservice.*', fn => fn.replace('microservice', camelCase(id))]
     ],
     rename: ({id, title}) => [{
@@ -34,8 +35,11 @@ module.exports = {
             'portal/**/*.js',
             'portal/**/*.js',
             'model/**/*.js',
+            'browser/**/*.js',
+            'help/**/*.md',
             'server/**/*.js',
             'test/**/*.js',
+            'test/ui/**/*.js',
             'api/**/*.sql',
             'api/**/*.yaml',
             'ui/react/**/*.js',
@@ -47,13 +51,14 @@ module.exports = {
             'index.js',
             'package.json',
             'test/manual/*.http',
+            'xml.md',
             'README.md'
         ].join(',')}}`,
         replace: [[
-            /(ut|"|'|-|\[|\/|db\$)microservice/g,
+            /(ut|"|'|-|_|\[|\/|db\$)microservice/g,
             `$1${camelCase(id)}`
         ], [
-            /microservice(\.|Tree|Color|Dispatch|Foo|Dropdown|<)/g,
+            /microservice(\.|Tree|Color|Dispatch|Foo|Bar|Mock|Dropdown|<|\(\)| from)/g,
             `${camelCase(id)}$1`
         ], [
             /(ut|"|'|fk|pk|error)Microservice/g,
