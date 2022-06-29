@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.21.24"
+        "version": "8.21.25"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -2177,7 +2177,7 @@
         },
         "/rpc/core/externalSystem/activateDeactivate": {
             "post": {
-                "description": "Activate/Deactivate Externam Systems Configuration",
+                "description": "Activate/Deactivate External Systems Configuration",
                 "operationId": "core.externalSystem.activateDeactivate",
                 "requestBody": {
                     "content": {
@@ -2307,7 +2307,7 @@
         },
         "/rpc/core/externalSystem/add": {
             "post": {
-                "description": "Add Externam Systems Configuration",
+                "description": "Add External Systems Configuration",
                 "operationId": "core.externalSystem.add",
                 "requestBody": {
                     "content": {
@@ -2595,7 +2595,7 @@
         },
         "/rpc/core/externalSystem/delete": {
             "post": {
-                "description": "Delete Externam Systems Configuration",
+                "description": "Delete External Systems Configuration",
                 "operationId": "core.externalSystem.delete",
                 "requestBody": {
                     "content": {
@@ -2723,7 +2723,7 @@
         },
         "/rpc/core/externalSystem/edit": {
             "post": {
-                "description": "Edit Externam Systems Configuration",
+                "description": "Edit External Systems Configuration",
                 "operationId": "core.externalSystem.edit",
                 "requestBody": {
                     "content": {
@@ -2897,7 +2897,7 @@
         },
         "/rpc/core/externalSystem/fetch": {
             "post": {
-                "description": "Fetch Externam Systems Configuration",
+                "description": "Fetch External Systems Configuration",
                 "operationId": "core.externalSystem.fetch",
                 "requestBody": {
                     "content": {
@@ -3126,7 +3126,7 @@
         },
         "/rpc/core/externalSystem/get": {
             "post": {
-                "description": "Get Externam System Configuration",
+                "description": "Get External System Configuration",
                 "operationId": "core.externalSystem.get",
                 "requestBody": {
                     "content": {
@@ -3370,7 +3370,7 @@
         },
         "/rpc/core/externalSystem/testConnection": {
             "post": {
-                "description": "Get Externam System Configuration",
+                "description": "Get External System Configuration",
                 "operationId": "core.externalSystem.testConnection",
                 "requestBody": {
                     "content": {
@@ -3543,7 +3543,7 @@
         },
         "/rpc/core/externalSystemAttributes/get": {
             "post": {
-                "description": "Fetch Externam System Attributes",
+                "description": "Fetch External System Attributes",
                 "operationId": "core.externalSystemAttributes.get",
                 "requestBody": {
                     "content": {
