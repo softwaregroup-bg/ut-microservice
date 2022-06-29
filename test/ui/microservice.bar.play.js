@@ -1,27 +1,8 @@
-/* eslint-disable no-console */
-/** @type {import('@playwright/test')} */
-const playwright = require('ut-portal/test');
-const {test, expect} = playwright;
-const randomName = 'autoTest' + (Date.now() - 1463200000000) * 10000;
+const {test, expect} = require('ut-portal/test');
+const randomName = require('uuid').v4();
 const testName = 'bar 1';
 
-test.extend({
-    username: ['', {scope: 'worker', option: true}],
-    password: ['', {scope: 'worker', option: true}]
-})('test', async({ page, username, password }) => {
-    page.on('console', msg => {
-        if (msg.type() === 'error') console.log(msg.text());
-    });
-    // Login
-    await page.goto('/a/browser/adminPortal#/login');
-    await page.click('input[name="username"]');
-    await page.fill('input[name="username"]', username);
-    await page.click('input[name="password"]');
-    await page.fill('input[name="password"]', password);
-    await Promise.all([
-        page.waitForNavigation(),
-        page.click('button:has-text("Login")')
-    ]);
+test('test', async({ portal: page }) => {
     await page.locator('[data-testid="portal-menu_test"]').click();
     await Promise.all([
         page.waitForNavigation(),

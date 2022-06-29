@@ -7,8 +7,10 @@
         "PROCID",
         "Qube",
         "RAISERROR",
+        "testid",
         "TRANCOUNT",
         "transpiled",
+        "VARBINARY",
         "VARCHAR"
     ]
 }
