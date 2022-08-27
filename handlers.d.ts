@@ -4,11 +4,11 @@ declare namespace db$microservice_bar_add {
     /**
      * object to create
      */
-    bar?: microserviceTableTypes.barTT.params[];
+    bar?: microserviceTableTypes.barTT.params[] | microserviceTableTypes.barTT.params;
     /**
      * information for the user that makes the operation
      */
-    meta?: coreTableTypes.metaDataTT.params[];
+    meta?: coreTableTypes.metaDataTT.params[] | coreTableTypes.metaDataTT.params;
   }
   export type result = any;
 }
@@ -18,11 +18,11 @@ declare namespace db$microservice_bar_delete$ {
     /**
      * bar ids
      */
-    barId?: coreTableTypes.arrayNumberList.params[];
+    barId?: coreTableTypes.arrayNumberList.params[] | coreTableTypes.arrayNumberList.params;
     /**
      * information for the user that makes the operation
      */
-    meta?: coreTableTypes.metaDataTT.params[];
+    meta?: coreTableTypes.metaDataTT.params[] | coreTableTypes.metaDataTT.params;
   }
   export type result = any;
 }
@@ -32,11 +32,11 @@ declare namespace db$microservice_bar_edit {
     /**
      * object to edit
      */
-    bar?: microserviceTableTypes.barTT.params[];
+    bar?: microserviceTableTypes.barTT.params[] | microserviceTableTypes.barTT.params;
     /**
      * information for the user that makes the operation
      */
-    meta?: coreTableTypes.metaDataTT.params[];
+    meta?: coreTableTypes.metaDataTT.params[] | coreTableTypes.metaDataTT.params;
   }
   export type result = any;
 }
@@ -48,15 +48,15 @@ declare namespace db$microservice_bar_fetch {
     /**
      * information about the user making the operation
      */
-    meta?: coreTableTypes.metaDataTT.params[];
+    meta?: coreTableTypes.metaDataTT.params[] | coreTableTypes.metaDataTT.params;
     /**
      * information for ordering
      */
-    orderBy?: coreTableTypes.orderByTT.params[];
+    orderBy?: coreTableTypes.orderByTT.params[] | coreTableTypes.orderByTT.params;
     /**
      * information for paging
      */
-    paging?: coreTableTypes.pagingTT.params[];
+    paging?: coreTableTypes.pagingTT.params[] | coreTableTypes.pagingTT.params;
   }
   export type result = any;
 }
@@ -84,8 +84,8 @@ declare namespace db$microservice_foo_get {
 
 declare namespace db$microservice_foo_merge {
   export interface params {
-    foo?: microserviceTableTypes.fooMergeTT.params[];
-    meta?: coreTableTypes.metaDataTT.params[];
+    foo?: microserviceTableTypes.fooMergeTT.params[] | microserviceTableTypes.fooMergeTT.params;
+    meta?: coreTableTypes.metaDataTT.params[] | coreTableTypes.metaDataTT.params;
   }
   export type result = any;
 }
@@ -210,7 +210,9 @@ declare namespace microservice_foo_process {
   export interface params {
     fooId?: number | string;
   }
-  export interface result {}
+  export interface result {
+    css?: string;
+  }
 }
 
 declare namespace microservice_session_delete$ {
@@ -249,7 +251,7 @@ declare namespace microserviceTableTypes.barTT {
     barId?: number | string;
     barName?: string | null;
   }
-  
+  export type result = unknown;
 }
 
 declare namespace microserviceTableTypes.barTTU {
@@ -261,7 +263,7 @@ declare namespace microserviceTableTypes.barTTU {
     barName?: string | null;
     barNameUpdated?: boolean | null;
   }
-  
+  export type result = unknown;
 }
 
 declare namespace microserviceTableTypes.fooMergeTT {
@@ -279,7 +281,7 @@ declare namespace microserviceTableTypes.fooMergeTT {
      */
     name?: string | null;
   }
-  
+  export type result = unknown;
 }
 
 declare namespace microserviceTableTypes.fooTT {
@@ -287,7 +289,7 @@ declare namespace microserviceTableTypes.fooTT {
     color?: string | null;
     fooId?: number | string;
   }
-  
+  export type result = unknown;
 }
 
 declare namespace microserviceTableTypes.fooTTU {
@@ -297,7 +299,7 @@ declare namespace microserviceTableTypes.fooTTU {
     fooId?: number | string;
     fooIdUpdated?: boolean | null;
   }
-  
+  export type result = unknown;
 }
 
 import ut from 'ut-run';
@@ -376,7 +378,8 @@ interface methods extends user.handlers {}
 export type libFactory = ut.libFactory<methods, errors>
 export type handlerFactory = ut.handlerFactory<methods, errors, handlers<'local'>>
 export type handlerSet = ut.handlerSet<methods, errors, handlers<'local'>>
+export type test = ut.test<methods & handlers>
 
-import portal from 'ut-portal/handlers'
+import portal from 'ut-portal'
 export type pageFactory = portal.pageFactory<methods, errors>
 export type pageSet = portal.pageSet<methods, errors>

@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.21.25"
+        "version": "8.23.0"
     },
     "paths": {
         "/rpc/core/actor/addResult": {
@@ -954,11 +954,11 @@
                                     "properties": {
                                         "configurationId": {
                                             "type": "integer"
+                                        },
+                                        "key": {
+                                            "type": "string"
                                         }
                                     },
-                                    "required": [
-                                        "configurationId"
-                                    ],
                                     "type": "object"
                                 },
                                 "timeout": {
@@ -1876,6 +1876,10 @@
                                                         "nullable": true,
                                                         "type": "string"
                                                     },
+                                                    "description": {
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
                                                     "label": {
                                                         "minLength": 1,
                                                         "type": "string"
@@ -1915,6 +1919,10 @@
                                                 "additionalProperties": false,
                                                 "properties": {
                                                     "alias": {
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
+                                                    "description": {
                                                         "nullable": true,
                                                         "type": "string"
                                                     },
@@ -2088,6 +2096,10 @@
                                                         "nullable": true,
                                                         "type": "string"
                                                     },
+                                                    "description": {
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
                                                     "label": {
                                                         "minLength": 1,
                                                         "type": "string"
@@ -2127,6 +2139,10 @@
                                                 "additionalProperties": false,
                                                 "properties": {
                                                     "alias": {
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
+                                                    "description": {
                                                         "nullable": true,
                                                         "type": "string"
                                                     },
@@ -5975,6 +5991,10 @@
                                         "languageId": {
                                             "nullable": true,
                                             "type": "number"
+                                        },
+                                        "resultSet": {
+                                            "nullable": true,
+                                            "type": "boolean"
                                         }
                                     },
                                     "type": "object"
@@ -6027,10 +6047,65 @@
                                     "type": "string"
                                 },
                                 "result": {
-                                    "items": {},
-                                    "maxItems": 0,
-                                    "minItems": 0,
-                                    "type": "array"
+                                    "oneOf": [
+                                        {
+                                            "items": {},
+                                            "maxItems": 0,
+                                            "minItems": 0,
+                                            "type": "array"
+                                        },
+                                        {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "item": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "createdOn": {
+                                                            "format": "date-time",
+                                                            "type": "string"
+                                                        },
+                                                        "itemNameId": {
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "integer"
+                                                                },
+                                                                {
+                                                                    "pattern": "^[0-9]{1,19}$",
+                                                                    "type": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "itemTranslationId": {
+                                                            "nullable": true,
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "integer"
+                                                                },
+                                                                {
+                                                                    "pattern": "^[0-9]{1,19}$",
+                                                                    "type": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "languageId": {
+                                                            "nullable": true,
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "integer"
+                                                                },
+                                                                {
+                                                                    "pattern": "^[0-9]{1,19}$",
+                                                                    "type": "string"
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
                                 }
                             },
                             "required": [
@@ -6198,6 +6273,10 @@
                                                 "languageId"
                                             ],
                                             "type": "object"
+                                        },
+                                        "resultSet": {
+                                            "nullable": true,
+                                            "type": "boolean"
                                         }
                                     },
                                     "required": [
@@ -6253,10 +6332,72 @@
                                     "type": "string"
                                 },
                                 "result": {
-                                    "items": {},
-                                    "maxItems": 0,
-                                    "minItems": 0,
-                                    "type": "array"
+                                    "oneOf": [
+                                        {
+                                            "items": {},
+                                            "maxItems": 0,
+                                            "minItems": 0,
+                                            "type": "array"
+                                        },
+                                        {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "item": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "itemNameId": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "pattern": "^[0-9]{1,19}$",
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "itemTranslationId": {
+                                                                "nullable": true,
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "pattern": "^[0-9]{1,19}$",
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "itemTranslationUpdatedOn": {
+                                                                "format": "date-time",
+                                                                "type": "string"
+                                                            },
+                                                            "itemUpdatedOn": {
+                                                                "format": "date-time",
+                                                                "type": "string"
+                                                            },
+                                                            "languageId": {
+                                                                "nullable": true,
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "pattern": "^[0-9]{1,19}$",
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    ]
                                 }
                             },
                             "required": [
@@ -7690,6 +7831,9 @@
                                         },
                                         "languageId": {
                                             "minimum": 1,
+                                            "type": "number"
+                                        },
+                                        "orderByKey": {
                                             "type": "number"
                                         },
                                         "organizationId": {
