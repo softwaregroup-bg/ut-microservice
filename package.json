@@ -30,7 +30,8 @@
     "ut-portal": "^9.1.6",
     "ut-portal-admin": "^7.13.1",
     "ut-run": "^10.70.9",
-    "ut-user": "^10.30.5"
+    "ut-user": "^10.30.5",
+    "uuid": "8.3.2"
   },
   "peerDependencies": {
     "prop-types": "^15.8.1",
