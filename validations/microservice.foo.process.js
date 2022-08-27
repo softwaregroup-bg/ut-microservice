@@ -9,7 +9,9 @@ module.exports = ({
         return {
             description: 'Foo process',
             params: joi.object().keys({fooId}),
-            result: joi.object()
+            result: joi.object({
+                css: joi.string()
+            })
         };
     }
 });

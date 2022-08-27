@@ -1,3 +1,4 @@
+/** @type { import("../../handlers").test } */
 module.exports = function test() {
     return {
         foo: function(test, bus, run, ports, {

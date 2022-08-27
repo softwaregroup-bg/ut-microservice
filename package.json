@@ -29,7 +29,7 @@
     "ut-port-sql": "^8.0.2",
     "ut-portal": "^9.1.6",
     "ut-portal-admin": "^7.13.1",
-    "ut-run": "^10.69.5",
+    "ut-run": "^10.70.9",
     "ut-user": "^10.30.5"
   },
   "peerDependencies": {
