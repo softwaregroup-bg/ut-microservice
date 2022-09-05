@@ -27,7 +27,7 @@
     "ut-port-http": "^8.9.3",
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^8.1.1",
-    "ut-portal": "^9.3.0",
+    "ut-portal": "^9.3.1",
     "ut-portal-admin": "^7.14.1",
     "ut-run": "^10.70.14",
     "ut-user": "^10.32.0",
@@ -42,7 +42,7 @@
     "react-router-dom": "^5.3.3",
     "ut-prime": "^2.12.0",
     "ut-dispatch-db": "^1.5.0",
-    "ut-portal": "^9.3.0",
+    "ut-portal": "^9.3.1",
     "ut-run": "^10.70.14"
   },
   "description": "UnderTree standard microservice",
