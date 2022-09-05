@@ -4,7 +4,6 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
-		"hookyqr.beautify",
 		"aaron-bond.better-comments",
 		"wmaurer.change-case",
 		"streetsidesoftware.code-spell-checker",
@@ -25,7 +24,8 @@
 		"undertree.ut-code-sql",
 		"visualstudioexptteam.vscodeintellicode",
 		"vscode-icons-team.vscode-icons",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"undertree.ut-code-dashboard"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
