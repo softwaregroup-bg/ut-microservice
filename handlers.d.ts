@@ -257,11 +257,11 @@ declare namespace microserviceTableTypes.barTT {
 declare namespace microserviceTableTypes.barTTU {
   export interface params {
     barDescription?: string | null;
-    barDescriptionUpdated?: boolean | null;
+    barDescriptionUpdated?: true | false | 0 | 1 | '0' | '1' | null;
     barId?: number | string;
-    barIdUpdated?: boolean | null;
+    barIdUpdated?: true | false | 0 | 1 | '0' | '1' | null;
     barName?: string | null;
-    barNameUpdated?: boolean | null;
+    barNameUpdated?: true | false | 0 | 1 | '0' | '1' | null;
   }
   export type result = unknown;
 }
@@ -295,9 +295,9 @@ declare namespace microserviceTableTypes.fooTT {
 declare namespace microserviceTableTypes.fooTTU {
   export interface params {
     color?: string | null;
-    colorUpdated?: boolean | null;
+    colorUpdated?: true | false | 0 | 1 | '0' | '1' | null;
     fooId?: number | string;
-    fooIdUpdated?: boolean | null;
+    fooIdUpdated?: true | false | 0 | 1 | '0' | '1' | null;
   }
   export type result = unknown;
 }
@@ -379,6 +379,7 @@ export type libFactory = ut.libFactory<methods, errors>
 export type handlerFactory = ut.handlerFactory<methods, errors, handlers<'local'>>
 export type handlerSet = ut.handlerSet<methods, errors, handlers<'local'>>
 export type test = ut.test<methods & handlers>
+export type steps = ut.steps<methods & handlers>
 
 import portal from 'ut-portal'
 export type pageFactory = portal.pageFactory<methods, errors>

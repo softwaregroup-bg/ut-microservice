@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.23.0"
+        "version": "8.24.4"
     },
     "paths": {
         "/rpc/core/actor/addResult": {
@@ -595,6 +595,472 @@
                     }
                 },
                 "summary": "CBS Fetch",
+                "tags": [
+                    "core"
+                ]
+            }
+        },
+        "/rpc/core/component/delete": {
+            "post": {
+                "description": "core.component.delete",
+                "operationId": "core.component.delete",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.component.delete"
+                                    ],
+                                    "example": "core.component.delete",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "componentId": {
+                                            "items": {
+                                                "maxLength": 100,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.component.delete"
+                                    ],
+                                    "example": "core.component.delete",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "component": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "componentConfig": {
+                                                        "additionalProperties": true,
+                                                        "properties": {},
+                                                        "type": "object"
+                                                    },
+                                                    "componentId": {
+                                                        "maxLength": 100,
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "componentId"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "required": [
+                                        "component"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Component delete",
+                "tags": [
+                    "core"
+                ]
+            }
+        },
+        "/rpc/core/component/edit": {
+            "post": {
+                "description": "core.component.edit",
+                "operationId": "core.component.edit",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.component.edit"
+                                    ],
+                                    "example": "core.component.edit",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "component": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "componentConfig": {
+                                                    "additionalProperties": true,
+                                                    "properties": {},
+                                                    "type": "object"
+                                                },
+                                                "componentId": {
+                                                    "maxLength": 100,
+                                                    "minLength": 1,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "componentId"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method",
+                                "params"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.component.edit"
+                                    ],
+                                    "example": "core.component.edit",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "component": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "componentConfig": {
+                                                    "additionalProperties": true,
+                                                    "properties": {},
+                                                    "type": "object"
+                                                },
+                                                "componentId": {
+                                                    "maxLength": 100,
+                                                    "minLength": 1,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "componentId"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Set component configuration",
+                "tags": [
+                    "core"
+                ]
+            }
+        },
+        "/rpc/core/component/get": {
+            "post": {
+                "description": "core.component.get",
+                "operationId": "core.component.get",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "oneOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.component.get"
+                                    ],
+                                    "example": "core.component.get",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "componentId": {
+                                            "maxLength": 100,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "componentId"
+                                    ],
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "nullable": true,
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.component.get"
+                                    ],
+                                    "example": "core.component.get",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "component": {
+                                            "additionalProperties": false,
+                                            "nullable": true,
+                                            "properties": {
+                                                "componentConfig": {
+                                                    "additionalProperties": true,
+                                                    "properties": {},
+                                                    "type": "object"
+                                                },
+                                                "componentId": {
+                                                    "maxLength": 100,
+                                                    "minLength": 1,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "componentId"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Component get",
                 "tags": [
                     "core"
                 ]
