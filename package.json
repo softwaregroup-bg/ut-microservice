@@ -4,7 +4,7 @@
   "main": "index.js",
   "browser": "browser.js",
   "dependencies": {
-    "ut-model": "^8.4.1",
+    "ut-model": "^8.4.3",
     "ut-function.common-joi": "^1.7.5"
   },
   "devDependencies": {
@@ -17,8 +17,8 @@
     "tap": "^16.3.0",
     "ut-browser": "^7.7.4",
     "ut-cache": "^6.0.1",
-    "ut-core": "^8.24.4",
-    "ut-customer": "^10.8.0",
+    "ut-core": "^8.24.5",
+    "ut-customer": "^10.9.0",
     "ut-db": "^8.5.6",
     "ut-dispatch-db": "^1.5.0",
     "ut-document": "^9.3.0",
@@ -27,10 +27,10 @@
     "ut-port-http": "^8.9.3",
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^8.1.1",
-    "ut-portal": "^9.3.1",
+    "ut-portal": "^9.4.2",
     "ut-portal-admin": "^7.14.1",
     "ut-run": "^10.70.14",
-    "ut-user": "^10.32.0",
+    "ut-user": "^10.33.0",
     "uuid": "8.3.2"
   },
   "peerDependencies": {
@@ -40,9 +40,9 @@
     "react-redux": "^7.2.8",
     "react-router": "^5.3.3",
     "react-router-dom": "^5.3.3",
-    "ut-prime": "^2.12.0",
+    "ut-prime": "^2.14.1",
     "ut-dispatch-db": "^1.5.0",
-    "ut-portal": "^9.3.1",
+    "ut-portal": "^9.4.2",
     "ut-run": "^10.70.14"
   },
   "description": "UnderTree standard microservice",
