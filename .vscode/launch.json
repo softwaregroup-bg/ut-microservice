@@ -65,9 +65,8 @@
             "request": "launch",
             "program": "${workspaceRoot}/ui.test.js",
             "args": [
-                "--run.logLevel=trace"
-                // ,"--playwright.headed"
-                // ,"--playwright.update-snapshots"
+                "--run.logLevel=trace",
+                "${input:snapshots}"
             ],
             "cwd": "${workspaceRoot}",
             "console": "integratedTerminal",
@@ -105,5 +104,20 @@
             },
             "outputCapture": "std"
         }
-    ]
+    ],
+    "inputs": [{
+        "id": "snapshots",
+        "type": "pickString",
+        "description": "Pick parallel test to run",
+        "options": [{
+            "label": "Test snapshots",
+            "value": "--playwright"
+        }, {
+            "label": "Update snapshots",
+            "value": "--playwright.update-snapshots"
+        }, {
+            "label": "Run headed",
+            "value": "--playwright.headed"
+        }]
+    }]
 }

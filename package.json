@@ -4,7 +4,7 @@
   "main": "index.js",
   "browser": "browser.js",
   "dependencies": {
-    "ut-model": "^8.4.3",
+    "ut-model": "^8.5.3",
     "ut-function.common-joi": "^1.7.5"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "ut-port-http": "^8.9.3",
     "ut-port-script": "^7.2.0",
     "ut-port-sql": "^8.1.1",
-    "ut-portal": "^9.4.2",
+    "ut-portal": "^9.4.7",
     "ut-portal-admin": "^7.14.1",
     "ut-run": "^10.70.14",
     "ut-user": "^10.33.0",

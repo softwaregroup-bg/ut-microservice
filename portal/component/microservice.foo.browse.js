@@ -35,7 +35,12 @@ export default ({
                         fetch={tenant != null && explorerFetch}
                         keyField='fooId'
                         schema={{properties}}
-                        columns={columns}
+                        name='microserviceFoo'
+                        cards = {{
+                            columns: {
+                                widgets: columns
+                            }
+                        }}
                         details={details}
                         filter={{tenant}}
                         toolbar={[{
