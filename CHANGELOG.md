@@ -1,3 +1,13 @@
+# [7.21.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.20.8...v7.21.0) (2022-10-03)
+
+
+### Features
+
+* file upload demo ([6a18c02](https://github.com/softwaregroup-bg/ut-microservice/commit/6a18c023e6bcfed337dbf24daa4cf8e2d1d060af))
+* file upload demo ([a496e2e](https://github.com/softwaregroup-bg/ut-microservice/commit/a496e2e060708a47c8552346c6d5713f12361559))
+
+
+
 ## [7.20.8](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.20.7...v7.20.8) (2022-09-20)
 
 

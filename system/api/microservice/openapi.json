@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "microservice",
-        "version": "7.20.7"
+        "version": "7.20.8"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -938,6 +938,212 @@
                     }
                 },
                 "summary": "Bar get",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/document/add": {
+            "post": {
+                "description": "microservice.document.add",
+                "operationId": "microservice.document.add",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "document": {
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "documentIcon": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "filename": {
+                                                        "type": "string"
+                                                    },
+                                                    "headers": {
+                                                        "additionalProperties": true,
+                                                        "properties": {},
+                                                        "type": "object"
+                                                    },
+                                                    "originalFilename": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "documentName": {
+                                                "minLength": 1,
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "documentName"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "page": {
+                                        "items": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "attachment": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "filename": {
+                                                            "type": "string"
+                                                        },
+                                                        "headers": {
+                                                            "additionalProperties": true,
+                                                            "properties": {},
+                                                            "type": "object"
+                                                        },
+                                                        "originalFilename": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "title": {
+                                                    "nullable": true,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "id": {
+                                            "description": "Unique identifier of the request",
+                                            "example": "1",
+                                            "maxLength": 36,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "jsonrpc": {
+                                            "description": "Version of the JSON-RPC protocol",
+                                            "enum": [
+                                                "2.0"
+                                            ],
+                                            "example": "2.0",
+                                            "type": "string"
+                                        },
+                                        "method": {
+                                            "description": "Name of the method",
+                                            "enum": [
+                                                "microservice.document.add"
+                                            ],
+                                            "example": "microservice.document.add",
+                                            "type": "string"
+                                        },
+                                        "result": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "document": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "documentIcon": {
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "filename": {
+                                                                    "type": "string"
+                                                                },
+                                                                "headers": {
+                                                                    "additionalProperties": true,
+                                                                    "properties": {},
+                                                                    "type": "object"
+                                                                },
+                                                                "originalFilename": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "documentId": {
+                                                            "oneOf": [
+                                                                {
+                                                                    "type": "integer"
+                                                                },
+                                                                {
+                                                                    "pattern": "^[0-9]{1,19}$",
+                                                                    "type": "string"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "documentName": {
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "documentId",
+                                                        "documentName"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "page": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "attachment": {
+                                                                "additionalProperties": false,
+                                                                "properties": {
+                                                                    "filename": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "headers": {
+                                                                        "additionalProperties": true,
+                                                                        "properties": {},
+                                                                        "type": "object"
+                                                                    },
+                                                                    "originalFilename": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "title": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "required": [
+                                        "jsonrpc",
+                                        "method"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "default": {
+                        "content": {},
+                        "description": "Invalid request"
+                    }
+                },
+                "summary": "add new document",
                 "tags": [
                     "microservice"
                 ]

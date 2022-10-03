@@ -182,6 +182,46 @@ declare namespace microservice_bar_get {
   }
 }
 
+declare namespace microservice_document_add {
+  export interface params {
+    document?: {
+      documentIcon?: {
+        filename?: string;
+        headers?: object;
+        originalFilename?: string;
+      };
+      documentName: string;
+    };
+    page?: ({
+      attachment?: {
+        filename?: string;
+        headers?: object;
+        originalFilename?: string;
+      };
+      title?: string | null;
+    })[];
+  }
+  export interface result {
+    document?: {
+      documentIcon?: {
+        filename?: string;
+        headers?: object;
+        originalFilename?: string;
+      };
+      documentId: number | string;
+      documentName: string;
+    };
+    page?: ({
+      attachment?: {
+        filename?: string;
+        headers?: object;
+        originalFilename?: string;
+      };
+      title?: string | null;
+    })[];
+  }
+}
+
 declare namespace microservice_foo_fetch {
   export interface params {
     color?: string;
@@ -334,6 +374,8 @@ export interface handlers<location = ''> {
   microserviceBarFetch?: ut.handler<microservice_bar_fetch.params, microservice_bar_fetch.result, location>,
   'microservice.bar.get'?: ut.handler<microservice_bar_get.params, microservice_bar_get.result, location>,
   microserviceBarGet?: ut.handler<microservice_bar_get.params, microservice_bar_get.result, location>,
+  'microservice.document.add'?: ut.handler<microservice_document_add.params, microservice_document_add.result, location>,
+  microserviceDocumentAdd?: ut.handler<microservice_document_add.params, microservice_document_add.result, location>,
   'microservice.foo.fetch'?: ut.handler<microservice_foo_fetch.params, microservice_foo_fetch.result, location>,
   microserviceFooFetch?: ut.handler<microservice_foo_fetch.params, microservice_foo_fetch.result, location>,
   'microservice.foo.get'?: ut.handler<microservice_foo_get.params, microservice_foo_get.result, location>,
