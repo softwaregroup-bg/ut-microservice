@@ -5,7 +5,7 @@
   "browser": "browser.js",
   "dependencies": {
     "ut-model": "^8.5.3",
-    "ut-function.common-joi": "^1.7.5"
+    "ut-function.common-joi": "^1.8.0"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "17.0.1",
