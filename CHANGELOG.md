@@ -1,3 +1,12 @@
+## [7.21.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.0...v7.21.1) (2022-10-03)
+
+
+### Bug Fixes
+
+* parentField ([0931234](https://github.com/softwaregroup-bg/ut-microservice/commit/0931234e0d17275934410cf79294519d333c82f6))
+
+
+
 # [7.21.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.20.8...v7.21.0) (2022-10-03)
 
 
