@@ -9,6 +9,7 @@ module.exports = function validation() {
         require('./microservice.bar.edit'),
         require('./microservice.bar.fetch'),
         require('./microservice.bar.get'),
+        require('./microservice.document.add'),
         require('./microservice.foo.fetch'),
         require('./microservice.foo.get'),
         require('./microservice.foo.process'),

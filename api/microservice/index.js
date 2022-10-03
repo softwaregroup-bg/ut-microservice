@@ -6,6 +6,7 @@ module.exports = function foo() {
         require('./example.parking.pay'),
         require('./example.request.receive'),
         require('./microservice.session'),
+        require('./microservice.document.add'),
         require('./microservice.foo.fetch'),
         require('./microservice.foo.get'),
         require('./microservice.foo.process')

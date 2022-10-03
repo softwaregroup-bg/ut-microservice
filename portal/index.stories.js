@@ -27,6 +27,7 @@ const page = app({
     microserviceMock()
 ]);
 
+export const DocumentNew = page('microservice.document.new');
 export const FooBrowse = page('microservice.foo.browse');
 export const FooDemo = page('microservice.foo.demo');
 export const FooOpen = page('microservice.foo.open', 1);
