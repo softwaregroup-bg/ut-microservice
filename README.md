@@ -122,6 +122,40 @@ Front end is defined in the following folder structure:
 </pre>
 <!-- markdownlint-restore -->
 
+### Create a configuration file
+
+Each microservice should be developed in a way, that enables debugging it
+without an implementation. The files needed to enable this are in the server
+folder. To connect to a database, a configuration file is needed, which should
+not be put in git. To avoid creation of a new configuration file for each
+microservice you work on, put a file named `.ut_devrc` in a common place
+(see [ut-config](https://github.com/softwaregroup-bg/ut-config)
+for the possible places, where configuration can be placed).
+A second file named `.ut_testrc`
+is needed for the launch configurations which use set the environment variable `UT_ENV=test`.
+
+The files must have the following recommended structure:
+
+```yaml
+db:
+  auto: true # this enables automatic DB creation based on user name
+  logLevel: info
+  connection:
+    server: bgs-vws-db-10.softwaregroup-bg.com
+    user: firstName.lastName # your first and last names
+    password: xxx
+    connectionTimeout: 60000
+    requestTimeout: 60000
+  create:
+    user: # user, which can create databases
+    password: # password of the above user
+utLogin:
+  login:
+    expire:
+      cookie: 400000000 # this makes the login not expire
+      access: 400000000 # this makes the login not expire
+```
+
 ### Defining UI components
 
 Components are created by following the pattern below:
