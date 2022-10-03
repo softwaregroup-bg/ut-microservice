@@ -64,6 +64,7 @@ export default ({
                             keyField='id'
                             field='title'
                             title='Tenant'
+                            parentField='parents'
                             resultSet='organization'
                         />
                     </Explorer>
