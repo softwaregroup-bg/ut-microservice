@@ -143,7 +143,10 @@ declare namespace microservice_bar_fetch {
       barDescription?: string | null;
       barName?: string | null;
     };
-    orderBy?: ({
+    orderBy?: {
+      dir?: 'ASC' | 'DESC';
+      field?: string;
+    } | ({
       dir?: 'ASC' | 'DESC';
       field?: string;
     })[];

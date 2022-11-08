@@ -1,3 +1,7 @@
+## [7.21.3](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.2...v7.21.3) (2022-11-08)
+
+
+
 ## [7.21.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.1...v7.21.2) (2022-10-03)
 
 

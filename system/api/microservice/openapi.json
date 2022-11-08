@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "microservice",
-        "version": "7.21.1"
+        "version": "7.21.2"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -607,25 +607,47 @@
                                                 "type": "object"
                                             },
                                             "orderBy": {
-                                                "items": {
-                                                    "additionalProperties": false,
-                                                    "properties": {
-                                                        "dir": {
-                                                            "enum": [
-                                                                "ASC",
-                                                                "DESC"
-                                                            ],
-                                                            "type": "string"
+                                                "oneOf": [
+                                                    {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "dir": {
+                                                                "enum": [
+                                                                    "ASC",
+                                                                    "DESC"
+                                                                ],
+                                                                "type": "string"
+                                                            },
+                                                            "field": {
+                                                                "maxLength": 50,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            }
                                                         },
-                                                        "field": {
-                                                            "maxLength": 128,
-                                                            "minLength": 1,
-                                                            "type": "string"
-                                                        }
+                                                        "type": "object"
                                                     },
-                                                    "type": "object"
-                                                },
-                                                "type": "array"
+                                                    {
+                                                        "items": {
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "dir": {
+                                                                    "enum": [
+                                                                        "ASC",
+                                                                        "DESC"
+                                                                    ],
+                                                                    "type": "string"
+                                                                },
+                                                                "field": {
+                                                                    "maxLength": 50,
+                                                                    "minLength": 1,
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                ]
                                             },
                                             "paging": {
                                                 "additionalProperties": false,

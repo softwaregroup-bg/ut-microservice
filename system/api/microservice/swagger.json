@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "microservice",
-        "version": "7.21.1"
+        "version": "7.21.2"
     },
     "paths": {
         "/rpc/microservice/bar/add": {
@@ -19,18 +19,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -57,20 +46,13 @@
                                             "properties": {
                                                 "barDescription": {
                                                     "maxLength": 255,
-                                                    "nullable": true,
-                                                    "type": "string"
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "barId": {
-                                                    "nullable": true,
-                                                    "oneOf": [
-                                                        {
-                                                            "type": "integer"
-                                                        },
-                                                        {
-                                                            "pattern": "^[0-9]{1,19}$",
-                                                            "type": "string"
-                                                        }
-                                                    ]
+                                                    "type": "integer"
                                                 },
                                                 "barName": {
                                                     "maxLength": 50,
@@ -89,8 +71,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -142,19 +126,13 @@
                                             "properties": {
                                                 "barDescription": {
                                                     "maxLength": 255,
-                                                    "nullable": true,
-                                                    "type": "string"
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "barId": {
-                                                    "oneOf": [
-                                                        {
-                                                            "type": "integer"
-                                                        },
-                                                        {
-                                                            "pattern": "^[0-9]{1,19}$",
-                                                            "type": "string"
-                                                        }
-                                                    ]
+                                                    "type": "integer"
                                                 },
                                                 "barName": {
                                                     "maxLength": 50,
@@ -204,18 +182,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -239,15 +206,7 @@
                                     "properties": {
                                         "barId": {
                                             "items": {
-                                                "oneOf": [
-                                                    {
-                                                        "type": "integer"
-                                                    },
-                                                    {
-                                                        "pattern": "^[0-9]{1,19}$",
-                                                        "type": "string"
-                                                    }
-                                                ]
+                                                "type": "integer"
                                             },
                                             "type": "array"
                                         }
@@ -257,8 +216,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -310,19 +271,13 @@
                                                 "properties": {
                                                     "barDescription": {
                                                         "maxLength": 255,
-                                                        "nullable": true,
-                                                        "type": "string"
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
                                                     },
                                                     "barId": {
-                                                        "oneOf": [
-                                                            {
-                                                                "type": "integer"
-                                                            },
-                                                            {
-                                                                "pattern": "^[0-9]{1,19}$",
-                                                                "type": "string"
-                                                            }
-                                                        ]
+                                                        "type": "integer"
                                                     },
                                                     "barName": {
                                                         "maxLength": 50,
@@ -377,18 +332,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -415,19 +359,13 @@
                                             "properties": {
                                                 "barDescription": {
                                                     "maxLength": 255,
-                                                    "nullable": true,
-                                                    "type": "string"
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "barId": {
-                                                    "oneOf": [
-                                                        {
-                                                            "type": "integer"
-                                                        },
-                                                        {
-                                                            "pattern": "^[0-9]{1,19}$",
-                                                            "type": "string"
-                                                        }
-                                                    ]
+                                                    "type": "integer"
                                                 },
                                                 "barName": {
                                                     "maxLength": 50,
@@ -447,8 +385,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -500,19 +440,13 @@
                                             "properties": {
                                                 "barDescription": {
                                                     "maxLength": 255,
-                                                    "nullable": true,
-                                                    "type": "string"
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "barId": {
-                                                    "oneOf": [
-                                                        {
-                                                            "type": "integer"
-                                                        },
-                                                        {
-                                                            "pattern": "^[0-9]{1,19}$",
-                                                            "type": "string"
-                                                        }
-                                                    ]
+                                                    "type": "integer"
                                                 },
                                                 "barName": {
                                                     "maxLength": 50,
@@ -562,18 +496,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -600,37 +523,38 @@
                                             "properties": {
                                                 "barDescription": {
                                                     "maxLength": 255,
-                                                    "nullable": true,
-                                                    "type": "string"
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "barName": {
                                                     "maxLength": 50,
-                                                    "nullable": true,
-                                                    "type": "string"
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 }
                                             },
                                             "type": "object"
                                         },
                                         "orderBy": {
-                                            "items": {
-                                                "additionalProperties": false,
-                                                "properties": {
-                                                    "dir": {
-                                                        "enum": [
-                                                            "ASC",
-                                                            "DESC"
-                                                        ],
-                                                        "type": "string"
-                                                    },
-                                                    "field": {
-                                                        "maxLength": 128,
-                                                        "minLength": 1,
-                                                        "type": "string"
-                                                    }
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "dir": {
+                                                    "enum": [
+                                                        "ASC",
+                                                        "DESC"
+                                                    ],
+                                                    "type": "string"
                                                 },
-                                                "type": "object"
+                                                "field": {
+                                                    "maxLength": 50,
+                                                    "minLength": 1,
+                                                    "type": "string"
+                                                }
                                             },
-                                            "type": "array"
+                                            "type": "object"
                                         },
                                         "paging": {
                                             "additionalProperties": false,
@@ -656,8 +580,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -709,19 +635,13 @@
                                                 "properties": {
                                                     "barDescription": {
                                                         "maxLength": 255,
-                                                        "nullable": true,
-                                                        "type": "string"
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
                                                     },
                                                     "barId": {
-                                                        "oneOf": [
-                                                            {
-                                                                "type": "integer"
-                                                            },
-                                                            {
-                                                                "pattern": "^[0-9]{1,19}$",
-                                                                "type": "string"
-                                                            }
-                                                        ]
+                                                        "type": "integer"
                                                     },
                                                     "barName": {
                                                         "maxLength": 50,
@@ -794,18 +714,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -828,15 +737,7 @@
                                     "description": "Method parameters",
                                     "properties": {
                                         "barId": {
-                                            "oneOf": [
-                                                {
-                                                    "type": "integer"
-                                                },
-                                                {
-                                                    "pattern": "^[0-9]{1,19}$",
-                                                    "type": "string"
-                                                }
-                                            ]
+                                            "type": "integer"
                                         }
                                     },
                                     "required": [
@@ -847,8 +748,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -899,19 +802,13 @@
                                             "properties": {
                                                 "barDescription": {
                                                     "maxLength": 255,
-                                                    "nullable": true,
-                                                    "type": "string"
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "barId": {
-                                                    "oneOf": [
-                                                        {
-                                                            "type": "integer"
-                                                        },
-                                                        {
-                                                            "pattern": "^[0-9]{1,19}$",
-                                                            "type": "string"
-                                                        }
-                                                    ]
+                                                    "type": "integer"
                                                 },
                                                 "barName": {
                                                     "maxLength": 50,
@@ -1012,8 +909,10 @@
                                                 "type": "object"
                                             },
                                             "title": {
-                                                "nullable": true,
-                                                "type": "string"
+                                                "type": [
+                                                    "string",
+                                                    "null"
+                                                ]
                                             }
                                         },
                                         "type": "object"
@@ -1081,15 +980,7 @@
                                                     "type": "object"
                                                 },
                                                 "documentId": {
-                                                    "oneOf": [
-                                                        {
-                                                            "type": "integer"
-                                                        },
-                                                        {
-                                                            "pattern": "^[0-9]{1,19}$",
-                                                            "type": "string"
-                                                        }
-                                                    ]
+                                                    "type": "integer"
                                                 },
                                                 "documentName": {
                                                     "minLength": 1,
@@ -1124,8 +1015,10 @@
                                                         "type": "object"
                                                     },
                                                     "title": {
-                                                        "nullable": true,
-                                                        "type": "string"
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
                                                     }
                                                 },
                                                 "type": "object"
@@ -1168,18 +1061,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -1211,8 +1093,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -1268,15 +1152,7 @@
                                                 "type": "string"
                                             },
                                             "fooId": {
-                                                "oneOf": [
-                                                    {
-                                                        "type": "integer"
-                                                    },
-                                                    {
-                                                        "pattern": "^[0-9]{1,19}$",
-                                                        "type": "string"
-                                                    }
-                                                ]
+                                                "type": "integer"
                                             },
                                             "name": {
                                                 "maxLength": 200,
@@ -1325,18 +1201,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -1359,15 +1224,7 @@
                                     "description": "Method parameters",
                                     "properties": {
                                         "fooId": {
-                                            "oneOf": [
-                                                {
-                                                    "type": "integer"
-                                                },
-                                                {
-                                                    "pattern": "^[0-9]{1,19}$",
-                                                    "type": "string"
-                                                }
-                                            ]
+                                            "type": "integer"
                                         }
                                     },
                                     "type": "object"
@@ -1375,8 +1232,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -1431,15 +1290,7 @@
                                             "type": "string"
                                         },
                                         "fooId": {
-                                            "oneOf": [
-                                                {
-                                                    "type": "integer"
-                                                },
-                                                {
-                                                    "pattern": "^[0-9]{1,19}$",
-                                                    "type": "string"
-                                                }
-                                            ]
+                                            "type": "integer"
                                         },
                                         "name": {
                                             "maxLength": 200,
@@ -1486,18 +1337,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -1520,15 +1360,7 @@
                                     "description": "Method parameters",
                                     "properties": {
                                         "fooId": {
-                                            "oneOf": [
-                                                {
-                                                    "type": "integer"
-                                                },
-                                                {
-                                                    "pattern": "^[0-9]{1,19}$",
-                                                    "type": "string"
-                                                }
-                                            ]
+                                            "type": "integer"
                                         }
                                     },
                                     "type": "object"
@@ -1536,8 +1368,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -1622,18 +1456,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -1665,8 +1488,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -1713,8 +1538,7 @@
                                     "enum": [
                                         null
                                     ],
-                                    "example": null,
-                                    "nullable": true
+                                    "example": null
                                 }
                             },
                             "required": [
@@ -1749,18 +1573,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -1792,8 +1605,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
@@ -1879,18 +1694,7 @@
                             "additionalProperties": false,
                             "properties": {
                                 "id": {
-                                    "description": "Unique identifier of the request",
-                                    "example": "1",
-                                    "oneOf": [
-                                        {
-                                            "type": "number"
-                                        },
-                                        {
-                                            "maxLength": 36,
-                                            "minLength": 1,
-                                            "type": "string"
-                                        }
-                                    ]
+                                    "type": "number"
                                 },
                                 "jsonrpc": {
                                     "description": "Version of the JSON-RPC protocol",
@@ -1922,8 +1726,10 @@
                                 "timeout": {
                                     "description": "Timeout in milliseconds",
                                     "example": null,
-                                    "nullable": true,
-                                    "type": "number"
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [
