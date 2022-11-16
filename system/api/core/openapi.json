@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.25.0"
+        "version": "8.25.5"
     },
     "openapi": "3.0.0",
     "paths": {

@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "policy",
-        "version": "10.39.2"
+        "version": "10.39.10"
     },
     "paths": {
         "/rpc/policy/ldapPolicy/get": {

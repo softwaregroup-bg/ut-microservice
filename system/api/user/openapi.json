@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "user",
-        "version": "10.39.2"
+        "version": "10.39.10"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -15366,6 +15366,10 @@
                                                             "minLength": 1,
                                                             "type": "string"
                                                         },
+                                                        "firstNameLocal": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "frontEndRecordId": {
                                                             "nullable": true,
                                                             "type": "string"
@@ -15486,6 +15490,11 @@
                                                             "type": "string"
                                                         },
                                                         "firstName": {
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        },
+                                                        "firstNameLocal": {
+                                                            "nullable": true,
                                                             "type": "string"
                                                         },
                                                         "frontEndRecordId": {
@@ -15497,11 +15506,24 @@
                                                             "type": "string"
                                                         },
                                                         "lastName": {
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        },
+                                                        "lastNameLocal": {
+                                                            "nullable": true,
                                                             "type": "string"
                                                         },
                                                         "maritalStatusId": {
                                                             "nullable": true,
                                                             "type": "number"
+                                                        },
+                                                        "middleName": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "middleNameLocal": {
+                                                            "nullable": true,
+                                                            "type": "string"
                                                         },
                                                         "nationalId": {
                                                             "nullable": true,
@@ -15542,6 +15564,10 @@
                                                             ]
                                                         }
                                                     },
+                                                    "required": [
+                                                        "firstName",
+                                                        "lastName"
+                                                    ],
                                                     "type": "object"
                                                 },
                                                 "phone": {
@@ -16881,6 +16907,11 @@
                                             "noResultSet": {
                                                 "nullable": true,
                                                 "type": "boolean"
+                                            },
+                                            "notification": {
+                                                "additionalProperties": true,
+                                                "properties": {},
+                                                "type": "object"
                                             }
                                         },
                                         "required": [
@@ -19544,6 +19575,10 @@
                                                             "minLength": 1,
                                                             "type": "string"
                                                         },
+                                                        "firstNameLocal": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "frontEndRecordId": {
                                                             "nullable": true,
                                                             "type": "string"
@@ -19664,6 +19699,11 @@
                                                             "type": "string"
                                                         },
                                                         "firstName": {
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        },
+                                                        "firstNameLocal": {
+                                                            "nullable": true,
                                                             "type": "string"
                                                         },
                                                         "frontEndRecordId": {
@@ -19675,11 +19715,24 @@
                                                             "type": "string"
                                                         },
                                                         "lastName": {
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        },
+                                                        "lastNameLocal": {
+                                                            "nullable": true,
                                                             "type": "string"
                                                         },
                                                         "maritalStatusId": {
                                                             "nullable": true,
                                                             "type": "number"
+                                                        },
+                                                        "middleName": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "middleNameLocal": {
+                                                            "nullable": true,
+                                                            "type": "string"
                                                         },
                                                         "nationalId": {
                                                             "nullable": true,
@@ -19720,6 +19773,10 @@
                                                             ]
                                                         }
                                                     },
+                                                    "required": [
+                                                        "firstName",
+                                                        "lastName"
+                                                    ],
                                                     "type": "object"
                                                 },
                                                 "phone": {
@@ -22409,6 +22466,10 @@
                                                             "minLength": 1,
                                                             "type": "string"
                                                         },
+                                                        "firstNameLocal": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "frontEndRecordId": {
                                                             "nullable": true,
                                                             "type": "string"
@@ -22529,6 +22590,11 @@
                                                             "type": "string"
                                                         },
                                                         "firstName": {
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        },
+                                                        "firstNameLocal": {
+                                                            "nullable": true,
                                                             "type": "string"
                                                         },
                                                         "frontEndRecordId": {
@@ -22540,11 +22606,24 @@
                                                             "type": "string"
                                                         },
                                                         "lastName": {
+                                                            "minLength": 1,
+                                                            "type": "string"
+                                                        },
+                                                        "lastNameLocal": {
+                                                            "nullable": true,
                                                             "type": "string"
                                                         },
                                                         "maritalStatusId": {
                                                             "nullable": true,
                                                             "type": "number"
+                                                        },
+                                                        "middleName": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "middleNameLocal": {
+                                                            "nullable": true,
+                                                            "type": "string"
                                                         },
                                                         "nationalId": {
                                                             "nullable": true,
@@ -22585,6 +22664,10 @@
                                                             ]
                                                         }
                                                     },
+                                                    "required": [
+                                                        "firstName",
+                                                        "lastName"
+                                                    ],
                                                     "type": "object"
                                                 },
                                                 "phone": {

@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "user",
-        "version": "10.39.2"
+        "version": "10.39.10"
     },
     "paths": {
         "/rpc/user/action/grant": {
@@ -14433,6 +14433,12 @@
                                                     "minLength": 1,
                                                     "type": "string"
                                                 },
+                                                "firstNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "frontEndRecordId": {
                                                     "type": [
                                                         "string",
@@ -14568,7 +14574,14 @@
                                                     ]
                                                 },
                                                 "firstName": {
+                                                    "minLength": 1,
                                                     "type": "string"
+                                                },
+                                                "firstNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "frontEndRecordId": {
                                                     "type": [
@@ -14583,11 +14596,30 @@
                                                     ]
                                                 },
                                                 "lastName": {
+                                                    "minLength": 1,
                                                     "type": "string"
+                                                },
+                                                "lastNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "maritalStatusId": {
                                                     "type": [
                                                         "number",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "middleName": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "middleNameLocal": {
+                                                    "type": [
+                                                        "string",
                                                         "null"
                                                     ]
                                                 },
@@ -14634,6 +14666,10 @@
                                                     ]
                                                 }
                                             },
+                                            "required": [
+                                                "firstName",
+                                                "lastName"
+                                            ],
                                             "type": [
                                                 "object",
                                                 "null"
@@ -16102,6 +16138,11 @@
                                                 "boolean",
                                                 "null"
                                             ]
+                                        },
+                                        "notification": {
+                                            "additionalProperties": true,
+                                            "properties": {},
+                                            "type": "object"
                                         }
                                     },
                                     "required": [
@@ -18750,6 +18791,12 @@
                                                     "minLength": 1,
                                                     "type": "string"
                                                 },
+                                                "firstNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "frontEndRecordId": {
                                                     "type": [
                                                         "string",
@@ -18885,7 +18932,14 @@
                                                     ]
                                                 },
                                                 "firstName": {
+                                                    "minLength": 1,
                                                     "type": "string"
+                                                },
+                                                "firstNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "frontEndRecordId": {
                                                     "type": [
@@ -18900,11 +18954,30 @@
                                                     ]
                                                 },
                                                 "lastName": {
+                                                    "minLength": 1,
                                                     "type": "string"
+                                                },
+                                                "lastNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "maritalStatusId": {
                                                     "type": [
                                                         "number",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "middleName": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "middleNameLocal": {
+                                                    "type": [
+                                                        "string",
                                                         "null"
                                                     ]
                                                 },
@@ -18951,6 +19024,10 @@
                                                     ]
                                                 }
                                             },
+                                            "required": [
+                                                "firstName",
+                                                "lastName"
+                                            ],
                                             "type": [
                                                 "object",
                                                 "null"
@@ -21875,6 +21952,12 @@
                                                     "minLength": 1,
                                                     "type": "string"
                                                 },
+                                                "firstNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "frontEndRecordId": {
                                                     "type": [
                                                         "string",
@@ -22010,7 +22093,14 @@
                                                     ]
                                                 },
                                                 "firstName": {
+                                                    "minLength": 1,
                                                     "type": "string"
+                                                },
+                                                "firstNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "frontEndRecordId": {
                                                     "type": [
@@ -22025,11 +22115,30 @@
                                                     ]
                                                 },
                                                 "lastName": {
+                                                    "minLength": 1,
                                                     "type": "string"
+                                                },
+                                                "lastNameLocal": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "maritalStatusId": {
                                                     "type": [
                                                         "number",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "middleName": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "middleNameLocal": {
+                                                    "type": [
+                                                        "string",
                                                         "null"
                                                     ]
                                                 },
@@ -22076,6 +22185,10 @@
                                                     ]
                                                 }
                                             },
+                                            "required": [
+                                                "firstName",
+                                                "lastName"
+                                            ],
                                             "type": [
                                                 "object",
                                                 "null"
