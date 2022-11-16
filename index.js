@@ -4,6 +4,9 @@ module.exports = require('ut-run').microservice(
     () => function utMicroservice() {
         return {
             config: require('./config'),
+            errors: () => function publicErrors(...params) {
+                return require('./errors')(...params);
+            },
             adapter: () => [
                 require('./api/sql/schema'),
                 require('./api/sql/seed'),
