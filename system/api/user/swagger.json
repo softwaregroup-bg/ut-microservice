@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "user",
-        "version": "10.42.1"
+        "version": "10.42.2"
     },
     "paths": {
         "/rpc/user/action/grant": {
