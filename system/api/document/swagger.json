@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "document",
-        "version": "9.10.0"
+        "version": "9.11.2"
     },
     "paths": {
         "/aa/document/repository/{key}": {
@@ -1354,6 +1354,240 @@
                 ]
             }
         },
+        "/rpc/document/document/addUnapproved": {
+            "post": {
+                "description": "document.document.addUnapproved",
+                "operationId": "document.document.addUnapproved",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "type": "number"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "document.document.addUnapproved"
+                                    ],
+                                    "example": "document.document.addUnapproved",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "actorId": {
+                                            "type": "integer"
+                                        },
+                                        "attachment": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "attachmentSizeId": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "content": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "contentEncoding": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "contentType": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "documentId": {
+                                                        "type": "integer"
+                                                    },
+                                                    "extension": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "filename": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "originalFilename": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "documentId",
+                                                    "attachmentSizeId",
+                                                    "content",
+                                                    "contentEncoding",
+                                                    "contentType",
+                                                    "filename",
+                                                    "originalFilename",
+                                                    "extension"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "document": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "documentId": {
+                                                    "type": "integer"
+                                                },
+                                                "documentTypeId": {
+                                                    "minLength": 1,
+                                                    "type": "string"
+                                                },
+                                                "statusId": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "documentId",
+                                                "documentTypeId"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "noResultSet": {
+                                            "enum": [
+                                                0,
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "actorId"
+                                    ],
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "document.document.addUnapproved"
+                                    ],
+                                    "example": "document.document.addUnapproved",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "attachment": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "documentUnapprovedId": {
+                                                        "type": "integer"
+                                                    },
+                                                    "hash": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "documentUnapprovedId",
+                                                    "hash"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "document": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "docSystemId": {
+                                                        "type": "integer"
+                                                    },
+                                                    "documentUnapprovedId": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "documentUnapprovedId",
+                                                    "docSystemId"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Save document",
+                "tags": [
+                    "document"
+                ]
+            }
+        },
         "/rpc/document/document/check": {
             "post": {
                 "description": "document.document.check",
@@ -1466,7 +1700,7 @@
                         "schema": {}
                     }
                 },
-                "summary": "Check document existance",
+                "summary": "Check document existence",
                 "tags": [
                     "document"
                 ]

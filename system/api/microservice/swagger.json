@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "microservice",
-        "version": "7.21.3"
+        "version": "7.21.4"
     },
     "paths": {
         "/rpc/microservice/bar/add": {
