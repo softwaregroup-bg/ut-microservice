@@ -1,3 +1,12 @@
+## [7.21.7](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.6...v7.21.7) (2022-11-30)
+
+
+### Bug Fixes
+
+* add test env by default in ui.test.js #UTCORE-121 ([45024b1](https://github.com/softwaregroup-bg/ut-microservice/commit/45024b1238e3df585c380cad19536e75b9e26b12)), closes [#UTCORE-121](https://github.com/softwaregroup-bg/ut-microservice/issues/UTCORE-121)
+
+
+
 ## [7.21.6](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.5...v7.21.6) (2022-11-28)
 
 
