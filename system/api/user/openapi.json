@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "user",
-        "version": "10.42.3"
+        "version": "10.46.3"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -14426,6 +14426,10 @@
                                             "person": {
                                                 "additionalProperties": false,
                                                 "properties": {
+                                                    "activityId": {
+                                                        "nullable": true,
+                                                        "type": "integer"
+                                                    },
                                                     "actorId": {
                                                         "nullable": true,
                                                         "type": "string"
@@ -15379,6 +15383,14 @@
                                                 "person": {
                                                     "additionalProperties": false,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -15506,6 +15518,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -18564,6 +18584,10 @@
                                                 "additionalProperties": false,
                                                 "description": "Required only for updating user names.",
                                                 "properties": {
+                                                    "activityId": {
+                                                        "nullable": true,
+                                                        "type": "integer"
+                                                    },
                                                     "actorId": {
                                                         "oneOf": [
                                                             {
@@ -19604,6 +19628,14 @@
                                                 "person": {
                                                     "additionalProperties": false,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -19731,6 +19763,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -22495,6 +22535,14 @@
                                                 "person": {
                                                     "additionalProperties": false,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -22622,6 +22670,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {

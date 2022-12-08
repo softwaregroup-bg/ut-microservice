@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.25.7"
+        "version": "8.26.1"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -1880,8 +1880,24 @@
                                                                 "minLength": 1,
                                                                 "type": "string"
                                                             },
+                                                            "languageId": {
+                                                                "nullable": true,
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "pattern": "^[0-9]{1,19}$",
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
                                                             "name": {
                                                                 "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "nameTranslation": {
+                                                                "nullable": true,
                                                                 "type": "string"
                                                             },
                                                             "numericCode": {

@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "document",
-        "version": "9.11.3"
+        "version": "9.12.1"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -3513,6 +3513,78 @@
                     }
                 },
                 "summary": "Upload document template",
+                "tags": [
+                    "document"
+                ]
+            }
+        },
+        "/rpc/document/transfer/execute": {
+            "post": {
+                "description": "document.transfer.execute",
+                "operationId": "document.transfer.execute",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "id": {
+                                        "description": "Unique identifier of the request",
+                                        "example": "1",
+                                        "maxLength": 36,
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "jsonrpc": {
+                                        "description": "Version of the JSON-RPC protocol",
+                                        "enum": [
+                                            "2.0"
+                                        ],
+                                        "example": "2.0",
+                                        "type": "string"
+                                    },
+                                    "method": {
+                                        "description": "Name of the method",
+                                        "enum": [
+                                            "document.transfer.execute"
+                                        ],
+                                        "example": "document.transfer.execute",
+                                        "type": "string"
+                                    },
+                                    "timeout": {
+                                        "description": "Timeout in milliseconds",
+                                        "example": null,
+                                        "nullable": true,
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "jsonrpc",
+                                    "method",
+                                    "params"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Successful response"
+                    },
+                    "default": {
+                        "content": {},
+                        "description": "Invalid request"
+                    }
+                },
+                "summary": "document.transfer.execute",
                 "tags": [
                     "document"
                 ]

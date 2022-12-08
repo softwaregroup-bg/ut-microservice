@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.25.7"
+        "version": "8.26.1"
     },
     "paths": {
         "/rpc/core/actor/addResult": {
@@ -1763,9 +1763,18 @@
                                                         "minLength": 1,
                                                         "type": "string"
                                                     },
+                                                    "languageId": {
+                                                        "type": "integer"
+                                                    },
                                                     "name": {
                                                         "minLength": 1,
                                                         "type": "string"
+                                                    },
+                                                    "nameTranslation": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
                                                     },
                                                     "numericCode": {
                                                         "type": [

@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "customer",
-        "version": "10.24.1"
+        "version": "10.25.3"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -4829,6 +4829,10 @@
                                                             "nullable": true,
                                                             "type": "string"
                                                         },
+                                                        "issuedBy": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "statusId": {
                                                             "nullable": true,
                                                             "type": "string"
@@ -4869,6 +4873,10 @@
                                             "person": {
                                                 "additionalProperties": false,
                                                 "properties": {
+                                                    "activityId": {
+                                                        "nullable": true,
+                                                        "type": "integer"
+                                                    },
                                                     "dateOfBirth": {
                                                         "nullable": true,
                                                         "type": "string"
@@ -5491,6 +5499,10 @@
                                                             "nullable": true,
                                                             "type": "string"
                                                         },
+                                                        "issuedBy": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "itemOrganizationId": {
                                                             "nullable": true
                                                         },
@@ -5936,6 +5948,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -6194,6 +6214,10 @@
                                                         "issueDate": {
                                                             "nullable": true,
                                                             "type": "string"
+                                                        },
+                                                        "issuedBy": {
+                                                            "nullable": true,
+                                                            "type": "string"
                                                         }
                                                     },
                                                     "type": "object"
@@ -6437,6 +6461,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -7101,6 +7133,7 @@
                                                         },
                                                         "expirationDate": {},
                                                         "issueDate": {},
+                                                        "issuedBy": {},
                                                         "statusId": {}
                                                     },
                                                     "type": "object"
@@ -7556,6 +7589,10 @@
                                                             },
                                                             "issueDate": {
                                                                 "format": "date-time",
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "issuedBy": {
                                                                 "nullable": true,
                                                                 "type": "string"
                                                             }
@@ -8642,6 +8679,10 @@
                                             "person": {
                                                 "additionalProperties": false,
                                                 "properties": {
+                                                    "activityId": {
+                                                        "nullable": true,
+                                                        "type": "integer"
+                                                    },
                                                     "actorId": {
                                                         "type": "number"
                                                     },
@@ -9351,6 +9392,10 @@
                                                             "nullable": true,
                                                             "type": "string"
                                                         },
+                                                        "issuedBy": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "itemOrganizationId": {
                                                             "nullable": true
                                                         },
@@ -9796,6 +9841,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -10054,6 +10107,10 @@
                                                         "issueDate": {
                                                             "nullable": true,
                                                             "type": "string"
+                                                        },
+                                                        "issuedBy": {
+                                                            "nullable": true,
+                                                            "type": "string"
                                                         }
                                                     },
                                                     "type": "object"
@@ -10297,6 +10354,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -10756,6 +10821,14 @@
                                                     "items": {
                                                         "additionalProperties": false,
                                                         "properties": {
+                                                            "activity": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "activityId": {
+                                                                "nullable": true,
+                                                                "type": "integer"
+                                                            },
                                                             "actorId": {
                                                                 "minLength": 1,
                                                                 "type": "string"
@@ -11407,6 +11480,10 @@
                                                             "nullable": true,
                                                             "type": "string"
                                                         },
+                                                        "issuedBy": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "itemOrganizationId": {
                                                             "nullable": true
                                                         },
@@ -11852,6 +11929,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -12110,6 +12195,10 @@
                                                         "issueDate": {
                                                             "nullable": true,
                                                             "type": "string"
+                                                        },
+                                                        "issuedBy": {
+                                                            "nullable": true,
+                                                            "type": "string"
                                                         }
                                                     },
                                                     "type": "object"
@@ -12353,6 +12442,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -13962,6 +14059,10 @@
                                                             },
                                                             "issueDate": {
                                                                 "format": "date-time",
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "issuedBy": {
                                                                 "nullable": true,
                                                                 "type": "string"
                                                             }
@@ -20618,13 +20719,20 @@
                                                 "type": "integer"
                                             },
                                             "customerTypeId": {
+                                                "nullable": true,
                                                 "type": "integer"
+                                            },
+                                            "display": {
+                                                "nullable": true,
+                                                "type": "string"
                                             },
                                             "isActive": {
                                                 "enum": [
+                                                    null,
                                                     "active",
                                                     "inactive"
                                                 ],
+                                                "nullable": true,
                                                 "type": "string"
                                             },
                                             "orderBy": {
@@ -27642,6 +27750,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -27871,6 +27987,14 @@
                                                     "additionalProperties": false,
                                                     "nullable": true,
                                                     "properties": {
+                                                        "activity": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "activityId": {
+                                                            "nullable": true,
+                                                            "type": "integer"
+                                                        },
                                                         "actorId": {
                                                             "oneOf": [
                                                                 {
@@ -30016,6 +30140,10 @@
                                                 ]
                                             },
                                             "issueDate": {
+                                                "type": "string"
+                                            },
+                                            "issuedBy": {
+                                                "nullable": true,
                                                 "type": "string"
                                             },
                                             "lat": {

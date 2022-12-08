@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "customer",
-        "version": "10.24.1"
+        "version": "10.25.3"
     },
     "paths": {
         "/rpc/customer/account/activity": {
@@ -4859,6 +4859,12 @@
                                                             "null"
                                                         ]
                                                     },
+                                                    "issuedBy": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
                                                     "statusId": {
                                                         "type": [
                                                             "string",
@@ -4901,6 +4907,12 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "dateOfBirth": {
                                                     "type": [
                                                         "string",
@@ -5485,6 +5497,12 @@
                                                         "null"
                                                     ]
                                                 },
+                                                "issuedBy": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "itemOrganizationId": {},
                                                 "kycId": {
                                                     "type": [
@@ -6025,6 +6043,18 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -6347,6 +6377,12 @@
                                                         "string",
                                                         "null"
                                                     ]
+                                                },
+                                                "issuedBy": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 }
                                             },
                                             "type": "object"
@@ -6506,6 +6542,18 @@
                                         "unapprovedperson": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -7220,6 +7268,7 @@
                                                     "documentTypeId": {},
                                                     "expirationDate": {},
                                                     "issueDate": {},
+                                                    "issuedBy": {},
                                                     "statusId": {}
                                                 },
                                                 "type": "object"
@@ -7742,6 +7791,12 @@
                                                     },
                                                     "issueDate": {
                                                         "format": "date-time",
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "issuedBy": {
                                                         "type": [
                                                             "string",
                                                             "null"
@@ -8757,6 +8812,12 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "number"
                                                 },
@@ -9455,6 +9516,12 @@
                                                         "null"
                                                     ]
                                                 },
+                                                "issuedBy": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "itemOrganizationId": {},
                                                 "kycId": {
                                                     "type": [
@@ -9995,6 +10062,18 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -10317,6 +10396,12 @@
                                                         "string",
                                                         "null"
                                                     ]
+                                                },
+                                                "issuedBy": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 }
                                             },
                                             "type": "object"
@@ -10476,6 +10561,18 @@
                                         "unapprovedperson": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -11023,6 +11120,18 @@
                                             "items": {
                                                 "additionalProperties": false,
                                                 "properties": {
+                                                    "activity": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "activityId": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
                                                     "actorId": {
                                                         "minLength": 1,
                                                         "type": "string"
@@ -11689,6 +11798,12 @@
                                                         "null"
                                                     ]
                                                 },
+                                                "issuedBy": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "itemOrganizationId": {},
                                                 "kycId": {
                                                     "type": [
@@ -12229,6 +12344,18 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -12551,6 +12678,12 @@
                                                         "string",
                                                         "null"
                                                     ]
+                                                },
+                                                "issuedBy": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
                                                 }
                                             },
                                             "type": "object"
@@ -12710,6 +12843,18 @@
                                         "unapprovedperson": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -14399,6 +14544,12 @@
                                                     },
                                                     "issueDate": {
                                                         "format": "date-time",
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "issuedBy": {
                                                         "type": [
                                                             "string",
                                                             "null"
@@ -21333,14 +21484,27 @@
                                             "type": "integer"
                                         },
                                         "customerTypeId": {
-                                            "type": "integer"
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ]
+                                        },
+                                        "display": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
                                         },
                                         "isActive": {
                                             "enum": [
+                                                null,
                                                 "active",
                                                 "inactive"
                                             ],
-                                            "type": "string"
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
                                         },
                                         "orderBy": {
                                             "additionalProperties": false,
@@ -28643,6 +28807,18 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -28939,6 +29115,18 @@
                                         "unapprovedperson": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -31097,6 +31285,12 @@
                                         },
                                         "issueDate": {
                                             "type": "string"
+                                        },
+                                        "issuedBy": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
                                         },
                                         "lat": {
                                             "type": [

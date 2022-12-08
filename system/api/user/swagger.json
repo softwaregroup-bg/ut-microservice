@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "user",
-        "version": "10.42.3"
+        "version": "10.46.3"
     },
     "paths": {
         "/rpc/user/action/grant": {
@@ -13374,6 +13374,12 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": [
                                                         "string",
@@ -14417,6 +14423,18 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -14561,6 +14579,18 @@
                                         "personUnapproved": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -17647,6 +17677,12 @@
                                             "additionalProperties": false,
                                             "description": "Required only for updating user names.",
                                             "properties": {
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -18799,6 +18835,18 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -18943,6 +18991,18 @@
                                         "personUnapproved": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -21960,6 +22020,18 @@
                                         "person": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
@@ -22104,6 +22176,18 @@
                                         "personUnapproved": {
                                             "additionalProperties": false,
                                             "properties": {
+                                                "activity": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "activityId": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "actorId": {
                                                     "type": "integer"
                                                 },
