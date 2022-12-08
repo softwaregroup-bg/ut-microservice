@@ -16,6 +16,7 @@ test('test', async({ portal: page }, testInfo) => {
     await page.locator('textarea[name="bar.barDescription"]').fill('description 1');
     await page.locator('input[name="bar.barName"]').fill(randomName);
     await page.locator('[data-testid="microserviceBar-saveButton"]').click();
+    await expect(page.getByTestId('microserviceBar-saveButton').locator('.pi-check')).toBeVisible();
     expect.soft(await page.screenshot({
         animations: 'disabled',
         mask: [page.locator('input[name="bar.barName"]')]
@@ -28,7 +29,7 @@ test('test', async({ portal: page }, testInfo) => {
     await page.locator(`td >> text=${randomName}`).click();
     await page.locator('textarea[name="bar.barDescription"]').fill('description 2');
     await page.locator('[data-testid="microserviceBar-saveButton"]').click();
-    expect(page.locator('[data-testid="microserviceBar-saveButton"]')).toBeDisabled();
+    await expect(page.getByTestId('microserviceBar-saveButton').locator('.pi-check')).toBeVisible();
     await page.locator('textarea[name="bar.barDescription"]').click();
     expect.soft(await page.screenshot({
         animations: 'disabled',
