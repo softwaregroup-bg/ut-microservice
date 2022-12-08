@@ -34,8 +34,8 @@ test('test', async({ portal: page }, testInfo) => {
     expect.soft(await page.screenshot({
         animations: 'disabled',
         mask: [page.locator('input[name="bar.barName"]')]
-    })).toMatchSnapshot('microservice-bar-edit.png');
-    await testInfo.attach('Bar edit', {path: testInfo.snapshotPath('microservice-bar-edit.png')});
+    })).toMatchSnapshot('microservice-bar-save.png');
+    await testInfo.attach('Bar edit', {path: testInfo.snapshotPath('microservice-bar-save.png')});
 
     // Fetch item and select for edit
     // close tab
