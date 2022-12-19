@@ -1,0 +1,6 @@
+POST http://localhost:8090/method
+Content-Type: application/json
+
+{
+    "param1": "demo"
+}
