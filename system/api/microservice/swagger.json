@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "microservice",
-        "version": "7.21.7"
+        "version": "7.21.8"
     },
     "paths": {
         "/rpc/microservice/bar/add": {
@@ -1437,6 +1437,125 @@
                     }
                 },
                 "summary": "Foo process",
+                "tags": [
+                    "microservice"
+                ]
+            }
+        },
+        "/rpc/microservice/foo/timeout": {
+            "post": {
+                "description": "microservice.foo.timeout",
+                "operationId": "microservice.foo.timeout",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "type": "number"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.timeout"
+                                    ],
+                                    "example": "microservice.foo.timeout",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "timeout": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "microservice.foo.timeout"
+                                    ],
+                                    "example": "microservice.foo.timeout",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "timeout": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Foo timeout",
                 "tags": [
                     "microservice"
                 ]

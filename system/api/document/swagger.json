@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "document",
-        "version": "9.12.1"
+        "version": "9.12.8"
     },
     "paths": {
         "/aa/document/repository/{key}": {

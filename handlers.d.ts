@@ -258,6 +258,15 @@ declare namespace microservice_foo_process {
   }
 }
 
+declare namespace microservice_foo_timeout {
+  export interface params {
+    timeout?: number;
+  }
+  export interface result {
+    timeout?: number;
+  }
+}
+
 declare namespace microservice_session_delete$ {
   export interface params {
     data?: any;
@@ -385,6 +394,8 @@ export interface handlers<location = ''> {
   microserviceFooGet?: ut.handler<microservice_foo_get.params, microservice_foo_get.result, location>,
   'microservice.foo.process'?: ut.handler<microservice_foo_process.params, microservice_foo_process.result, location>,
   microserviceFooProcess?: ut.handler<microservice_foo_process.params, microservice_foo_process.result, location>,
+  'microservice.foo.timeout'?: ut.handler<microservice_foo_timeout.params, microservice_foo_timeout.result, location>,
+  microserviceFooTimeout?: ut.handler<microservice_foo_timeout.params, microservice_foo_timeout.result, location>,
   'microservice.session.delete'?: ut.handler<microservice_session_delete$.params, microservice_session_delete$.result, location>,
   microserviceSessionDelete?: ut.handler<microservice_session_delete$.params, microservice_session_delete$.result, location>,
   'microservice.session.get'?: ut.handler<microservice_session_get.params, microservice_session_get.result, location>,

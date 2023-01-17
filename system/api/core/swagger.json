@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.26.1"
+        "version": "8.30.1"
     },
     "paths": {
         "/rpc/core/actor/addResult": {
@@ -3219,7 +3219,10 @@
                                     "description": "Method parameters",
                                     "properties": {
                                         "alias": {
-                                            "type": "string"
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
                                         },
                                         "breadcrumbs": {
                                             "items": {},
@@ -3229,7 +3232,10 @@
                                             "type": "number"
                                         },
                                         "isActive": {
-                                            "type": "boolean"
+                                            "type": [
+                                                "boolean",
+                                                "null"
+                                            ]
                                         },
                                         "orderBy": {
                                             "additionalProperties": false,
@@ -4849,10 +4855,16 @@
                                             "type": "array"
                                         },
                                         "isEnabled": {
-                                            "type": "boolean"
+                                            "type": [
+                                                "boolean",
+                                                "null"
+                                            ]
                                         },
                                         "itemName": {
-                                            "type": "string"
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
                                         },
                                         "itemTypeId": {
                                             "type": "integer"
@@ -5904,6 +5916,148 @@
                     }
                 },
                 "summary": "Get cascade dropdown data",
+                "tags": [
+                    "core"
+                ]
+            }
+        },
+        "/rpc/core/itemNameId/get": {
+            "post": {
+                "description": "core.itemNameId.get",
+                "operationId": "core.itemNameId.get",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "type": "number"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.itemNameId.get"
+                                    ],
+                                    "example": "core.itemNameId.get",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "itemCode": {
+                                            "maxLength": 200,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "itemType": {
+                                            "maxLength": 50,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "itemType",
+                                        "itemCode"
+                                    ],
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.itemNameId.get"
+                                    ],
+                                    "example": "core.itemNameId.get",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "itemId": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "itemNameId": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "itemNameId"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "Get itemNameId",
                 "tags": [
                     "core"
                 ]
@@ -7612,6 +7766,228 @@
                 ]
             }
         },
+        "/rpc/core/request/fetch": {
+            "post": {
+                "description": "core.request.fetch",
+                "operationId": "core.request.fetch",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "type": "number"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.request.fetch"
+                                    ],
+                                    "example": "core.request.fetch",
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "additionalProperties": false,
+                                    "description": "Method parameters",
+                                    "properties": {
+                                        "actionId": {
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        "actorId": {
+                                            "type": "integer"
+                                        },
+                                        "endDate": {
+                                            "format": "date-time",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        "orderBy": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "dir": {
+                                                    "enum": [
+                                                        "ASC",
+                                                        "DESC"
+                                                    ],
+                                                    "type": "string"
+                                                },
+                                                "field": {
+                                                    "maxLength": 50,
+                                                    "minLength": 1,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "paging": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "pageNumber": {
+                                                    "type": "integer"
+                                                },
+                                                "pageSize": {
+                                                    "type": "integer"
+                                                },
+                                                "pagesTotal": {
+                                                    "type": "integer"
+                                                },
+                                                "recordsTotal": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "startDate": {
+                                            "format": "date-time",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "timeout": {
+                                    "description": "Timeout in milliseconds",
+                                    "example": null,
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "description": "Unique identifier of the request",
+                                    "example": "1",
+                                    "maxLength": 36,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "jsonrpc": {
+                                    "description": "Version of the JSON-RPC protocol",
+                                    "enum": [
+                                        "2.0"
+                                    ],
+                                    "example": "2.0",
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "description": "Name of the method",
+                                    "enum": [
+                                        "core.request.fetch"
+                                    ],
+                                    "example": "core.request.fetch",
+                                    "type": "string"
+                                },
+                                "result": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "pagination": {
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "pageNumber": {
+                                                    "type": "integer"
+                                                },
+                                                "pageSize": {
+                                                    "type": "integer"
+                                                },
+                                                "pagesTotal": {
+                                                    "type": "integer"
+                                                },
+                                                "recordsTotal": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "request": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "actionId": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "actorId": {
+                                                        "type": "integer"
+                                                    },
+                                                    "createdOn": {
+                                                        "format": "date-time",
+                                                        "type": "string"
+                                                    },
+                                                    "requestId": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "requestId",
+                                                    "actorId",
+                                                    "actionId",
+                                                    "createdOn"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "required": [
+                                        "request"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "jsonrpc",
+                                "method"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Invalid request",
+                        "schema": {}
+                    }
+                },
+                "summary": "fetch requests",
+                "tags": [
+                    "core"
+                ]
+            }
+        },
         "/rpc/core/translation/add": {
             "post": {
                 "description": "core.translation.add",
@@ -8657,10 +9033,16 @@
                                             ]
                                         },
                                         "itemTypeId": {
-                                            "type": "string"
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
                                         },
                                         "languageId": {
-                                            "type": "string"
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
                                         },
                                         "pageNumber": {
                                             "minimum": 1,

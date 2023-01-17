@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "policy",
-        "version": "10.46.3"
+        "version": "10.47.18"
     },
     "paths": {
         "/rpc/policy/ldapPolicy/get": {
@@ -784,6 +784,7 @@
                                                 ],
                                                 "type": "object"
                                             },
+                                            "minItems": 1,
                                             "type": "array"
                                         },
                                         "function": {
@@ -832,6 +833,7 @@
                                                 },
                                                 "type": "object"
                                             },
+                                            "minItems": 1,
                                             "type": "array"
                                         },
                                         "policy": {
@@ -1074,9 +1076,15 @@
                                                 },
                                                 "type": "object"
                                             },
+                                            "minItems": 1,
                                             "type": "array"
                                         }
                                     },
+                                    "required": [
+                                        "factor",
+                                        "function",
+                                        "term"
+                                    ],
                                     "type": "object"
                                 },
                                 "timeout": {

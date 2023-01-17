@@ -2,7 +2,7 @@
     "info": {
         "description": "UT Microservice API",
         "title": "customer",
-        "version": "10.25.3"
+        "version": "10.29.6"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -5460,6 +5460,10 @@
                                                             "nullable": true,
                                                             "type": "string"
                                                         },
+                                                        "encryptedUdf": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "expirationDate": {
                                                             "nullable": true,
                                                             "type": "string"
@@ -9353,6 +9357,10 @@
                                                             "nullable": true,
                                                             "type": "string"
                                                         },
+                                                        "encryptedUdf": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
                                                         "expirationDate": {
                                                             "nullable": true,
                                                             "type": "string"
@@ -11438,6 +11446,10 @@
                                                             "type": "number"
                                                         },
                                                         "documentTypeId": {
+                                                            "nullable": true,
+                                                            "type": "string"
+                                                        },
+                                                        "encryptedUdf": {
                                                             "nullable": true,
                                                             "type": "string"
                                                         },
@@ -14448,6 +14460,52 @@
                                                     },
                                                     "type": "array"
                                                 },
+                                                "customer.customerTypeAlias": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "alias": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "description": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "label": {
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "parent": {
+                                                                "nullable": true,
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "value": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "label",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                },
                                                 "customer.education": {
                                                     "items": {
                                                         "additionalProperties": false,
@@ -14725,6 +14783,52 @@
                                                     "type": "array"
                                                 },
                                                 "customer.kycAttributes": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "alias": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "description": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "label": {
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "parent": {
+                                                                "nullable": true,
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "value": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "label",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "customer.kycDocuments": {
                                                     "items": {
                                                         "additionalProperties": false,
                                                         "properties": {
@@ -20036,6 +20140,21 @@
                                                 },
                                                 "type": "array"
                                             },
+                                            "kycConditionDocumentType": {
+                                                "items": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "itemNameId": {
+                                                            "type": "integer"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "itemNameId"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
                                             "noResultSet": {
                                                 "type": "boolean"
                                             }
@@ -20532,6 +20651,21 @@
                                                 },
                                                 "type": "array"
                                             },
+                                            "kycConditionDocumentType": {
+                                                "items": {
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "itemNameId": {
+                                                            "type": "integer"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "itemNameId"
+                                                    ],
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
                                             "noResultSet": {
                                                 "type": "boolean"
                                             }
@@ -20716,6 +20850,7 @@
                                         "description": "Method parameters",
                                         "properties": {
                                             "businessUnitId": {
+                                                "nullable": true,
                                                 "type": "integer"
                                             },
                                             "customerTypeId": {
@@ -20723,6 +20858,7 @@
                                                 "type": "integer"
                                             },
                                             "display": {
+                                                "maxLength": 10,
                                                 "nullable": true,
                                                 "type": "string"
                                             },
@@ -20764,9 +20900,6 @@
                                                 "type": "object"
                                             }
                                         },
-                                        "required": [
-                                            "businessUnitId"
-                                        ],
                                         "type": "object"
                                     },
                                     "timeout": {
@@ -21351,6 +21484,21 @@
                                                         "required": [
                                                             "kycConditionAttributeId",
                                                             "conditionId"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "kycConditionDocumentType": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "itemNameId": {
+                                                                "type": "integer"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "itemNameId"
                                                         ],
                                                         "type": "object"
                                                     },
@@ -24382,6 +24530,10 @@
                                             "organization": {
                                                 "additionalProperties": false,
                                                 "properties": {
+                                                    "activity": {
+                                                        "nullable": true,
+                                                        "type": "string"
+                                                    },
                                                     "activityId": {
                                                         "nullable": true,
                                                         "type": "integer"
@@ -24444,6 +24596,10 @@
                                                     },
                                                     "oldValues": {
                                                         "nullable": true
+                                                    },
+                                                    "organizationCodeBIC": {
+                                                        "nullable": true,
+                                                        "type": "string"
                                                     },
                                                     "organizationCodeIBAN": {
                                                         "nullable": true,
