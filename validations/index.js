@@ -13,6 +13,7 @@ module.exports = function validation() {
         require('./microservice.foo.fetch'),
         require('./microservice.foo.get'),
         require('./microservice.foo.process'),
+        require('./microservice.foo.timeout'),
         require('./microservice.session.delete'),
         require('./microservice.session.get'),
         require('./microservice.session.set')

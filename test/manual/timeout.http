@@ -1,0 +1,11 @@
+POST http://localhost:8090/rpc/microservice/foo/timeout
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "microservice.foo.timeout",
+    "id": 1,
+    "params": {
+        "timeout": 180000
+    }
+}

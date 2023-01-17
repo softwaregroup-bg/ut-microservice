@@ -9,6 +9,7 @@ module.exports = function foo() {
         require('./microservice.document.add'),
         require('./microservice.foo.fetch'),
         require('./microservice.foo.get'),
-        require('./microservice.foo.process')
+        require('./microservice.foo.process'),
+        require('./microservice.foo.timeout')
     ];
 };
