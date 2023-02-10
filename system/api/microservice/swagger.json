@@ -1655,10 +1655,16 @@
                                     "type": "string"
                                 },
                                 "result": {
+                                    "additionalProperties": true,
                                     "enum": [
                                         null
                                     ],
-                                    "example": null
+                                    "example": null,
+                                    "properties": {},
+                                    "type": [
+                                        "object",
+                                        "null"
+                                    ]
                                 }
                             },
                             "required": [

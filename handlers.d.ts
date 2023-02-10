@@ -272,7 +272,7 @@ declare namespace microservice_session_delete$ {
     data?: any;
     id?: number;
   }
-  export type result = any | null;
+  export type result = object | null;
 }
 
 declare namespace microservice_session_get {

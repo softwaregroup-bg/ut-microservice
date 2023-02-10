@@ -1848,11 +1848,14 @@
                                             "type": "string"
                                         },
                                         "result": {
+                                            "additionalProperties": true,
                                             "enum": [
                                                 null
                                             ],
                                             "example": null,
-                                            "nullable": true
+                                            "nullable": true,
+                                            "properties": {},
+                                            "type": "object"
                                         }
                                     },
                                     "required": [

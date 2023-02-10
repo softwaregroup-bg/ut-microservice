@@ -1,0 +1,102 @@
+{
+    "info": {
+        "description": "Parking services",
+        "title": "example",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/parking/pay": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "description": "Pay parking in a city zone",
+                "operationId": "example.parking.pay",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "schema": {
+                            "properties": {
+                                "city": {
+                                    "description": "City",
+                                    "type": "string"
+                                },
+                                "zone": {
+                                    "description": "Zone",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "city",
+                                "zone"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Payment details",
+                        "schema": {
+                            "properties": {
+                                "details": {
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "time": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "time",
+                                        "amount"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "details"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                },
+                "security": [],
+                "summary": "Parking payment",
+                "tags": [
+                    "parking"
+                ],
+                "x-options": {
+                    "payload": {
+                        "parse": false
+                    }
+                },
+                "x-ut-errorTransform": "example.error.transform",
+                "x-ut-receive": "example.request.receive"
+            }
+        }
+    },
+    "security": [
+        {
+            "jwt": []
+        }
+    ],
+    "securityDefinitions": {
+        "basicAuth": {
+            "type": "basic"
+        },
+        "jwt": {
+            "in": "header",
+            "name": "authorization",
+            "type": "apiKey"
+        }
+    },
+    "swagger": "2.0",
+    "host": "localhost",
+    "schemes": [
+        "http",
+        "https"
+    ]
+}

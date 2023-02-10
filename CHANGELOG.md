@@ -1,3 +1,12 @@
+## [7.21.10](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.9...v7.21.10) (2023-02-10)
+
+
+### Bug Fixes
+
+* api validation ([b20c403](https://github.com/softwaregroup-bg/ut-microservice/commit/b20c40333b790d701e02ed8ee2657ebd9b06f9b4))
+
+
+
 ## [7.21.9](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.8...v7.21.9) (2023-01-17)
 
 
