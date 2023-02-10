@@ -7,9 +7,9 @@ module.exports = ({
             description: 'Session delete',
             params: joi.object().keys({
                 id: joi.number().integer(),
-                data: joi.any
+                data: joi.any()
             }),
-            result: joi.valid(null)
+            result: joi.object().valid(null)
         };
     }
 });
