@@ -32,7 +32,7 @@ export default ({
                 }, utMeta());
             };
             return function FooDemo(params) {
-                // @ts-ignore
+                // @ts-expect-error can't type useSelector in js
                 const pages = useSelector(({pages}) => pages);
                 return <div>
                     <div>TEST TAB</div><div>{JSON.stringify(params)}</div>

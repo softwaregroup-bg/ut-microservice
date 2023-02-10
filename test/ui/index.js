@@ -6,7 +6,9 @@ module.exports = [
                     {
                         params: {__dirname},
                         name: 'utMicroservice.playwright',
-                        result() {}
+                        result() {
+                            // no assertions
+                        }
                     },
                     bus?.config?.utRun?.test?.type === 'unit' && 'portal.playwright.run'
                 ].filter(Boolean));

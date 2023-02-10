@@ -1,8 +1,9 @@
 {
     "info": {
+        "contact": {},
         "description": "UT Microservice API",
         "title": "policy",
-        "version": "10.47.18"
+        "version": "10.48.9"
     },
     "paths": {
         "/rpc/policy/ldapPolicy/get": {
@@ -72,7 +73,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -916,10 +917,7 @@
                                                 "name": {
                                                     "maxLength": 30,
                                                     "minLength": 2,
-                                                    "type": [
-                                                        "string",
-                                                        "null"
-                                                    ]
+                                                    "type": "string"
                                                 },
                                                 "policyId": {
                                                     "type": [
@@ -931,6 +929,9 @@
                                                     "type": "string"
                                                 }
                                             },
+                                            "required": [
+                                                "name"
+                                            ],
                                             "type": "object"
                                         },
                                         "restrictionDate": {
@@ -1116,7 +1117,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1673,7 +1674,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1813,7 +1814,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1957,7 +1958,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -2320,10 +2321,7 @@
                                                 "name": {
                                                     "maxLength": 30,
                                                     "minLength": 2,
-                                                    "type": [
-                                                        "string",
-                                                        "null"
-                                                    ]
+                                                    "type": "string"
                                                 },
                                                 "policyId": {
                                                     "type": "number"
@@ -2332,6 +2330,9 @@
                                                     "type": "string"
                                                 }
                                             },
+                                            "required": [
+                                                "name"
+                                            ],
                                             "type": "object"
                                         },
                                         "restrictionDate": {
@@ -2508,7 +2509,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3075,7 +3076,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3235,7 +3236,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3366,7 +3367,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3512,7 +3513,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4091,7 +4092,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4229,7 +4230,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4676,5 +4677,10 @@
             "description": "utUser.validation",
             "name": "policy"
         }
+    ],
+    "host": "localhost",
+    "schemes": [
+        "http",
+        "https"
     ]
 }

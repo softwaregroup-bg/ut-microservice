@@ -1,8 +1,9 @@
 {
     "info": {
+        "contact": {},
         "description": "UT Microservice API",
         "title": "microservice",
-        "version": "7.21.8"
+        "version": "7.21.9"
     },
     "paths": {
         "/rpc/microservice/bar/add": {
@@ -98,7 +99,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -242,7 +243,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -412,7 +413,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -606,7 +607,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -774,7 +775,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -936,7 +937,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1119,7 +1120,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1258,7 +1259,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1394,7 +1395,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1513,7 +1514,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1633,7 +1634,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1750,7 +1751,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1871,7 +1872,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1927,5 +1928,10 @@
             "description": "utMicroservice.validation",
             "name": "microservice"
         }
+    ],
+    "host": "localhost",
+    "schemes": [
+        "http",
+        "https"
     ]
 }

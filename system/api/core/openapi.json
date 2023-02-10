@@ -1,8 +1,9 @@
 {
     "info": {
+        "contact": {},
         "description": "UT Microservice API",
         "title": "core",
-        "version": "8.30.1"
+        "version": "8.30.5"
     },
     "openapi": "3.0.0",
     "paths": {
@@ -24,7 +25,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -86,7 +87,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -184,7 +185,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -268,7 +269,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -329,7 +330,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -399,7 +400,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -469,7 +470,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -520,7 +521,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -615,7 +616,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -678,7 +679,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -769,7 +770,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -844,7 +845,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -929,7 +930,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -992,7 +993,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -1078,7 +1079,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -1164,7 +1165,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -1225,7 +1226,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -1284,7 +1285,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -1381,7 +1382,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -1442,7 +1443,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -1539,7 +1540,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -1665,7 +1666,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -1783,7 +1784,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -1834,7 +1835,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -1966,7 +1967,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -2017,7 +2018,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -2117,7 +2118,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -2178,7 +2179,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -2278,7 +2279,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -2332,7 +2333,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -2356,6 +2357,52 @@
                                             "additionalProperties": false,
                                             "properties": {
                                                 "core.country": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "alias": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "description": {
+                                                                "nullable": true,
+                                                                "type": "string"
+                                                            },
+                                                            "label": {
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "parent": {
+                                                                "nullable": true,
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "value": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "label",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "core.currency": {
                                                     "items": {
                                                         "additionalProperties": false,
                                                         "properties": {
@@ -2758,7 +2805,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -2827,7 +2874,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -2888,7 +2935,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -2993,7 +3040,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -3176,7 +3223,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -3240,7 +3287,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -3304,7 +3351,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -3417,7 +3464,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -3478,7 +3525,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -3585,7 +3632,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -3709,7 +3756,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -3770,7 +3817,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -3953,7 +4000,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -4049,7 +4096,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -4126,7 +4173,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -4187,7 +4234,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -4283,7 +4330,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -4334,7 +4381,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -4443,7 +4490,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -4597,7 +4644,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -4818,7 +4865,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -4972,7 +5019,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -5193,7 +5240,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -5318,7 +5365,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -5494,7 +5541,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -5563,7 +5610,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -5784,7 +5831,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -5849,7 +5896,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -5940,7 +5987,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -6011,7 +6058,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -6127,7 +6174,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -6181,7 +6228,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -6267,7 +6314,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -6350,7 +6397,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -6415,7 +6462,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -6484,7 +6531,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -6573,7 +6620,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -6705,7 +6752,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -6826,7 +6873,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -6989,7 +7036,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -7117,7 +7164,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -7184,7 +7231,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -7270,7 +7317,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -7337,7 +7384,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -7503,7 +7550,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -7565,7 +7612,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -7629,7 +7676,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -7751,7 +7798,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -7919,7 +7966,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -7989,7 +8036,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -8100,7 +8147,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -8164,7 +8211,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -8257,7 +8304,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -8335,7 +8382,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -8362,6 +8409,25 @@
                                                     "additionalProperties": true,
                                                     "properties": {},
                                                     "type": "object"
+                                                },
+                                                "currencies": {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "code": {
+                                                                "type": "string"
+                                                            },
+                                                            "currencyId": {
+                                                                "minimum": 1,
+                                                                "type": "number"
+                                                            },
+                                                            "scale": {
+                                                                "type": "number"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
                                                 },
                                                 "translations": {
                                                     "items": {
@@ -8480,7 +8546,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -8622,7 +8688,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -8754,7 +8820,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -8833,7 +8899,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -8947,7 +9013,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -9024,7 +9090,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -9164,7 +9230,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -9247,7 +9313,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -9361,7 +9427,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -9439,7 +9505,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -9579,7 +9645,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -9648,7 +9714,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -9762,7 +9828,7 @@
                                                 "type": "number"
                                             },
                                             {
-                                                "maxLength": 36,
+                                                "maxLength": 64,
                                                 "minLength": 1,
                                                 "type": "string"
                                             }
@@ -9865,7 +9931,7 @@
                                         "id": {
                                             "description": "Unique identifier of the request",
                                             "example": "1",
-                                            "maxLength": 36,
+                                            "maxLength": 64,
                                             "minLength": 1,
                                             "type": "string"
                                         },
@@ -9983,6 +10049,11 @@
             }
         }
     },
+    "servers": [
+        {
+            "url": "http://localhost"
+        }
+    ],
     "tags": [
         {
             "description": "utCore.validation",

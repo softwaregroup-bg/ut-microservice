@@ -1,8 +1,9 @@
 {
     "info": {
+        "contact": {},
         "description": "UT Microservice API",
         "title": "customer",
-        "version": "10.29.6"
+        "version": "10.32.18"
     },
     "paths": {
         "/rpc/customer/account/activity": {
@@ -85,7 +86,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -199,7 +200,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -306,7 +307,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -413,7 +414,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -517,7 +518,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -701,7 +702,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -762,6 +763,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -1478,7 +1485,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -1539,6 +1546,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -2274,7 +2287,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -2335,6 +2348,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -3106,7 +3125,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3213,7 +3232,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3343,7 +3362,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3465,7 +3484,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3569,7 +3588,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3684,7 +3703,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3815,7 +3834,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -3922,7 +3941,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4055,7 +4074,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4159,7 +4178,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4266,7 +4285,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4373,7 +4392,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4480,7 +4499,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -4631,6 +4650,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -5147,7 +5172,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -5407,6 +5432,12 @@
                                                     ]
                                                 },
                                                 "dao": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "deleteReason": {
                                                     "type": [
                                                         "string",
                                                         "null"
@@ -5701,6 +5732,18 @@
                                                         ]
                                                     },
                                                     "addressZone4Id": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
                                                         "type": [
                                                             "string",
                                                             "null"
@@ -6032,6 +6075,10 @@
                                                 },
                                                 "type": "object"
                                             },
+                                            "type": "array"
+                                        },
+                                        "inactiveCards": {
+                                            "items": {},
                                             "type": "array"
                                         },
                                         "mno": {
@@ -6949,7 +6996,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -7053,7 +7100,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -7155,6 +7202,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -7385,7 +7438,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -7446,6 +7499,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -8098,7 +8157,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -8209,7 +8268,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -8394,6 +8453,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -9172,7 +9237,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -9432,6 +9497,12 @@
                                                     ]
                                                 },
                                                 "dao": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "deleteReason": {
                                                     "type": [
                                                         "string",
                                                         "null"
@@ -9726,6 +9797,18 @@
                                                         ]
                                                     },
                                                     "addressZone4Id": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
                                                         "type": [
                                                             "string",
                                                             "null"
@@ -10057,6 +10140,10 @@
                                                 },
                                                 "type": "object"
                                             },
+                                            "type": "array"
+                                        },
+                                        "inactiveCards": {
+                                            "items": {},
                                             "type": "array"
                                         },
                                         "mno": {
@@ -11090,7 +11177,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -11460,7 +11547,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -11720,6 +11807,12 @@
                                                     ]
                                                 },
                                                 "dao": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "deleteReason": {
                                                     "type": [
                                                         "string",
                                                         "null"
@@ -12014,6 +12107,18 @@
                                                         ]
                                                     },
                                                     "addressZone4Id": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
                                                         "type": [
                                                             "string",
                                                             "null"
@@ -12345,6 +12450,10 @@
                                                 },
                                                 "type": "object"
                                             },
+                                            "type": "array"
+                                        },
+                                        "inactiveCards": {
+                                            "items": {},
                                             "type": "array"
                                         },
                                         "mno": {
@@ -13259,7 +13368,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -13384,7 +13493,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -13499,7 +13608,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -13647,7 +13756,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -13837,7 +13946,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -13941,7 +14050,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -14131,7 +14240,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -14191,6 +14300,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -14859,7 +14974,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -14882,6 +14997,41 @@
                                 "result": {
                                     "additionalProperties": false,
                                     "properties": {
+                                        "customer.addressType": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "alias": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "description": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "label": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "parent": {
+                                                        "type": "integer"
+                                                    },
+                                                    "value": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "label",
+                                                    "value"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
                                         "customer.customerCategory": {
                                             "items": {
                                                 "additionalProperties": false,
@@ -15022,6 +15172,41 @@
                                             },
                                             "type": "array"
                                         },
+                                        "customer.emailType": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "alias": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "description": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "label": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "parent": {
+                                                        "type": "integer"
+                                                    },
+                                                    "value": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "label",
+                                                    "value"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
                                         "customer.employerCategory": {
                                             "items": {
                                                 "additionalProperties": false,
@@ -15058,6 +15243,41 @@
                                             "type": "array"
                                         },
                                         "customer.employment": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "alias": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "description": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "label": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "parent": {
+                                                        "type": "integer"
+                                                    },
+                                                    "value": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "label",
+                                                    "value"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "customer.gender": {
                                             "items": {
                                                 "additionalProperties": false,
                                                 "properties": {
@@ -15441,6 +15661,41 @@
                                                 "type": "object"
                                             },
                                             "type": "array"
+                                        },
+                                        "customer.phoneType": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "alias": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "description": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "label": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "parent": {
+                                                        "type": "integer"
+                                                    },
+                                                    "value": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "label",
+                                                    "value"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
                                         }
                                     },
                                     "type": "object"
@@ -15528,7 +15783,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -15632,7 +15887,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -15736,7 +15991,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -15855,7 +16110,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -15915,6 +16170,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -16583,7 +16844,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -16644,6 +16905,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -17314,7 +17581,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -17374,6 +17641,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -18053,7 +18326,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -18113,6 +18386,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -18802,7 +19081,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -18952,7 +19231,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -19013,6 +19292,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -19673,6 +19958,12 @@
                                                         "null"
                                                     ]
                                                 },
+                                                "addressZone5": {
+                                                    "type": [
+                                                        "number",
+                                                        "null"
+                                                    ]
+                                                },
                                                 "city": {},
                                                 "lat": {},
                                                 "lng": {},
@@ -19836,7 +20127,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -19897,6 +20188,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -20582,7 +20879,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -20706,7 +21003,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -20810,7 +21107,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -20905,7 +21202,10 @@
                                                     "type": "integer"
                                                 },
                                                 "organizationId": {
-                                                    "type": "integer"
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ]
                                                 },
                                                 "statusId": {
                                                     "maxLength": 20,
@@ -20916,7 +21216,6 @@
                                                 "display",
                                                 "description",
                                                 "customerTypeId",
-                                                "organizationId",
                                                 "itemNameId"
                                             ],
                                             "type": "object"
@@ -20999,7 +21298,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -21040,15 +21339,13 @@
                                                         "type": "string"
                                                     },
                                                     "itemNameId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "kycId": {
                                                         "type": "integer"
                                                     },
                                                     "organizationId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "statusId": {
                                                         "minLength": 1,
@@ -21059,7 +21356,8 @@
                                                     "kycId",
                                                     "display",
                                                     "statusId",
-                                                    "customerTypeId"
+                                                    "customerTypeId",
+                                                    "itemNameId"
                                                 ],
                                                 "type": "object"
                                             },
@@ -21173,7 +21471,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -21293,7 +21591,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -21426,10 +21724,14 @@
                                                 "properties": {
                                                     "itemNameId": {
                                                         "type": "integer"
+                                                    },
+                                                    "kycId": {
+                                                        "type": "integer"
                                                     }
                                                 },
                                                 "required": [
-                                                    "itemNameId"
+                                                    "itemNameId",
+                                                    "kycId"
                                                 ],
                                                 "type": "object"
                                             },
@@ -21474,7 +21776,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -21515,15 +21817,13 @@
                                                         "type": "string"
                                                     },
                                                     "itemNameId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "kycId": {
                                                         "type": "integer"
                                                     },
                                                     "organizationId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "statusId": {
                                                         "minLength": 1,
@@ -21534,7 +21834,8 @@
                                                     "kycId",
                                                     "display",
                                                     "statusId",
-                                                    "customerTypeId"
+                                                    "customerTypeId",
+                                                    "itemNameId"
                                                 ],
                                                 "type": "object"
                                             },
@@ -21688,7 +21989,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -21739,11 +22040,13 @@
                                                         "type": "integer"
                                                     },
                                                     "organizationId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "organizationName": {
-                                                        "type": "string"
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
                                                     },
                                                     "statusId": {
                                                         "minLength": 1,
@@ -21752,6 +22055,7 @@
                                                 },
                                                 "required": [
                                                     "kycId",
+                                                    "customerTypeId",
                                                     "customerType",
                                                     "statusId"
                                                 ],
@@ -21914,7 +22218,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -21960,16 +22264,17 @@
                                                         ]
                                                     },
                                                     "organizationName": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
                                                     }
                                                 },
                                                 "required": [
                                                     "kycId",
                                                     "description",
                                                     "display",
-                                                    "customerType",
-                                                    "organizationName"
+                                                    "customerType"
                                                 ],
                                                 "type": "object"
                                             },
@@ -22092,7 +22397,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -22143,18 +22448,19 @@
                                                         "type": "string"
                                                     },
                                                     "itemNameId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "kycId": {
                                                         "type": "integer"
                                                     },
                                                     "organizationId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "organizationName": {
-                                                        "type": "string"
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
                                                     },
                                                     "statusId": {
                                                         "minLength": 1,
@@ -22177,8 +22483,7 @@
                                                 "additionalProperties": false,
                                                 "properties": {
                                                     "attributeId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "conditionCheck": {
                                                         "type": "string"
@@ -22208,11 +22513,27 @@
                                             "items": {
                                                 "additionalProperties": false,
                                                 "properties": {
+                                                    "itemCode": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
                                                     "itemNameId": {
+                                                        "type": "integer"
+                                                    },
+                                                    "itemNameTranslation": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "kycConditionDocumentTypeId": {
                                                         "type": "integer"
                                                     }
                                                 },
                                                 "required": [
+                                                    "kycConditionDocumentTypeId",
                                                     "itemNameId"
                                                 ],
                                                 "type": "object"
@@ -22289,8 +22610,7 @@
                                         }
                                     },
                                     "required": [
-                                        "customerType",
-                                        "organizationId"
+                                        "customerType"
                                     ],
                                     "type": "object"
                                 },
@@ -22323,7 +22643,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -22351,8 +22671,7 @@
                                                 "additionalProperties": false,
                                                 "properties": {
                                                     "itemNameId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "itemNameTranslation": {
                                                         "minLength": 1,
@@ -22462,7 +22781,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -22490,8 +22809,7 @@
                                                 "additionalProperties": false,
                                                 "properties": {
                                                     "itemNameId": {
-                                                        "minLength": 1,
-                                                        "type": "string"
+                                                        "type": "integer"
                                                     },
                                                     "itemNameTranslation": {
                                                         "minLength": 1,
@@ -22499,6 +22817,7 @@
                                                     }
                                                 },
                                                 "required": [
+                                                    "itemNameId",
                                                     "itemNameTranslation"
                                                 ],
                                                 "type": "object"
@@ -22607,7 +22926,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -22659,6 +22978,12 @@
                                                     "addressZone4": {
                                                         "type": [
                                                             "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "number",
                                                             "null"
                                                         ]
                                                     },
@@ -23013,7 +23338,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -23117,7 +23442,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -23250,7 +23575,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -23380,7 +23705,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -23562,6 +23887,12 @@
                                                         ]
                                                     },
                                                     "addressZone4": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
                                                         "type": [
                                                             "number",
                                                             "null"
@@ -23851,7 +24182,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -24008,6 +24339,18 @@
                                                             "null"
                                                         ]
                                                     },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
                                                     "city": {
                                                         "type": [
                                                             "string",
@@ -24135,6 +24478,18 @@
                                                         ]
                                                     },
                                                     "addressZone4Id": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
                                                         "type": [
                                                             "string",
                                                             "null"
@@ -24885,7 +25240,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -25003,7 +25358,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -25120,7 +25475,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -25294,6 +25649,18 @@
                                                         ]
                                                     },
                                                     "addressZone4Id": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
                                                         "type": [
                                                             "integer",
                                                             "null"
@@ -25726,7 +26093,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -26045,7 +26412,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -26347,7 +26714,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -26509,7 +26876,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -26666,6 +27033,18 @@
                                                             "null"
                                                         ]
                                                     },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
                                                     "city": {
                                                         "type": [
                                                             "string",
@@ -26793,6 +27172,18 @@
                                                         ]
                                                     },
                                                     "addressZone4Id": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "addressZone5Id": {
                                                         "type": [
                                                             "string",
                                                             "null"
@@ -27559,7 +27950,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -27700,7 +28091,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -27855,7 +28246,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -27996,7 +28387,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -28116,7 +28507,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -28220,7 +28611,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -28373,7 +28764,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -28518,7 +28909,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -28677,7 +29068,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -28816,7 +29207,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -28927,7 +29318,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -29652,7 +30043,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -29759,7 +30150,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -29953,7 +30344,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -30157,7 +30548,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -30267,7 +30658,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -30426,7 +30817,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -30678,7 +31069,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -30876,7 +31267,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -31031,7 +31422,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -31193,7 +31584,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -31564,7 +31955,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -31703,7 +32094,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -31810,7 +32201,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -31917,7 +32308,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -32032,7 +32423,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -32147,7 +32538,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -32254,7 +32645,7 @@
                                 "id": {
                                     "description": "Unique identifier of the request",
                                     "example": "1",
-                                    "maxLength": 36,
+                                    "maxLength": 64,
                                     "minLength": 1,
                                     "type": "string"
                                 },
@@ -32330,5 +32721,10 @@
             "description": "utCustomer.validation",
             "name": "customer"
         }
+    ],
+    "host": "localhost",
+    "schemes": [
+        "http",
+        "https"
     ]
 }
