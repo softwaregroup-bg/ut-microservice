@@ -71,7 +71,8 @@
     "snapshot": "node ui.test --playwright.update-snapshots",
     "storybook": "ut-storybook start -p 6006 --ci",
     "test": "ut-test-parallel",
-    "version": "node build && ut-help build --out-dir .lint/help && ut-storybook build && ut-storybook publish && git add handlers.d.ts system/api && ut-version"
+    "version": "node build && ut-help build --out-dir .lint/help && ut-storybook build && ut-storybook publish && git add handlers.d.ts system/api && ut-version",
+    "watch": "UT_WATCH=1 UT_ENV=test node index.test.js"
   },
   "publishConfig": {
     "registry": "https://nexus.softwaregroup.com/repository/npm-internal"
