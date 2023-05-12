@@ -4,8 +4,8 @@
   "main": "index.js",
   "browser": "browser.js",
   "dependencies": {
-    "ut-model": "^8.9.1",
-    "ut-function.common-joi": "^1.8.0"
+    "ut-model": "^8.22.1",
+    "ut-function.common-joi": "^1.10.0"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "17.0.1",
@@ -17,20 +17,20 @@
     "tap": "^16.3.0",
     "ut-browser": "^7.7.4",
     "ut-cache": "^6.0.1",
-    "ut-core": "^8.24.5",
-    "ut-customer": "^11.0.0",
-    "ut-db": "^10.0.0",
+    "ut-core": "^8.31.12",
+    "ut-customer": "^11.0.9",
+    "ut-db": "^10.0.1",
     "ut-dispatch-db": "^1.5.0",
-    "ut-document": "^9.3.0",
-    "ut-login": "^7.20.1",
-    "ut-port-jsonrpc": "^7.3.1",
-    "ut-port-http": "^8.9.3",
+    "ut-document": "^9.25.3",
+    "ut-login": "^7.22.1",
+    "ut-port-jsonrpc": "^7.3.2",
+    "ut-port-http": "^8.9.8",
     "ut-port-script": "^7.2.0",
-    "ut-port-sql": "^9.0.1",
-    "ut-portal": "^9.6.25",
-    "ut-portal-admin": "^7.14.1",
-    "ut-run": "^10.70.14",
-    "ut-user": "^10.33.0",
+    "ut-port-sql": "^9.0.2",
+    "ut-portal": "^9.6.37",
+    "ut-portal-admin": "^7.16.0",
+    "ut-run": "^10.75.6",
+    "ut-user": "^10.50.6",
     "uuid": "8.3.2"
   },
   "peerDependencies": {
@@ -40,10 +40,10 @@
     "react-redux": "^7.2.8",
     "react-router": "^5.3.3",
     "react-router-dom": "^5.3.3",
-    "ut-prime": "^2.14.1",
+    "ut-prime": "^2.73.6",
     "ut-dispatch-db": "^1.5.0",
-    "ut-portal": "^9.4.2",
-    "ut-run": "^10.70.14"
+    "ut-portal": "^9.6.37",
+    "ut-run": "^10.75.6"
   },
   "description": "UnderTree standard microservice",
   "scripts": {
