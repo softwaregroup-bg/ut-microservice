@@ -55,7 +55,7 @@
     "gitlab": "ut-gitlab",
     "help": "ut-help build --out-dir dist/help",
     "help:start": "ut-help start --no-open",
-    "jenkins": "ut-jenkins && ut-run metrics",
+    "jenkins": "ut-jenkins",
     "lint": "UT_ENV=uat node index server api && ut-lint .",
     "lint-js": "ut-lint-js .",
     "metrics": "ut-run metrics",
