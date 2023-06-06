@@ -1,5 +1,6 @@
 module.exports = [
     'ut-cache',
+    'ut-telemetry',
     'ut-db',
     'ut-portal',
     'ut-browser',
