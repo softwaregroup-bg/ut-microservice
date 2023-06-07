@@ -1,6 +1,6 @@
 {
   "name": "ut-microservice",
-  "version": "7.21.15",
+  "version": "7.22.0",
   "main": "index.js",
   "browser": "browser.js",
   "dependencies": {

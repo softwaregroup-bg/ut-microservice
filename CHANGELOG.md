@@ -1,3 +1,12 @@
+# [7.22.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.15...v7.22.0) (2023-06-07)
+
+
+### Features
+
+* metrics ([e44ed79](https://github.com/softwaregroup-bg/ut-microservice/commit/e44ed79213bf5f0eec18076a6a09c580caf4dfe1))
+
+
+
 ## [7.21.15](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.21.14...v7.21.15) (2023-05-12)
 
 
