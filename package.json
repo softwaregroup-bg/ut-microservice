@@ -29,7 +29,8 @@
     "ut-port-sql": "^9.0.2",
     "ut-portal": "^9.6.37",
     "ut-portal-admin": "^7.16.0",
-    "ut-run": "^10.75.6",
+    "ut-run": "^10.76.1",
+    "ut-telemetry": "^7.2.4",
     "ut-user": "^10.50.6",
     "uuid": "8.3.2"
   },
@@ -57,6 +58,7 @@
     "jenkins": "ut-jenkins",
     "lint": "UT_ENV=uat node index server api && ut-lint .",
     "lint-js": "ut-lint-js .",
+    "metrics": "ut-run metrics",
     "portal": "ut-storybook build",
     "postpublish": "ut-postpublish",
     "postversion": "ut-postversion",

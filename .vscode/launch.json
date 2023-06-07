@@ -103,6 +103,21 @@
                 "NODE_PATH": "dev"
             },
             "outputCapture": "std"
+        },
+        {
+            "name": "Metrics",
+            "type": "node",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run", "metrics"],
+            "skipFiles": ["<node_internals>/**"],
+            "env": {
+                "GIT_BRANCH": "master",
+                "BUILD_NUMBER": "10",
+                "BUILD_DATE": "2023-06-06T12:30:00Z"
+            }
         }
     ],
     "inputs": [{
