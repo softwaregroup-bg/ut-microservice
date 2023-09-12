@@ -26,7 +26,8 @@ test('test', async({ portal: page }, testInfo) => {
     // close tab
     await page.locator('#pr_id_1_header_1 i').click();
     await page.locator('input[name="bar.barNameFilter"]').fill(randomName);
-    await page.locator(`td >> text=${randomName}`).click();
+    await page.locator(`td >> text=${randomName}`).click(); // this locator also ensures the fetch completed
+    await expect(page.locator('textarea[name="bar.barDescription"]')).toHaveValue('description 1'); // wait for data load
     await page.locator('textarea[name="bar.barDescription"]').fill('description 2');
     await page.locator('[data-testid="microserviceBar-saveButton"]').click();
     await expect(page.getByTestId('microserviceBar-saveButton').locator('.pi-check')).toBeVisible();
@@ -41,7 +42,8 @@ test('test', async({ portal: page }, testInfo) => {
     // close tab
     await page.locator('#pr_id_1_header_1 i').click();
     await page.locator('input[name="bar.barNameFilter"]').fill(randomName);
-    await page.locator(`td >> text=${randomName}`).click();
+    await page.locator(`td >> text=${randomName}`).click(); // this locator also ensures the fetch completed
+    await expect(page.locator('textarea[name="bar.barDescription"]')).toHaveValue('description 2'); // wait for data load
     await page.locator('textarea[name="bar.barDescription"]').click();
     expect.soft(await page.screenshot({
         animations: 'disabled',
