@@ -1,3 +1,12 @@
+# [7.23.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.22.2...v7.23.0) (2023-10-18)
+
+
+### Features
+
+* non portal pages ([6a28763](https://github.com/softwaregroup-bg/ut-microservice/commit/6a28763342693964ab2f5c745a5a3a5721d26dbf))
+
+
+
 ## [7.22.2](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.22.1...v7.22.2) (2023-09-12)
 
 
