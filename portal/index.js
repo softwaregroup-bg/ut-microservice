@@ -1,10 +1,11 @@
 import backend from './backend';
 import component from './component';
 import handle from './handle';
+import config from './config';
 
 export default () => function utMicroservice() {
     return {
-        config: require('./config'),
+        config,
         browser: () => [
             backend,
             ...component,

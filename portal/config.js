@@ -1,4 +1,4 @@
-module.exports = () => ({
+export default () => ({
     // environments
     common: {
         browser: true

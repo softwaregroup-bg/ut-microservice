@@ -27,7 +27,21 @@ module.exports = ({joi}) => ({
         edit: {
             label: 'Bar',
             widgets: ['bar.barName', 'bar.barDescription']
+        },
+        custom: {
+            hidden: true,
+            widgets: ['bar.barName', 'bar.barId']
+        },
+        card1: {
+            widgets: ['bar.barName']
+        },
+        card2: {
+            widgets: ['bar.barDescription']
         }
+    },
+    layouts: {
+        editCustom: ['custom'],
+        editCards: ['card1', 'card2']
     },
     reports: {
         list: {

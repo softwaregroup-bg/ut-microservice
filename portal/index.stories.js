@@ -36,3 +36,7 @@ export const BarBrowse = page('microservice.bar.browse');
 export const BarOpen = page('microservice.bar.open', 1);
 export const BarNew = page('microservice.bar.new');
 export const BarReport = page('microservice.bar.report', 'list');
+export const PageCardsNew = page('p/microservice.page.cards');
+export const PageCardsOpen = page('p/microservice.page.cards', 1);
+export const PageCustomNew = page('p/microservice.page.custom');
+export const PageCustomOpen = page('p/microservice.page.custom', 1);

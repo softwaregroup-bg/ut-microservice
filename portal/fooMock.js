@@ -9,7 +9,7 @@ let lastFooId = fooList.reduce((max, {fooId}) => Math.max(max, fooId), 0);
 const byKey = filter => ({fooId}) => String(fooId) === String(filter.fooId);
 const findFoo = filter => fooList.find(byKey(filter));
 
-module.exports = {
+export default {
     'microservice.foo.fetch': ({filterBy: {tenant}}) => fooList.filter(foo => tenant == null || String(foo.tenant) === String(tenant)),
     'microservice.foo.get': findFoo,
     'microservice.foo.add': foo => {
