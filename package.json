@@ -43,7 +43,7 @@
     "react-router-dom": "^5.3.3",
     "ut-prime": "^2.73.6",
     "ut-dispatch-db": "^1.5.0",
-    "ut-portal": "^9.6.68",
+    "ut-portal": "^9.6.69",
     "ut-run": "^10.75.6"
   },
   "description": "UnderTree standard microservice",
