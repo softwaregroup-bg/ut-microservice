@@ -1,3 +1,12 @@
+## [7.23.1](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.23.0...v7.23.1) (2023-10-19)
+
+
+### Bug Fixes
+
+* do not mix cjs and esm ([c581e7c](https://github.com/softwaregroup-bg/ut-microservice/commit/c581e7cca0efd7beb822090fe2be9dfe6ad252a3))
+
+
+
 # [7.23.0](https://github.com/softwaregroup-bg/ut-microservice/compare/v7.22.2...v7.23.0) (2023-10-18)
 
 
